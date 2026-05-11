@@ -15,8 +15,12 @@ app.set('trust proxy', true);
 // ── Security ──────────────────────────────────────────────
 app.use(helmet());
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
-  methods: ['GET', 'POST', 'DELETE'],
+  origin: [
+    "http://localhost:3000",
+    "https://zahrion-tech.vercel.app"
+  ],
+  methods: ["GET", "POST", "DELETE"],
+  credentials: true
 }));
 app.use(express.json());
 
