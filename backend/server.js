@@ -261,8 +261,11 @@ app.get('/robots.txt', (req, res) => {
 
 // Serve frontend build from the same backend server
 const frontendDist = path.join(__dirname, '..', 'frontend', 'dist');
-app.use(express.static(frontendDist));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(frontendDist, 'index.html'));
+app.get("/", (req, res) => {
+  res.send("ZahrionTech API running 🚀");
 });
+// app.use(express.static(frontendDist));
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(frontendDist, 'index.html'));
+// });
 app.listen(PORT, () => console.log(`✅ ZahrionTech backend running on port ${PORT}`));

@@ -70,9 +70,7 @@ export default function Footer() {
           <p className="dark:text-slate-500 text-slate-500 text-sm">
             © {new Date().getFullYear()} ZahrionTech. All rights reserved.
           </p>
-          <p className="dark:text-slate-500 text-slate-500 text-sm font-mono">
-            Built with <span className="text-brand-400">♥</span> using React + Node.js
-          </p>
+        
         </div>
       </div>
     </footer>
