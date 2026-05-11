@@ -43,7 +43,7 @@ export default function Admin() {
   const fetchMessages = async () => {
     setLoading(true)
     try {
-      const res = await fetch('/api/admin/messages', { headers: { Authorization: token } })
+      const res = await fetch('https://zahrion-tech-production.up.railway.app/api/admin/messages', { headers: { Authorization: token } })
       const data = await res.json()
       setMessages(Array.isArray(data) ? data : [])
     } catch { toast.error('Failed to load messages.') }
@@ -53,7 +53,7 @@ export default function Admin() {
   const fetchVisitors = async (page = visitorPage) => {
     setVisitorsLoading(true)
     try {
-      const res = await fetch(`/api/admin/visitors?page=${page}&limit=10`, { headers: { Authorization: token } })
+      const res = await fetch(`https://zahrion-tech-production.up.railway.app/api/admin/visitors?page=${page}&limit=10`, { headers: { Authorization: token } })
       const data = await res.json()
       setVisitors(Array.isArray(data.visitors) ? data.visitors : [])
       setVisitorMeta({
@@ -66,13 +66,13 @@ export default function Admin() {
   }
 
   const markRead = async id => {
-    await fetch(`/api/admin/messages/${id}/read`, { method: 'POST', headers: { Authorization: token } })
+    await fetch(`https://zahrion-tech-production.up.railway.app/api/admin/messages/${id}/read`, { method: 'POST', headers: { Authorization: token } })
     setMessages(ms => ms.map(m => m.id === id ? { ...m, read: 1 } : m))
   }
 
   const deleteMsg = async id => {
     if (!confirm('Delete this message?')) return
-    await fetch(`/api/admin/messages/${id}`, { method: 'DELETE', headers: { Authorization: token } })
+    await fetch(`https://zahrion-tech-production.up.railway.app/api/admin/messages/${id}`, { method: 'DELETE', headers: { Authorization: token } })
     setMessages(ms => ms.filter(m => m.id !== id))
     if (selected?.id === id) setSelected(null)
     toast.success('Deleted.')
