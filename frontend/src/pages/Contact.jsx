@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
-import { Send, Mail, MapPin, Clock, CheckCircle2 } from 'lucide-react'
+import { Send, Mail, MapPin, Clock, CheckCircle2,PhoneCall } from 'lucide-react'
 import toast from 'react-hot-toast'
 import PageWrapper from '../components/PageWrapper'
 
@@ -11,9 +11,10 @@ const services = [
 ]
 
 const info = [
-  { icon: Mail, label: 'Email', value: 'hello@zahriontech.com' },
+  { icon: Mail, label: 'Email', value: 'inquiry@zahriontech.com' },
   { icon: MapPin, label: 'Location', value: 'Remote – Worldwide' },
   { icon: Clock, label: 'Response Time', value: 'Within 24 hours' },
+  { icon: PhoneCall, label: 'Phone', value: '+1 (917) 924-8267' },
 ]
 
 export default function Contact() {
