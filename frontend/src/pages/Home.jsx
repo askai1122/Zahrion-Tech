@@ -39,6 +39,7 @@ export default function Home() {
       <Helmet>
         <title>ZahrionTech – Web, Mobile & Desktop Software Agency</title>
         <meta name="description" content="ZahrionTech builds world-class websites, mobile apps, desktop software, and digital solutions. Expert team. Modern tech. Results-driven." />
+        <link rel="canonical" href="https://zahriontech.com/" />
       </Helmet>
 
       {/* ── Hero ─────────────────────────────────────────── */}

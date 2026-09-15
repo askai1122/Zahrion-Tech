@@ -89,7 +89,10 @@ export default function Admin() {
 
   if (!token) return (
     <PageWrapper>
-      <Helmet><title>Admin – ZahrionTech</title></Helmet>
+      <Helmet>
+        <title>Admin – ZahrionTech</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div className="min-h-screen flex items-center justify-center pt-16 grid-pattern">
         <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="glass rounded-2xl p-8 w-full max-w-sm">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center mb-6 mx-auto">
@@ -113,7 +116,6 @@ export default function Admin() {
               {loading ? 'Logging in...' : 'Login'}
             </button>
           </form>
-          <p className="text-center dark:text-slate-500 text-slate-500 text-xs mt-4">Default: admin / zahriontech2024</p>
         </motion.div>
       </div>
     </PageWrapper>
@@ -121,7 +123,10 @@ export default function Admin() {
 
   return (
     <PageWrapper>
-      <Helmet><title>Admin Dashboard – ZahrionTech</title></Helmet>
+      <Helmet>
+        <title>Admin Dashboard – ZahrionTech</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div className="pt-20 min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Header */}

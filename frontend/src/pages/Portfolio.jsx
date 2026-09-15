@@ -69,6 +69,12 @@ export default function Portfolio() {
       <Helmet>
         <title>Portfolio – ZahrionTech</title>
         <meta name="description" content="Browse ZahrionTech's portfolio of web apps, mobile apps, desktop software and social media campaigns." />
+        <link rel="canonical" href="https://zahriontech.com/portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zahriontech.com/portfolio" />
+        <meta property="og:title" content="Portfolio – ZahrionTech" />
+        <meta property="og:description" content="Browse ZahrionTech's portfolio of web apps, mobile apps, desktop software and social media campaigns." />
+        <meta property="og:image" content="https://zahriontech.com/zahriontech-logo.png" />
       </Helmet>
 
       {/* Hero */}

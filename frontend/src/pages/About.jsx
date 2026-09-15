@@ -17,6 +17,12 @@ export default function About() {
       <Helmet>
         <title>About Us – ZahrionTech</title>
         <meta name="description" content="Learn about ZahrionTech — our mission, team, and the values that drive every product we build." />
+        <link rel="canonical" href="https://zahriontech.com/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zahriontech.com/about" />
+        <meta property="og:title" content="About Us – ZahrionTech" />
+        <meta property="og:description" content="Learn about ZahrionTech — our mission, team, and the values that drive every product we build." />
+        <meta property="og:image" content="https://zahriontech.com/zahriontech-logo.png" />
       </Helmet>
 
       {/* Hero */}

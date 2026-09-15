@@ -12,6 +12,7 @@ const services = [
     color: 'from-brand-500 to-cyan-400',
     desc: 'From landing pages to complex web applications. We build fast, SEO-friendly, accessible websites using React, Next.js, and modern backend stacks.',
     features: ['Custom React / Next.js apps', 'RESTful & GraphQL APIs', 'SEO optimization', 'CMS integration', 'Performance tuning', 'Responsive design'],
+    slug: '/hire-web-developer',
   },
   {
     icon: Monitor,
@@ -19,6 +20,7 @@ const services = [
     color: 'from-accent-500 to-pink-500',
     desc: 'Cross-platform desktop apps for Windows, macOS, and Linux using Electron or Tauri — with native performance and beautiful UIs.',
     features: ['Electron / Tauri apps', 'Cross-platform support', 'Auto-updater', 'Offline-first', 'Native OS integration', 'Secure local storage'],
+    slug: '/hire-software-developer',
   },
   {
     icon: Smartphone,
@@ -26,6 +28,7 @@ const services = [
     color: 'from-emerald-500 to-teal-400',
     desc: 'Native-quality iOS & Android apps with Flutter or React Native. Smooth, performant, and pixel-perfect on every device.',
     features: ['Flutter & React Native', 'App Store publishing', 'Push notifications', 'Offline mode', 'Payment integration', 'Analytics & crash reporting'],
+    slug: '/hire-mobile-app-developer',
   },
   {
     icon: Share2,
@@ -33,6 +36,7 @@ const services = [
     color: 'from-orange-500 to-yellow-400',
     desc: 'Content strategy, creative design, scheduling, and analytics management across Instagram, Facebook, LinkedIn, Twitter, and TikTok.',
     features: ['Content strategy', 'Graphic & video creation', 'Scheduling & automation', 'Community management', 'Analytics & reporting', 'Paid ads management'],
+    slug: null,
   },
   {
     icon: UserCheck,
@@ -40,6 +44,7 @@ const services = [
     color: 'from-pink-500 to-rose-400',
     desc: 'Dedicated virtual assistance for busy entrepreneurs — email management, research, scheduling, data entry, and more.',
     features: ['Email & calendar management', 'Research & reports', 'Data entry', 'Customer support', 'Task management', 'Document preparation'],
+    slug: null,
   },
   {
     icon: Wrench,
@@ -47,6 +52,7 @@ const services = [
     color: 'from-slate-500 to-slate-400',
     desc: 'Fast, reliable debugging and long-term maintenance for any tech stack. We diagnose, fix, and future-proof your codebase.',
     features: ['Any framework or stack', 'Performance audits', 'Security patching', 'Code refactoring', 'Dependency updates', '24/7 monitoring option'],
+    slug: '/hire-software-developer',
   },
 ]
 
@@ -56,6 +62,12 @@ export default function Services() {
       <Helmet>
         <title>Services – ZahrionTech</title>
         <meta name="description" content="Explore ZahrionTech's full range of services: web development, mobile apps, desktop software, social media management, bug fixing and more." />
+        <link rel="canonical" href="https://zahriontech.com/services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zahriontech.com/services" />
+        <meta property="og:title" content="Services – ZahrionTech" />
+        <meta property="og:description" content="Web development, mobile apps, desktop software, social media management, and more." />
+        <meta property="og:image" content="https://zahriontech.com/zahriontech-logo.png" />
       </Helmet>
 
       {/* Hero */}
@@ -95,9 +107,16 @@ export default function Services() {
                 </div>
                 <h2 className="font-display font-bold text-2xl dark:text-white text-slate-900 mb-3">{svc.title}</h2>
                 <p className="dark:text-slate-400 text-slate-600 text-sm leading-relaxed">{svc.desc}</p>
-                <Link to="/contact" className="inline-flex items-center gap-2 mt-6 text-sm font-medium dark:text-brand-400 text-brand-600 hover:underline">
-                  Get a quote <ArrowRight size={14} />
-                </Link>
+                <div className="flex items-center gap-4 mt-6 flex-wrap">
+                  {svc.slug && (
+                    <Link to={svc.slug} className="inline-flex items-center gap-2 text-sm font-medium dark:text-brand-400 text-brand-600 hover:underline">
+                      Learn more <ArrowRight size={14} />
+                    </Link>
+                  )}
+                  <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-medium dark:text-slate-400 text-slate-600 hover:underline">
+                    Get a quote <ArrowRight size={14} />
+                  </Link>
+                </div>
               </div>
               <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {svc.features.map((f, j) => (

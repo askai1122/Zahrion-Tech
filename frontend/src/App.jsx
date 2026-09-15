@@ -9,6 +9,10 @@ import Services from './pages/Services'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
 import Admin from './pages/Admin'
+import HireWebDeveloper from './pages/HireWebDeveloper'
+import HireMobileAppDeveloper from './pages/HireMobileAppDeveloper'
+import HireNodeJsDeveloper from './pages/HireNodeJsDeveloper'
+import HireSoftwareDeveloper from './pages/HireSoftwareDeveloper'
 
 export default function App() {
   const { pathname } = useLocation()
@@ -31,6 +35,10 @@ export default function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/hire-web-developer" element={<HireWebDeveloper />} />
+            <Route path="/hire-mobile-app-developer" element={<HireMobileAppDeveloper />} />
+            <Route path="/hire-nodejs-developer" element={<HireNodeJsDeveloper />} />
+            <Route path="/hire-software-developer" element={<HireSoftwareDeveloper />} />
             <Route path="/admin" element={<Admin />} />
           </Routes>
         </AnimatePresence>

@@ -9,10 +9,10 @@ const links = {
     { to: '/contact', label: 'Contact' },
   ],
   Services: [
-    { to: '/services', label: 'Web Development' },
-    { to: '/services', label: 'Mobile Apps' },
-    { to: '/services', label: 'Desktop Apps' },
-    { to: '/services', label: 'Social Media' },
+    { to: '/hire-web-developer', label: 'Hire a Web Developer' },
+    { to: '/hire-mobile-app-developer', label: 'Hire a Mobile App Developer' },
+    { to: '/hire-nodejs-developer', label: 'Hire a Node.js Developer' },
+    { to: '/hire-software-developer', label: 'Hire a Software Developer' },
   ],
 }
 

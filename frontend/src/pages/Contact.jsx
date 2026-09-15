@@ -57,6 +57,12 @@ export default function Contact() {
       <Helmet>
         <title>Contact Us – ZahrionTech</title>
         <meta name="description" content="Get in touch with ZahrionTech. Tell us about your project and we'll respond within 24 hours." />
+        <link rel="canonical" href="https://zahriontech.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zahriontech.com/contact" />
+        <meta property="og:title" content="Contact Us – ZahrionTech" />
+        <meta property="og:description" content="Get in touch with ZahrionTech. Tell us about your project and we'll respond within 24 hours." />
+        <meta property="og:image" content="https://zahriontech.com/zahriontech-logo.png" />
       </Helmet>
 
       {/* Hero */}
