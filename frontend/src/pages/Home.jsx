@@ -37,8 +37,8 @@ export default function Home() {
   return (
     <PageWrapper>
       <Helmet>
-        <title>ZahrionTech – Web, Mobile & Desktop Software Agency</title>
-        <meta name="description" content="ZahrionTech builds world-class websites, mobile apps, desktop software, and digital solutions. Expert team. Modern tech. Results-driven." />
+        <title>ZahrionTech – Software Development Agency for USA, UK & Europe</title>
+        <meta name="description" content="ZahrionTech builds custom websites, mobile apps, and software for businesses across the USA, UK, Germany, and Europe. Expert developers, transparent pricing." />
         <link rel="canonical" href="https://zahriontech.com/" />
       </Helmet>
 
@@ -57,7 +57,7 @@ export default function Home() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono dark:bg-white/5 bg-slate-100 dark:text-slate-300 text-slate-600 dark:border-white/10 border-slate-200 border mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            Available for new projects
+            Serving clients across the USA, UK & Europe
           </motion.div>
 
           <motion.h1
@@ -78,7 +78,7 @@ export default function Home() {
             className="dark:text-slate-400 text-slate-600 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
           >
             From concept to deployment — we craft high-performance websites, mobile apps,
-            and enterprise software that drives real business results.
+            and enterprise software for businesses across the USA, UK, Germany, and Europe.
           </motion.p>
 
           <motion.div

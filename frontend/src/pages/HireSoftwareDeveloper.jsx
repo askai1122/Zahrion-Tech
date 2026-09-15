@@ -28,22 +28,23 @@ const faqs = [
   { q: 'Do you work with startups and small businesses, or only large companies?', a: 'Both. We work with solo founders building an MVP, small businesses that need a working tool, and larger teams that need extra development capacity.' },
   { q: 'Will I own the code after the project is done?', a: 'Yes. You receive full ownership of the source code and all deliverables — there is no ongoing lock-in to our team.' },
   { q: 'Can you take over or fix an existing project another developer started?', a: 'Yes, we regularly step into existing codebases to fix bugs, finish incomplete features, or take over long-term maintenance.' },
+  { q: 'Do you work with clients in the USA, UK, and Europe?', a: 'Yes, we work with clients across the United States, United Kingdom, Germany, and the rest of Europe as our primary markets, with overlapping call hours and clear async communication throughout your project.' },
 ]
 
 export default function HireSoftwareDeveloper() {
   return (
     <PageWrapper>
       <Helmet>
-        <title>Hire a Software Developer | Custom Software Development – ZahrionTech</title>
+        <title>Hire a Software Developer in USA, UK & Europe – ZahrionTech</title>
         <meta
           name="description"
-          content="Need a software developer or software engineer for your project? ZahrionTech builds custom web, mobile, and desktop software with transparent pricing and full code ownership."
+          content="Need a software developer or software engineer in the USA, UK, Germany, or Europe? ZahrionTech builds custom web, mobile, and desktop software with transparent pricing."
         />
         <link rel="canonical" href="https://zahriontech.com/hire-software-developer" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zahriontech.com/hire-software-developer" />
-        <meta property="og:title" content="Hire a Software Developer – ZahrionTech" />
-        <meta property="og:description" content="Custom software development for startups and businesses — web, mobile, and desktop." />
+        <meta property="og:title" content="Hire a Software Developer in USA, UK & Europe – ZahrionTech" />
+        <meta property="og:description" content="Custom software development for USA, UK, and European startups and businesses." />
         <meta property="og:image" content="https://zahriontech.com/zahriontech-logo.png" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -51,8 +52,13 @@ export default function HireSoftwareDeveloper() {
             '@type': 'Service',
             serviceType: 'Custom Software Development',
             provider: { '@type': 'ProfessionalService', name: 'ZahrionTech', url: 'https://zahriontech.com' },
-            areaServed: 'Worldwide',
-            description: 'Custom software development services covering web, mobile, desktop, and backend engineering.',
+            areaServed: [
+              { '@type': 'Country', name: 'United States' },
+              { '@type': 'Country', name: 'United Kingdom' },
+              { '@type': 'Country', name: 'Germany' },
+              { '@type': 'Continent', name: 'Europe' },
+            ],
+            description: 'Custom software development services covering web, mobile, desktop, and backend engineering for clients in the USA, UK, Germany, and Europe.',
           })}
         </script>
         <script type="application/ld+json">
@@ -78,11 +84,12 @@ export default function HireSoftwareDeveloper() {
               Custom Software Development
             </span>
             <h1 className="font-poppins font-black text-4xl sm:text-5xl lg:text-6xl dark:text-white text-slate-900 leading-tight mb-6">
-              Need a Software Developer? <span className="gradient-text">We're Ready to Build.</span>
+              Need a Software Developer <span className="gradient-text">in the USA, UK, or Europe?</span>
             </h1>
             <p className="dark:text-slate-400 text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
               Whatever you're building — a website, mobile app, internal tool, or full software platform —
-              ZahrionTech's engineers turn your idea into working software, with transparent pricing and no lock-in.
+              ZahrionTech's engineers turn your idea into working software for clients across the United States,
+              UK, Germany, and Europe, with transparent pricing and no lock-in.
             </p>
             <div className="mt-10">
               <Link

@@ -28,22 +28,23 @@ const faqs = [
   { q: 'Do you build websites that rank on Google?', a: 'Yes. Every website we build is structured for SEO from day one — clean semantic HTML, fast load times, mobile optimization, and proper meta tags — so your site has a real chance to rank, not just look good.' },
   { q: 'Can you redesign or fix my existing website?', a: 'Yes, we take on redesigns, migrations, and bug fixes for existing sites in addition to building new ones from scratch.' },
   { q: 'What technologies do you use?', a: 'Primarily React and Next.js on the frontend, with Node.js, Express, or other backend stacks depending on your needs — chosen based on what fits your project best, not a one-size-fits-all template.' },
+  { q: 'Do you work with clients in the USA, UK, and Europe?', a: 'Yes, we regularly work with clients across the United States, United Kingdom, Germany, and the rest of Europe. We accommodate overlapping working hours for calls and keep communication async-friendly (email/Slack updates) so time zone differences don\u2019t slow down your project.' },
 ]
 
 export default function HireWebDeveloper() {
   return (
     <PageWrapper>
       <Helmet>
-        <title>Hire a Web Developer | Custom Website Development – ZahrionTech</title>
+        <title>Hire a Web Developer in USA, UK & Europe – ZahrionTech</title>
         <meta
           name="description"
-          content="Hire an experienced web developer to build a fast, custom, SEO-optimized website or web application. Transparent pricing, modern tech stack, ongoing support."
+          content="Hire an experienced web developer for your business in the USA, UK, Germany, or Europe. Fast, custom, SEO-optimized websites and web apps. Transparent pricing."
         />
         <link rel="canonical" href="https://zahriontech.com/hire-web-developer" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zahriontech.com/hire-web-developer" />
-        <meta property="og:title" content="Hire a Web Developer – ZahrionTech" />
-        <meta property="og:description" content="Custom website & web application development. Fast, SEO-friendly, built to scale." />
+        <meta property="og:title" content="Hire a Web Developer in USA, UK & Europe – ZahrionTech" />
+        <meta property="og:description" content="Custom website & web application development for USA, UK, and European businesses." />
         <meta property="og:image" content="https://zahriontech.com/zahriontech-logo.png" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -51,8 +52,13 @@ export default function HireWebDeveloper() {
             '@type': 'Service',
             serviceType: 'Web Development',
             provider: { '@type': 'ProfessionalService', name: 'ZahrionTech', url: 'https://zahriontech.com' },
-            areaServed: 'Worldwide',
-            description: 'Custom web development services including React and Next.js websites and web applications.',
+            areaServed: [
+              { '@type': 'Country', name: 'United States' },
+              { '@type': 'Country', name: 'United Kingdom' },
+              { '@type': 'Country', name: 'Germany' },
+              { '@type': 'Continent', name: 'Europe' },
+            ],
+            description: 'Custom web development services including React and Next.js websites and web applications for clients in the USA, UK, Germany, and Europe.',
           })}
         </script>
         <script type="application/ld+json">
@@ -78,10 +84,10 @@ export default function HireWebDeveloper() {
               Web Development
             </span>
             <h1 className="font-poppins font-black text-4xl sm:text-5xl lg:text-6xl dark:text-white text-slate-900 leading-tight mb-6">
-              Hire a Web Developer <span className="gradient-text">Who Builds for Results</span>
+              Hire a Web Developer <span className="gradient-text">in the USA, UK & Europe</span>
             </h1>
             <p className="dark:text-slate-400 text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
-              Whether you need a business website, an e-commerce store, or a custom web application,
+              Whether you're a business in the United States, the UK, Germany, or elsewhere in Europe,
               ZahrionTech's web developers build fast, SEO-friendly, mobile-ready sites using React and Next.js —
               designed to actually convert visitors into customers.
             </p>
