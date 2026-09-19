@@ -1,0 +1,313 @@
+// 50 US metro areas. Each entry carries genuinely distinct data so that every
+// generated city page has unique, useful content — NOT a doorway page.
+// Fields: slug, city, state, abbr, metro (metro area name), pop (metro population),
+// lat/lng, tz, econ (dominant local industries), districts (real business areas),
+// hook (one-line local context), demand (what local businesses actually ask us for)
+
+export const locations = [
+  { slug: 'new-york', city: 'New York', state: 'New York', abbr: 'NY', metro: 'New York–Newark–Jersey City', pop: '19.5M', lat: 40.7128, lng: -74.0060, tz: 'America/New_York',
+    econ: ['finance', 'media', 'fashion retail', 'hospitality', 'real estate'],
+    districts: ['Manhattan (Midtown & FiDi)', 'Brooklyn (DUMBO, Williamsburg)', 'Long Island City'],
+    hook: 'The densest small-business market in the country — and the most crowded search results, which is exactly why intent-specific pages beat generic ones here.',
+    demand: 'restaurant and bodega POS systems, boutique retail inventory, real-estate CRM portals, and fintech-adjacent dashboards' },
+
+  { slug: 'los-angeles', city: 'Los Angeles', state: 'California', abbr: 'CA', metro: 'Los Angeles–Long Beach–Anaheim', pop: '12.8M', lat: 34.0522, lng: -118.2437, tz: 'America/Los_Angeles',
+    econ: ['entertainment', 'apparel manufacturing', 'logistics', 'healthcare', 'tourism'],
+    districts: ['Downtown LA & the Fashion District', 'Santa Monica / Silicon Beach', 'Burbank & Glendale'],
+    hook: 'A sprawling metro where a single business often runs three locations 40 miles apart — multi-site software is the norm, not the exception.',
+    demand: 'multi-location POS, apparel and wholesale inventory systems, booking apps for studios and salons, and creator-economy platforms' },
+
+  { slug: 'chicago', city: 'Chicago', state: 'Illinois', abbr: 'IL', metro: 'Chicago–Naperville–Elgin', pop: '9.4M', lat: 41.8781, lng: -87.6298, tz: 'America/Chicago',
+    econ: ['logistics & freight', 'manufacturing', 'food service', 'insurance', 'trading'],
+    districts: ['The Loop', 'Fulton Market', 'Naperville & the western suburbs'],
+    hook: 'The national freight crossroads — which means warehouse, dispatch and inventory software carry unusual weight in this market.',
+    demand: 'warehouse and dispatch management, restaurant POS, manufacturing job-tracking, and insurance agency CRMs' },
+
+  { slug: 'dallas', city: 'Dallas', state: 'Texas', abbr: 'TX', metro: 'Dallas–Fort Worth–Arlington', pop: '8.1M', lat: 32.7767, lng: -96.7970, tz: 'America/Chicago',
+    econ: ['corporate HQs', 'construction', 'energy services', 'healthcare', 'telecom'],
+    districts: ['Uptown & Deep Ellum', 'Plano & Frisco corridor', 'Fort Worth / Alliance'],
+    hook: 'One of the fastest-growing metros in the US, with a constant stream of newly-incorporated businesses that need their first real system.',
+    demand: 'construction job-costing, HVAC and field-service scheduling, clinic management, and franchise-wide POS rollouts' },
+
+  { slug: 'houston', city: 'Houston', state: 'Texas', abbr: 'TX', metro: 'Houston–The Woodlands–Sugar Land', pop: '7.3M', lat: 29.7604, lng: -95.3698, tz: 'America/Chicago',
+    econ: ['energy', 'petrochemical', 'medical', 'shipping', 'aerospace'],
+    districts: ['Downtown & the Energy Corridor', 'Texas Medical Center', 'The Woodlands'],
+    hook: 'Home to the largest medical complex on earth, so HIPAA-aware software is a baseline requirement rather than an upsell here.',
+    demand: 'clinic and practice management, equipment/asset tracking for oilfield services, port logistics tools, and compliance dashboards' },
+
+  { slug: 'phoenix', city: 'Phoenix', state: 'Arizona', abbr: 'AZ', metro: 'Phoenix–Mesa–Chandler', pop: '5.1M', lat: 33.4484, lng: -112.0740, tz: 'America/Phoenix',
+    econ: ['semiconductors', 'construction', 'hospitality', 'senior care', 'call centers'],
+    districts: ['Downtown Phoenix', 'Scottsdale', 'Chandler & Tempe tech corridor'],
+    hook: 'A boom market for home services and senior care — two categories where scheduling and dispatch software directly decides revenue.',
+    demand: 'field-service dispatch, senior-care and home-health management, HOA and property software, and resort booking systems' },
+
+  { slug: 'philadelphia', city: 'Philadelphia', state: 'Pennsylvania', abbr: 'PA', metro: 'Philadelphia–Camden–Wilmington', pop: '6.2M', lat: 39.9526, lng: -75.1652, tz: 'America/New_York',
+    econ: ['healthcare', 'higher education', 'pharma', 'food service', 'legal'],
+    districts: ['Center City', 'University City', 'Navy Yard'],
+    hook: 'An "eds and meds" economy where universities and hospital networks anchor a long tail of specialist suppliers.',
+    demand: 'practice management, pharmacy POS, student and course management, and law-firm case tracking' },
+
+  { slug: 'san-antonio', city: 'San Antonio', state: 'Texas', abbr: 'TX', metro: 'San Antonio–New Braunfels', pop: '2.6M', lat: 29.4241, lng: -98.4936, tz: 'America/Chicago',
+    econ: ['military & defense', 'tourism', 'healthcare', 'cybersecurity', 'restaurants'],
+    districts: ['Downtown & the River Walk', 'Medical Center District', 'Stone Oak'],
+    hook: 'A heavy tourism corridor where restaurants and attractions live or die on booking and table-turn efficiency.',
+    demand: 'restaurant POS and reservations, tour/attraction ticketing, clinic systems, and secure internal tools for defense contractors' },
+
+  { slug: 'san-diego', city: 'San Diego', state: 'California', abbr: 'CA', metro: 'San Diego–Chula Vista–Carlsbad', pop: '3.3M', lat: 32.7157, lng: -117.1611, tz: 'America/Los_Angeles',
+    econ: ['biotech', 'defense', 'tourism', 'craft brewing', 'telecom'],
+    districts: ['Downtown & Gaslamp', 'Torrey Pines / UTC biotech cluster', 'Carlsbad'],
+    hook: 'A biotech and craft-beverage hub — two industries with unusually strict batch, lot and compliance tracking needs.',
+    demand: 'lab and sample tracking, brewery/taproom POS and production tracking, hotel booking engines, and research data portals' },
+
+  { slug: 'san-jose', city: 'San Jose', state: 'California', abbr: 'CA', metro: 'San Jose–Sunnyvale–Santa Clara', pop: '2.0M', lat: 37.3382, lng: -121.8863, tz: 'America/Los_Angeles',
+    econ: ['software', 'hardware', 'venture-backed startups', 'professional services'],
+    districts: ['Downtown San Jose', 'Santa Clara & Sunnyvale', 'Palo Alto / Mountain View edge'],
+    hook: 'The most technically demanding client base in the country — here the differentiator is engineering depth and clean architecture, not marketing.',
+    demand: 'MVPs for funded startups, internal developer tooling, API platforms, and AI feature integration' },
+
+  { slug: 'austin', city: 'Austin', state: 'Texas', abbr: 'TX', metro: 'Austin–Round Rock–Georgetown', pop: '2.5M', lat: 30.2672, lng: -97.7431, tz: 'America/Chicago',
+    econ: ['tech', 'live music & events', 'food trucks', 'semiconductors', 'real estate'],
+    districts: ['Downtown & East Austin', 'The Domain', 'Round Rock'],
+    hook: 'A startup-dense city where a huge number of businesses are under five years old and buying their first software stack right now.',
+    demand: 'SaaS MVPs, event and ticketing platforms, food-truck and small-venue POS, and real-estate CRMs' },
+
+  { slug: 'jacksonville', city: 'Jacksonville', state: 'Florida', abbr: 'FL', metro: 'Jacksonville', pop: '1.7M', lat: 30.3322, lng: -81.6557, tz: 'America/New_York',
+    econ: ['logistics & port', 'insurance', 'healthcare', 'military', 'retail'],
+    districts: ['Downtown & Southbank', 'Southside / Deerwood', 'JaxPort area'],
+    hook: 'A port and distribution economy where freight visibility and inventory accuracy are the main operational pain points.',
+    demand: 'warehouse management, freight tracking portals, insurance agency CRMs, and multi-site retail POS' },
+
+  { slug: 'columbus', city: 'Columbus', state: 'Ohio', abbr: 'OH', metro: 'Columbus', pop: '2.1M', lat: 39.9612, lng: -82.9988, tz: 'America/New_York',
+    econ: ['retail HQs', 'insurance', 'logistics', 'higher education', 'fintech'],
+    districts: ['Downtown & Short North', 'Easton', 'Dublin & Westerville'],
+    hook: 'A national test market for retail concepts, which makes clean e-commerce and inventory integration unusually valuable here.',
+    demand: 'e-commerce and omnichannel inventory, insurance workflows, campus/student systems, and fulfilment dashboards' },
+
+  { slug: 'charlotte', city: 'Charlotte', state: 'North Carolina', abbr: 'NC', metro: 'Charlotte–Concord–Gastonia', pop: '2.7M', lat: 35.2271, lng: -80.8431, tz: 'America/New_York',
+    econ: ['banking', 'energy', 'motorsports', 'construction', 'logistics'],
+    districts: ['Uptown', 'South End', 'Ballantyne'],
+    hook: 'The second-largest US banking centre, so audit trails, permissions and reporting expectations run higher than in comparable metros.',
+    demand: 'financial back-office tools, construction management, fleet and dealer systems, and compliance-grade reporting' },
+
+  { slug: 'san-francisco', city: 'San Francisco', state: 'California', abbr: 'CA', metro: 'San Francisco–Oakland–Berkeley', pop: '4.6M', lat: 37.7749, lng: -122.4194, tz: 'America/Los_Angeles',
+    econ: ['software & AI', 'venture capital', 'biotech', 'hospitality', 'professional services'],
+    districts: ['SoMa & Financial District', 'Mission', 'Oakland & the East Bay'],
+    hook: 'The highest concentration of AI-native product teams anywhere — clients here expect modern stacks and honest technical trade-offs.',
+    demand: 'AI-integrated products, SaaS MVPs, data platforms, and internal tooling for fast-scaling teams' },
+
+  { slug: 'indianapolis', city: 'Indianapolis', state: 'Indiana', abbr: 'IN', metro: 'Indianapolis–Carmel–Anderson', pop: '2.1M', lat: 39.7684, lng: -86.1581, tz: 'America/New_York',
+    econ: ['life sciences', 'logistics', 'motorsports', 'agriculture tech', 'manufacturing'],
+    districts: ['Downtown / Mile Square', 'Carmel & Fishers', 'Plainfield logistics corridor'],
+    hook: 'A major air-freight hub with a serious life-sciences cluster — a combination that rewards traceability-first software design.',
+    demand: 'warehouse and parcel systems, clinical and lab tools, manufacturing ERP, and dealer management' },
+
+  { slug: 'seattle', city: 'Seattle', state: 'Washington', abbr: 'WA', metro: 'Seattle–Tacoma–Bellevue', pop: '4.0M', lat: 47.6062, lng: -122.3321, tz: 'America/Los_Angeles',
+    econ: ['cloud & software', 'aerospace', 'coffee & food retail', 'maritime', 'biotech'],
+    districts: ['South Lake Union', 'Bellevue', 'Ballard & Fremont'],
+    hook: 'A cloud-first market where clients often arrive with an existing AWS or Azure footprint that new software has to slot into.',
+    demand: 'cloud-native backends, coffee and QSR POS, marine and logistics tools, and B2B SaaS builds' },
+
+  { slug: 'denver', city: 'Denver', state: 'Colorado', abbr: 'CO', metro: 'Denver–Aurora–Lakewood', pop: '3.0M', lat: 39.7392, lng: -104.9903, tz: 'America/Denver',
+    econ: ['aerospace', 'cannabis', 'outdoor recreation', 'energy', 'construction'],
+    districts: ['LoDo & RiNo', 'Denver Tech Center', 'Boulder corridor'],
+    hook: 'Heavily regulated cannabis and outdoor-rental businesses live here, both of which need seed-to-sale or asset-tracking logic off the shelf software rarely handles well.',
+    demand: 'compliance-tracking POS, rental and reservation systems, construction management, and field-service apps' },
+
+  { slug: 'washington-dc', city: 'Washington', state: 'District of Columbia', abbr: 'DC', metro: 'Washington–Arlington–Alexandria', pop: '6.3M', lat: 38.9072, lng: -77.0369, tz: 'America/New_York',
+    econ: ['government contracting', 'associations & nonprofits', 'legal', 'consulting', 'hospitality'],
+    districts: ['Downtown DC', 'Arlington & Crystal City', 'Bethesda & Tysons'],
+    hook: 'An association- and contractor-heavy economy where membership management, document workflow and access control dominate requirements.',
+    demand: 'membership and association CRMs, contract and proposal systems, secure document portals, and event platforms' },
+
+  { slug: 'boston', city: 'Boston', state: 'Massachusetts', abbr: 'MA', metro: 'Boston–Cambridge–Newton', pop: '4.9M', lat: 42.3601, lng: -71.0589, tz: 'America/New_York',
+    econ: ['biotech & pharma', 'higher education', 'healthcare', 'robotics', 'finance'],
+    districts: ['Seaport / Innovation District', 'Cambridge & Kendall Square', 'Route 128 corridor'],
+    hook: 'The world\u2019s densest biotech cluster, where data integrity and validated workflows matter more than shipping fast.',
+    demand: 'lab information systems, clinical trial tooling, university and course platforms, and research data portals' },
+
+  { slug: 'nashville', city: 'Nashville', state: 'Tennessee', abbr: 'TN', metro: 'Nashville–Davidson–Murfreesboro', pop: '2.1M', lat: 36.1627, lng: -86.7816, tz: 'America/Chicago',
+    econ: ['healthcare management', 'music & entertainment', 'hospitality', 'automotive', 'construction'],
+    districts: ['Downtown & Broadway', 'The Gulch', 'Franklin & Brentwood'],
+    hook: 'The headquarters city for US healthcare operators, plus a tourism strip that runs at full capacity most nights of the year.',
+    demand: 'healthcare operations software, bar and venue POS, booking and ticketing, and multi-unit franchise reporting' },
+
+  { slug: 'detroit', city: 'Detroit', state: 'Michigan', abbr: 'MI', metro: 'Detroit–Warren–Dearborn', pop: '4.3M', lat: 42.3314, lng: -83.0458, tz: 'America/New_York',
+    econ: ['automotive', 'manufacturing', 'mobility tech', 'logistics', 'healthcare'],
+    districts: ['Downtown & Midtown', 'Troy & Auburn Hills', 'Dearborn'],
+    hook: 'A supplier-chain economy where a mid-sized shop can have a hundred SKUs and three OEM customers with three different reporting formats.',
+    demand: 'manufacturing ERP and job tracking, supplier portals, dealership management, and quality/inspection systems' },
+
+  { slug: 'portland', city: 'Portland', state: 'Oregon', abbr: 'OR', metro: 'Portland–Vancouver–Hillsboro', pop: '2.5M', lat: 45.5152, lng: -122.6784, tz: 'America/Los_Angeles',
+    econ: ['semiconductors', 'athletic apparel', 'food & beverage', 'sustainability services', 'creative'],
+    districts: ['Pearl District', 'Hillsboro / Silicon Forest', 'Southeast Portland'],
+    hook: 'A city of independent makers and small-batch producers, where the winning software fits a 6-person operation rather than an enterprise.',
+    demand: 'small-batch production tracking, cafe and food-cart POS, DTC e-commerce, and wholesale order portals' },
+
+  { slug: 'las-vegas', city: 'Las Vegas', state: 'Nevada', abbr: 'NV', metro: 'Las Vegas–Henderson–Paradise', pop: '2.3M', lat: 36.1699, lng: -115.1398, tz: 'America/Los_Angeles',
+    econ: ['hospitality & gaming', 'conventions', 'food service', 'entertainment', 'construction'],
+    districts: ['The Strip & Paradise', 'Downtown / Fremont', 'Henderson & Summerlin'],
+    hook: 'A 24-hour hospitality economy where software has to handle peak load on a convention weekend without blinking.',
+    demand: 'hotel and restaurant POS, event/convention management, nightlife reservations, and high-volume booking engines' },
+
+  { slug: 'miami', city: 'Miami', state: 'Florida', abbr: 'FL', metro: 'Miami–Fort Lauderdale–Pompano Beach', pop: '6.1M', lat: 25.7617, lng: -80.1918, tz: 'America/New_York',
+    econ: ['international trade', 'real estate', 'hospitality', 'finance & crypto', 'logistics'],
+    districts: ['Brickell', 'Wynwood & Design District', 'Fort Lauderdale'],
+    hook: 'The gateway to Latin American trade — bilingual interfaces and multi-currency handling are routine requirements, not extras.',
+    demand: 'bilingual POS and CRM, import/export and trade portals, real-estate platforms, and hospitality booking systems' },
+
+  { slug: 'atlanta', city: 'Atlanta', state: 'Georgia', abbr: 'GA', metro: 'Atlanta–Sandy Springs–Alpharetta', pop: '6.3M', lat: 33.7490, lng: -84.3880, tz: 'America/New_York',
+    econ: ['payments & fintech', 'film production', 'logistics', 'healthcare', 'franchising'],
+    districts: ['Midtown & Downtown', 'Buckhead', 'Alpharetta / Technology Park'],
+    hook: 'Known as "Transaction Alley" — a huge share of US card payments route through this metro, so payment integration expertise is expected here.',
+    demand: 'payment-integrated POS, franchise management, film production scheduling, and logistics dashboards' },
+
+  { slug: 'minneapolis', city: 'Minneapolis', state: 'Minnesota', abbr: 'MN', metro: 'Minneapolis–St. Paul–Bloomington', pop: '3.7M', lat: 44.9778, lng: -93.2650, tz: 'America/Chicago',
+    econ: ['medical devices', 'retail HQs', 'agriculture', 'financial services', 'manufacturing'],
+    districts: ['Downtown Minneapolis', 'St. Paul', 'Bloomington & the southwest suburbs'],
+    hook: 'A medical-device capital where regulated documentation and device traceability shape how software gets specified.',
+    demand: 'device and inventory traceability, retail and wholesale systems, agricultural operations tools, and quality management' },
+
+  { slug: 'tampa', city: 'Tampa', state: 'Florida', abbr: 'FL', metro: 'Tampa–St. Petersburg–Clearwater', pop: '3.3M', lat: 27.9506, lng: -82.4572, tz: 'America/New_York',
+    econ: ['healthcare', 'finance back-office', 'tourism', 'marine', 'construction'],
+    districts: ['Downtown & Water Street', 'Westshore', 'St. Petersburg & Clearwater'],
+    hook: 'A fast-growing back-office hub with a large population of independent clinics and contractors going digital for the first time.',
+    demand: 'clinic and dental practice management, contractor estimating, marina and boat-rental booking, and restaurant POS' },
+
+  { slug: 'orlando', city: 'Orlando', state: 'Florida', abbr: 'FL', metro: 'Orlando–Kissimmee–Sanford', pop: '2.8M', lat: 28.5383, lng: -81.3792, tz: 'America/New_York',
+    econ: ['theme parks & tourism', 'simulation & training', 'hospitality', 'vacation rentals', 'events'],
+    districts: ['Downtown Orlando', 'International Drive', 'Lake Nona & Medical City'],
+    hook: 'Tourism volume here is extreme and seasonal, so booking systems must survive 10x traffic spikes without degrading.',
+    demand: 'vacation-rental management, attraction ticketing, hotel and restaurant POS, and high-load booking engines' },
+
+  { slug: 'st-louis', city: 'St. Louis', state: 'Missouri', abbr: 'MO', metro: 'St. Louis', pop: '2.8M', lat: 38.6270, lng: -90.1994, tz: 'America/Chicago',
+    econ: ['agriculture tech', 'healthcare', 'financial services', 'manufacturing', 'logistics'],
+    districts: ['Downtown & Cortex District', 'Clayton', 'Chesterfield'],
+    hook: 'A serious agtech and plant-science cluster sits alongside traditional manufacturing, creating demand for data-heavy operational tools.',
+    demand: 'agricultural data platforms, manufacturing ERP, healthcare operations, and distribution management' },
+
+  { slug: 'baltimore', city: 'Baltimore', state: 'Maryland', abbr: 'MD', metro: 'Baltimore–Columbia–Towson', pop: '2.8M', lat: 39.2904, lng: -76.6122, tz: 'America/New_York',
+    econ: ['healthcare & research', 'cybersecurity', 'port logistics', 'education', 'biotech'],
+    districts: ['Inner Harbor & Harbor East', 'Columbia & Howard County', 'Towson'],
+    hook: 'A cybersecurity corridor anchored by federal agencies — security review is often part of the buying process, not an afterthought.',
+    demand: 'secure internal portals, healthcare research tools, port and logistics systems, and education platforms' },
+
+  { slug: 'sacramento', city: 'Sacramento', state: 'California', abbr: 'CA', metro: 'Sacramento–Roseville–Folsom', pop: '2.4M', lat: 38.5816, lng: -121.4944, tz: 'America/Los_Angeles',
+    econ: ['state government', 'agriculture', 'healthcare', 'clean energy', 'education'],
+    districts: ['Downtown & Midtown', 'Roseville & Folsom', 'West Sacramento'],
+    hook: 'California\u2019s capital, where public-sector accessibility standards (WCAG, Section 508) routinely apply to private vendors too.',
+    demand: 'accessible public-facing portals, agricultural operations software, clinic systems, and permit/licensing workflows' },
+
+  { slug: 'pittsburgh', city: 'Pittsburgh', state: 'Pennsylvania', abbr: 'PA', metro: 'Pittsburgh', pop: '2.4M', lat: 40.4406, lng: -79.9959, tz: 'America/New_York',
+    econ: ['robotics & AI research', 'healthcare', 'advanced manufacturing', 'energy', 'education'],
+    districts: ['Downtown & Strip District', 'Oakland (universities)', 'Cranberry Township'],
+    hook: 'A robotics and AI research town layered on top of legacy manufacturing — clients often need modern software talking to 20-year-old machines.',
+    demand: 'machine data integration, manufacturing execution systems, healthcare tooling, and research platforms' },
+
+  { slug: 'raleigh', city: 'Raleigh', state: 'North Carolina', abbr: 'NC', metro: 'Raleigh–Cary', pop: '1.5M', lat: 35.7796, lng: -78.6382, tz: 'America/New_York',
+    econ: ['pharma & CRO', 'software', 'higher education', 'clean tech', 'analytics'],
+    districts: ['Downtown Raleigh', 'Research Triangle Park', 'Cary & Morrisville'],
+    hook: 'Research Triangle Park makes this an unusually technical small metro, with clients who read the architecture doc before signing.',
+    demand: 'clinical and CRO data tools, B2B SaaS, analytics dashboards, and university systems' },
+
+  { slug: 'kansas-city', city: 'Kansas City', state: 'Missouri', abbr: 'MO', metro: 'Kansas City', pop: '2.2M', lat: 39.0997, lng: -94.5786, tz: 'America/Chicago',
+    econ: ['animal health', 'logistics & rail', 'engineering services', 'agriculture', 'telecom'],
+    districts: ['Downtown & Crossroads', 'Overland Park', 'Country Club Plaza'],
+    hook: 'The global centre of the animal-health industry sits here, alongside one of the largest rail hubs in North America.',
+    demand: 'veterinary practice management, rail and freight systems, engineering project tracking, and agricultural software' },
+
+  { slug: 'salt-lake-city', city: 'Salt Lake City', state: 'Utah', abbr: 'UT', metro: 'Salt Lake City', pop: '1.3M', lat: 40.7608, lng: -111.8910, tz: 'America/Denver',
+    econ: ['SaaS ("Silicon Slopes")', 'outdoor gear', 'direct sales', 'finance', 'healthcare'],
+    districts: ['Downtown SLC', 'Lehi & Silicon Slopes', 'Sandy & Draper'],
+    hook: 'Silicon Slopes has produced an unusual density of SaaS companies for a metro this size, so B2B product expectations are high.',
+    demand: 'B2B SaaS products, subscription and billing systems, e-commerce for outdoor brands, and sales-team CRMs' },
+
+  { slug: 'columbus-ga', city: 'Cincinnati', state: 'Ohio', abbr: 'OH', metro: 'Cincinnati', pop: '2.3M', lat: 39.1031, lng: -84.5120, tz: 'America/New_York',
+    econ: ['consumer goods', 'logistics', 'aerospace', 'financial services', 'healthcare'],
+    districts: ['Downtown & Over-the-Rhine', 'Blue Ash', 'Northern Kentucky / CVG corridor'],
+    hook: 'A consumer-goods and air-cargo centre where supply chain visibility is the recurring theme in nearly every project brief.',
+    demand: 'supply-chain dashboards, retail and CPG inventory, air-freight tooling, and B2B ordering portals' },
+
+  { slug: 'milwaukee', city: 'Milwaukee', state: 'Wisconsin', abbr: 'WI', metro: 'Milwaukee–Waukesha', pop: '1.6M', lat: 43.0389, lng: -87.9065, tz: 'America/Chicago',
+    econ: ['industrial machinery', 'brewing & food', 'water technology', 'healthcare', 'finance'],
+    districts: ['Downtown & Third Ward', 'Waukesha', 'Menomonee Valley'],
+    hook: 'A machinery and food-production town where shop-floor software has to be usable with gloves on and spotty Wi-Fi.',
+    demand: 'manufacturing job tracking, food production and batch systems, distributor portals, and maintenance scheduling' },
+
+  { slug: 'oklahoma-city', city: 'Oklahoma City', state: 'Oklahoma', abbr: 'OK', metro: 'Oklahoma City', pop: '1.5M', lat: 35.4676, lng: -97.5164, tz: 'America/Chicago',
+    econ: ['energy', 'aviation maintenance', 'agriculture', 'healthcare', 'logistics'],
+    districts: ['Downtown & Bricktown', 'Edmond', 'Will Rogers / aviation corridor'],
+    hook: 'Energy services and aviation MRO dominate, both of which run on work orders, inspections and asset histories.',
+    demand: 'work-order and inspection systems, asset and equipment tracking, clinic software, and fleet management' },
+
+  { slug: 'richmond', city: 'Richmond', state: 'Virginia', abbr: 'VA', metro: 'Richmond', pop: '1.3M', lat: 37.5407, lng: -77.4360, tz: 'America/New_York',
+    econ: ['finance', 'government services', 'logistics', 'healthcare', 'advertising'],
+    districts: ['Downtown & Scott\u2019s Addition', 'Innsbrook', 'Midlothian'],
+    hook: 'A finance and government-services town with a growing independent-business scene in converted industrial districts.',
+    demand: 'financial back-office tools, government-adjacent portals, restaurant and brewery POS, and agency project systems' },
+
+  { slug: 'louisville', city: 'Louisville', state: 'Kentucky', abbr: 'KY', metro: 'Louisville/Jefferson County', pop: '1.4M', lat: 38.2527, lng: -85.7585, tz: 'America/New_York',
+    econ: ['air logistics', 'bourbon & beverage', 'healthcare & aging care', 'manufacturing', 'events'],
+    districts: ['Downtown & NuLu', 'Airport / UPS Worldport corridor', 'St. Matthews'],
+    hook: 'A global air-cargo hub next to a distilling industry with strict barrel, batch and excise tracking requirements.',
+    demand: 'parcel and warehouse systems, barrel/batch production tracking, senior-care management, and distributor portals' },
+
+  { slug: 'new-orleans', city: 'New Orleans', state: 'Louisiana', abbr: 'LA', metro: 'New Orleans–Metairie', pop: '1.3M', lat: 29.9511, lng: -90.0715, tz: 'America/Chicago',
+    econ: ['tourism & hospitality', 'port & shipping', 'energy services', 'events', 'healthcare'],
+    districts: ['French Quarter & CBD', 'Metairie', 'Port of New Orleans area'],
+    hook: 'Restaurants and event venues here operate at festival-level intensity for months at a time, which punishes fragile software.',
+    demand: 'restaurant and bar POS, event and catering management, port logistics tools, and hotel booking systems' },
+
+  { slug: 'hartford', city: 'Hartford', state: 'Connecticut', abbr: 'CT', metro: 'Hartford–East Hartford–Middletown', pop: '1.2M', lat: 41.7658, lng: -72.6734, tz: 'America/New_York',
+    econ: ['insurance', 'aerospace manufacturing', 'healthcare', 'education', 'defense'],
+    districts: ['Downtown Hartford', 'Farmington Valley', 'East Hartford aerospace corridor'],
+    hook: 'The insurance capital of the US, where claims workflow, audit logging and document handling define most project scopes.',
+    demand: 'insurance and claims workflow, agency CRMs, aerospace quality systems, and document management portals' },
+
+  { slug: 'buffalo', city: 'Buffalo', state: 'New York', abbr: 'NY', metro: 'Buffalo–Cheektowaga', pop: '1.2M', lat: 42.8864, lng: -78.8784, tz: 'America/New_York',
+    econ: ['healthcare & life sciences', 'cross-border trade', 'manufacturing', 'education', 'tourism'],
+    districts: ['Downtown & Canalside', 'Buffalo Niagara Medical Campus', 'Amherst'],
+    hook: 'A cross-border trade point with Canada, so customs paperwork and dual-currency handling turn up more often than you would expect.',
+    demand: 'cross-border logistics tools, medical campus systems, manufacturing tracking, and retail POS' },
+
+  { slug: 'memphis', city: 'Memphis', state: 'Tennessee', abbr: 'TN', metro: 'Memphis', pop: '1.3M', lat: 35.1495, lng: -90.0490, tz: 'America/Chicago',
+    econ: ['air cargo & logistics', 'medical devices', 'music & tourism', 'agriculture', 'distribution'],
+    districts: ['Downtown & Beale Street', 'Memphis International / cargo corridor', 'Germantown'],
+    hook: 'One of the busiest cargo airports on earth anchors a distribution economy where every hour of delay is measurable.',
+    demand: 'warehouse and parcel systems, cold-chain tracking, restaurant POS, and distributor ordering portals' },
+
+  { slug: 'birmingham', city: 'Birmingham', state: 'Alabama', abbr: 'AL', metro: 'Birmingham–Hoover', pop: '1.1M', lat: 33.5186, lng: -86.8104, tz: 'America/Chicago',
+    econ: ['healthcare & research', 'banking', 'steel & manufacturing', 'construction', 'automotive'],
+    districts: ['Downtown & UAB district', 'Hoover', 'Vestavia Hills'],
+    hook: 'A major academic medical centre sits at the centre of the economy, pulling a long tail of clinics and suppliers with it.',
+    demand: 'clinic and practice management, manufacturing tracking, construction estimating, and banking back-office tools' },
+
+  { slug: 'boise', city: 'Boise', state: 'Idaho', abbr: 'ID', metro: 'Boise City', pop: '800K', lat: 43.6150, lng: -116.2023, tz: 'America/Denver',
+    econ: ['semiconductors', 'agriculture', 'outdoor recreation', 'healthcare', 'construction'],
+    districts: ['Downtown Boise', 'Meridian', 'Nampa'],
+    hook: 'One of the fastest-growing small metros in the US, full of businesses that outgrew spreadsheets in the last 24 months.',
+    demand: 'first-time business management systems, agricultural operations software, contractor tools, and retail POS' },
+
+  { slug: 'omaha', city: 'Omaha', state: 'Nebraska', abbr: 'NE', metro: 'Omaha–Council Bluffs', pop: '975K', lat: 41.2565, lng: -95.9345, tz: 'America/Chicago',
+    econ: ['insurance & finance', 'agriculture', 'data centers', 'transportation', 'healthcare'],
+    districts: ['Downtown & Old Market', 'West Omaha', 'Council Bluffs'],
+    hook: 'An insurance and agribusiness centre with a surprisingly large data-center footprint feeding local technical demand.',
+    demand: 'insurance workflow tools, agricultural and commodity systems, trucking dispatch, and clinic management' },
+
+  { slug: 'albuquerque', city: 'Albuquerque', state: 'New Mexico', abbr: 'NM', metro: 'Albuquerque', pop: '925K', lat: 35.0844, lng: -106.6504, tz: 'America/Denver',
+    econ: ['national labs & defense', 'film production', 'healthcare', 'tourism', 'solar'],
+    districts: ['Downtown & Nob Hill', 'Rio Rancho', 'Sandia / lab corridor'],
+    hook: 'National-lab spillover creates a technical client base unusual for the metro size, alongside a growing film-production sector.',
+    demand: 'secure research and data tools, film production scheduling, clinic systems, and tourism booking platforms' },
+
+  { slug: 'tucson', city: 'Tucson', state: 'Arizona', abbr: 'AZ', metro: 'Tucson', pop: '1.05M', lat: 32.2226, lng: -110.9747, tz: 'America/Phoenix',
+    econ: ['aerospace & defense', 'optics', 'mining', 'healthcare', 'tourism'],
+    districts: ['Downtown & 4th Avenue', 'Oro Valley', 'UA Tech Park'],
+    hook: 'An optics and aerospace cluster ("Optics Valley") gives this metro a precision-manufacturing character most similar-sized cities lack.',
+    demand: 'precision manufacturing tracking, inspection and QA systems, clinic management, and resort booking' },
+]
+
+export const locationBySlug = Object.fromEntries(locations.map(l => [l.slug, l]))
+export const locationSlugs = locations.map(l => l.slug)
+
+// States rolled up for the /locations hub page
+export const statesServed = [...new Set(locations.map(l => l.state))].sort()
