@@ -25,13 +25,15 @@ const links = {
     { to: '/industries/healthcare-clinic-software', label: 'Clinic & Healthcare Software' },
   ],
   Locations: [
-    { to: '/locations', label: 'All US Locations' },
-    { to: '/software-development-company/new-york', label: 'New York, NY' },
-    { to: '/software-development-company/los-angeles', label: 'Los Angeles, CA' },
-    { to: '/software-development-company/chicago', label: 'Chicago, IL' },
-    { to: '/software-development-company/houston', label: 'Houston, TX' },
-    { to: '/software-development-company/austin', label: 'Austin, TX' },
-    { to: '/software-development-company/miami', label: 'Miami, FL' },
+    { to: '/locations', label: 'All Locations' },
+    { to: '/software-development-company/new-york', label: 'New York, USA' },
+    { to: '/software-development-company/austin', label: 'Austin, USA' },
+    { to: '/software-development-company/uae', label: 'UAE — Overview' },
+    { to: '/software-development-company/dubai', label: 'Dubai, UAE' },
+    { to: '/software-development-company/abu-dhabi', label: 'Abu Dhabi, UAE' },
+    { to: '/software-development-company/canada', label: 'Canada — Overview' },
+    { to: '/software-development-company/toronto', label: 'Toronto, Canada' },
+    { to: '/software-development-company/vancouver', label: 'Vancouver, Canada' },
   ],
 }
 

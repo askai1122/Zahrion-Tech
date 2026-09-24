@@ -17,6 +17,8 @@ export const staticRoutes = [
   { path: '/services', priority: '0.9', changefreq: 'monthly' },
   { path: '/industries', priority: '0.9', changefreq: 'weekly' },
   { path: '/locations', priority: '0.9', changefreq: 'weekly' },
+  { path: '/software-development-company/uae', priority: '0.95', changefreq: 'weekly' },
+  { path: '/software-development-company/canada', priority: '0.95', changefreq: 'weekly' },
   { path: '/hire-software-developer', priority: '0.9', changefreq: 'monthly' },
   { path: '/hire-web-developer', priority: '0.9', changefreq: 'monthly' },
   { path: '/hire-mobile-app-developer', priority: '0.9', changefreq: 'monthly' },

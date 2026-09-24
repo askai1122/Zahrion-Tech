@@ -22,6 +22,7 @@ import Locations from './pages/Locations'
 import CityPage from './pages/CityPage'
 import IndustriesHub from './pages/IndustriesHub'
 import IndustryPage from './pages/IndustryPage'
+import CountryPage from './pages/CountryPage'
 import NotFound from './pages/NotFound'
 
 export default function App() {
@@ -59,6 +60,8 @@ export default function App() {
             <Route path="/business-management-software" element={<BusinessManagementSoftware />} />
             <Route path="/hire-software-developer" element={<HireSoftwareDeveloper />} />
             <Route path="/locations" element={<Locations />} />
+            <Route path="/software-development-company/uae" element={<CountryPage country="UAE" />} />
+            <Route path="/software-development-company/canada" element={<CountryPage country="CA" />} />
             <Route path="/software-development-company/:citySlug" element={<CityPage />} />
             <Route path="/industries" element={<IndustriesHub />} />
             <Route path="/industries/:industrySlug" element={<IndustryPage />} />

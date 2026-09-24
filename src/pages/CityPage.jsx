@@ -8,6 +8,7 @@ import Seo, { faqSchema, serviceSchema, SITE } from '../components/Seo'
 import { locationBySlug, locations } from '../data/locations'
 import { services } from '../data/services'
 import { industries } from '../data/industries'
+import { countryInfo } from '../data/countries'
 
 const list = arr => {
   if (arr.length === 1) return arr[0]
@@ -19,9 +20,13 @@ export default function CityPage() {
   const loc = locationBySlug[citySlug]
   if (!loc) return <Navigate to="/locations" replace />
 
+  const ci = countryInfo(loc)
+  const isIntl = ci.code !== 'US'
+  const locationLabel = loc.country === 'UAE' ? `${loc.city}, ${ci.demonym}` : `${loc.city}, ${loc.abbr}`
+
   const path = `/software-development-company/${loc.slug}`
-  const title = `Software Development Company in ${loc.city}, ${loc.abbr} | Custom Software | ${'ZahrionTech'}`
-  const description = `Hire software developers in ${loc.city}, ${loc.state}. Custom software, web and mobile apps, POS, CRM and ERP development for ${loc.city} businesses. Transparent pricing, code you own.`
+  const title = `Software Development Company in ${locationLabel} | Custom Software | ZahrionTech`
+  const description = `Hire software developers in ${loc.city}, ${loc.state}, ${ci.name}. Custom software, web and mobile apps, POS, CRM and ERP development for ${loc.city} businesses. Transparent pricing, code you own.`
 
   const faqs = [
     {
@@ -30,7 +35,7 @@ export default function CityPage() {
     },
     {
       q: `What does custom software cost for a ${loc.city} business?`,
-      a: `It depends entirely on scope, and we quote before you commit. A focused internal tool or a single-location POS usually lands in the low five figures; a multi-module platform costs more and is normally phased so the first release is earning its keep before the next one starts. You will get a written breakdown by milestone rather than a single number with nothing behind it.`,
+      a: `It depends entirely on scope, and we quote in ${ci.currency} before you commit. A focused internal tool or a single-location POS is usually the smallest project size; a multi-module platform costs more and is normally phased so the first release is earning its keep before the next one starts. Quotes account for ${ci.taxNote} where it applies, and you get a written breakdown by milestone rather than a single number with nothing behind it.`,
     },
     {
       q: `Which industries in ${loc.city} do you build for?`,
@@ -41,18 +46,26 @@ export default function CityPage() {
       a: `Yes, completely. You receive the full source code, the repositories, and the deployment configuration. There is no per-seat licence, no lock-in, and no scenario where walking away from us costs you your software.`,
     },
     {
-      q: `Can you take over a project another developer started?`,
-      a: `Yes, and it is a large share of what we do. We start with a paid code audit so you get an honest assessment of what is salvageable before deciding whether to continue the existing codebase or rebuild the weakest parts.`,
+      q: isIntl ? `Do you handle ${ci.name}-specific compliance and data rules?` : `Can you take over a project another developer started?`,
+      a: isIntl
+        ? `Yes — we design with ${ci.complianceNote} in mind from the start where your business needs it, and we will flag anything that needs your own legal sign-off rather than guessing. We also take over projects another developer started, usually beginning with a paid code audit.`
+        : `Yes, and it is a large share of what we do. We start with a paid code audit so you get an honest assessment of what is salvageable before deciding whether to continue the existing codebase or rebuild the weakest parts.`,
+    },
+    {
+      q: `Do you work with ${loc.city} businesses remotely, or do you need to be local?`,
+      a: `Remotely, by design. We work with clients across ${ci.name} on scheduled calls in ${loc.city} business hours, so distance has no impact on communication — you get the same access to the engineers building your software whether you are five minutes away or on the other side of the country.`,
     },
     {
       q: `How do we start?`,
-      a: `A free discovery call. Tell us what you are trying to build or which process is currently costing you time, and we will come back with a recommended approach, a realistic timeline and a budget range — with no obligation to proceed.`,
+      a: `A free discovery call. Tell us what you are trying to build or which process is currently costing you time, and we will come back with a recommended approach, a realistic timeline and a budget range in ${ci.currency} — with no obligation to proceed.`,
     },
   ]
 
-  const nearby = locations
+  const countryKey = loc.country || 'US'
+  const sameCountry = locations.filter(l => (l.country || 'US') === countryKey)
+  const nearby = sameCountry
     .filter(l => l.slug !== loc.slug && l.state === loc.state)
-    .concat(locations.filter(l => l.slug !== loc.slug && l.state !== loc.state))
+    .concat(sameCountry.filter(l => l.slug !== loc.slug && l.state !== loc.state))
     .slice(0, 6)
 
   const featuredIndustries = industries.slice(0, 8)
@@ -63,20 +76,21 @@ export default function CityPage() {
         title={title}
         description={description}
         path={path}
+        hreflang={ci.hreflang}
         breadcrumbs={[
           { name: 'Home', path: '/' },
           { name: 'Locations', path: '/locations' },
-          { name: `${loc.city}, ${loc.abbr}`, path },
+          { name: locationLabel, path },
         ]}
         schema={[
           serviceSchema({
-            name: `Custom Software Development in ${loc.city}, ${loc.abbr}`,
+            name: `Custom Software Development in ${locationLabel}`,
             description,
             path,
             areaServed: {
               '@type': 'City',
               name: loc.city,
-              containedInPlace: { '@type': 'State', name: loc.state },
+              containedInPlace: { '@type': 'State', name: loc.state, containedInPlace: { '@type': 'Country', name: ci.name } },
             },
           }),
           {
@@ -85,8 +99,10 @@ export default function CityPage() {
             name: `ZahrionTech — Software Development for ${loc.city}`,
             url: `${SITE}${path}`,
             image: `${SITE}/zahriontech-logo.png`,
-            areaServed: { '@type': 'City', name: `${loc.city}, ${loc.abbr}` },
+            areaServed: { '@type': 'City', name: loc.city, containedInPlace: { '@type': 'Country', name: ci.name } },
+            address: { '@type': 'PostalAddress', addressLocality: loc.city, addressRegion: loc.state, addressCountry: ci.code },
             geo: { '@type': 'GeoCoordinates', latitude: loc.lat, longitude: loc.lng },
+            currenciesAccepted: ci.currency,
             priceRange: '$$',
           },
           faqSchema(faqs),
@@ -99,11 +115,11 @@ export default function CityPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono dark:bg-brand-500/10 bg-brand-50 dark:text-brand-400 text-brand-600 dark:border-brand-500/20 border-brand-200 border mb-6">
-              <MapPin size={12} /> {loc.city}, {loc.abbr} · {loc.metro}
+              <MapPin size={12} /> {locationLabel} · {loc.metro}
             </span>
             <h1 className="font-poppins font-black text-4xl sm:text-5xl lg:text-6xl dark:text-white text-slate-900 leading-tight mb-6">
               Software Development Company in{' '}
-              <span className="gradient-text">{loc.city}, {loc.abbr}</span>
+              <span className="gradient-text">{locationLabel}</span>
             </h1>
             <p className="dark:text-slate-400 text-slate-600 text-lg max-w-3xl mx-auto leading-relaxed">
               {loc.hook} We build custom software, websites, mobile apps, POS systems and internal tools

@@ -21,6 +21,7 @@ export default function Seo({
   schema = [],
   breadcrumbs = [],
   noindex = false,
+  hreflang = null,
 }) {
   const url = `${SITE}${path === '/' ? '/' : path}`
   const blocks = Array.isArray(schema) ? schema : [schema]
@@ -44,6 +45,7 @@ export default function Seo({
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
       <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1'} />
+      {hreflang && <link rel="alternate" hrefLang={hreflang} href={url} />}
 
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content={BRAND} />

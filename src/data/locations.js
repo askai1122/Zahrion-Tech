@@ -304,6 +304,147 @@ export const locations = [
     districts: ['Downtown & 4th Avenue', 'Oro Valley', 'UA Tech Park'],
     hook: 'An optics and aerospace cluster ("Optics Valley") gives this metro a precision-manufacturing character most similar-sized cities lack.',
     demand: 'precision manufacturing tracking, inspection and QA systems, clinic management, and resort booking' },
+
+  // ───────────────────── United Arab Emirates ─────────────────────
+  // abbr holds the emirate's short form; state holds the emirate's full name.
+  { slug: 'dubai', city: 'Dubai', state: 'Dubai', abbr: 'DXB', country: 'UAE', metro: 'Dubai', pop: '3.7M', lat: 25.2048, lng: 55.2708, tz: 'Asia/Dubai',
+    econ: ['trade & logistics', 'real estate', 'tourism & hospitality', 'fintech', 'e-commerce'],
+    districts: ['Business Bay & DIFC', 'Dubai Internet City / Media City', 'JLT & Downtown Dubai'],
+    hook: 'The commercial capital of the Gulf, where a huge share of trading and e-commerce businesses are digital-first from day one and expect software to match that pace.',
+    demand: 'e-commerce and trade platforms, real-estate CRM and listing portals, restaurant and retail POS, and fintech-adjacent dashboards' },
+
+  { slug: 'abu-dhabi', city: 'Abu Dhabi', state: 'Abu Dhabi', abbr: 'AUH', country: 'UAE', metro: 'Abu Dhabi', pop: '1.7M', lat: 24.4539, lng: 54.3773, tz: 'Asia/Dubai',
+    econ: ['government & public sector', 'energy', 'financial services', 'healthcare', 'media (twofour54)'],
+    districts: ['Abu Dhabi Global Market (ADGM)', 'Khalifa City', 'Al Reem Island'],
+    hook: 'The seat of federal government and ADGM\u2019s financial free zone, where procurement and data-residency requirements shape most enterprise software briefs.',
+    demand: 'government-adjacent portals, financial back-office tools, clinic and hospital systems, and energy-sector reporting dashboards' },
+
+  { slug: 'sharjah', city: 'Sharjah', state: 'Sharjah', abbr: 'SHJ', country: 'UAE', metro: 'Sharjah', pop: '1.8M', lat: 25.3463, lng: 55.4209, tz: 'Asia/Dubai',
+    econ: ['manufacturing', 'publishing & media', 'education', 'logistics', 'SME retail'],
+    districts: ['Sharjah Media City (Shams)', 'Industrial Area', 'Al Majaz'],
+    hook: 'The UAE\u2019s manufacturing and SME base, with lower operating costs than Dubai driving a steady stream of first-time software buyers.',
+    demand: 'manufacturing job tracking, retail and wholesale POS, school management software, and warehouse inventory systems' },
+
+  { slug: 'ajman', city: 'Ajman', state: 'Ajman', abbr: 'AJM', country: 'UAE', metro: 'Ajman', pop: '540K', lat: 25.4052, lng: 55.5136, tz: 'Asia/Dubai',
+    econ: ['SME trade', 'light manufacturing', 'real estate', 'free zone businesses'],
+    districts: ['Ajman Free Zone', 'Al Nuaimiya', 'Ajman Corniche'],
+    hook: 'The most affordable emirate to set up in, which pulls in a constant wave of newly-licensed free zone companies buying their first business system.',
+    demand: 'starter POS and inventory systems, trade and import/export tools, and lightweight CRM for growing SMEs' },
+
+  { slug: 'ras-al-khaimah', city: 'Ras Al Khaimah', state: 'Ras Al Khaimah', abbr: 'RAK', country: 'UAE', metro: 'Ras Al Khaimah', pop: '415K', lat: 25.7895, lng: 55.9432, tz: 'Asia/Dubai',
+    econ: ['manufacturing & ceramics', 'tourism', 'RAKEZ free zone businesses', 'construction'],
+    districts: ['RAKEZ (RAK Economic Zone)', 'Al Hamra', 'RAK City'],
+    hook: 'A manufacturing and tourism emirate anchored by RAKEZ, one of the region\u2019s largest and most cost-competitive free zones.',
+    demand: 'manufacturing and production tracking, resort and hospitality booking, and free-zone compliant business management software' },
+
+  { slug: 'fujairah', city: 'Fujairah', state: 'Fujairah', abbr: 'FUJ', country: 'UAE', metro: 'Fujairah', pop: '256K', lat: 25.1288, lng: 56.3265, tz: 'Asia/Dubai',
+    econ: ['port & bunkering', 'oil storage & logistics', 'tourism', 'trade'],
+    districts: ['Port of Fujairah', 'Fujairah Free Zone', 'Dibba'],
+    hook: 'The only emirate on the Gulf of Oman coast, built around one of the world\u2019s busiest bunkering ports.',
+    demand: 'port and freight logistics software, fuel and inventory tracking, and hospitality booking systems' },
+
+  { slug: 'al-ain', city: 'Al Ain', state: 'Abu Dhabi', abbr: 'AAN', country: 'UAE', metro: 'Al Ain', pop: '766K', lat: 24.2075, lng: 55.7447, tz: 'Asia/Dubai',
+    econ: ['agriculture', 'education', 'tourism', 'public sector', 'SME retail'],
+    districts: ['Al Ain city centre', 'Al Foah', 'Al Ain Industrial Area'],
+    hook: 'The Abu Dhabi emirate\u2019s inland garden city, with an agriculture and education base that generic Gulf software rarely addresses well.',
+    demand: 'agricultural operations software, school and training-centre management, and retail POS' },
+
+  { slug: 'umm-al-quwain', city: 'Umm Al Quwain', state: 'Umm Al Quwain', abbr: 'UAQ', country: 'UAE', metro: 'Umm Al Quwain', pop: '90K', lat: 25.5647, lng: 55.5532, tz: 'Asia/Dubai',
+    econ: ['fishing & marine trade', 'free zone manufacturing', 'tourism'],
+    districts: ['UAQ Free Trade Zone', 'Old Town', 'Al Salamah'],
+    hook: 'The smallest and quietest emirate, popular with light manufacturers for its low-cost UAQ Free Trade Zone licensing.',
+    demand: 'small-business inventory systems, marine trade tools, and free-zone manufacturing tracking' },
+
+  // ───────────────────────────── Canada ─────────────────────────────
+  { slug: 'toronto', city: 'Toronto', state: 'Ontario', abbr: 'ON', country: 'CA', metro: 'Greater Toronto Area', pop: '6.4M', lat: 43.6532, lng: -79.3832, tz: 'America/Toronto',
+    econ: ['finance', 'technology', 'media', 'life sciences', 'professional services'],
+    districts: ['Financial District', 'King West & Liberty Village', 'North York & Mississauga'],
+    hook: 'Canada\u2019s financial and tech capital, where fintech-adjacent compliance and enterprise integration expectations run higher than anywhere else in the country.',
+    demand: 'fintech and back-office tools, SaaS MVPs, retail and restaurant POS, and CRM/ERP integration for mid-market firms' },
+
+  { slug: 'vancouver', city: 'Vancouver', state: 'British Columbia', abbr: 'BC', country: 'CA', metro: 'Metro Vancouver', pop: '2.6M', lat: 49.2827, lng: -123.1207, tz: 'America/Vancouver',
+    econ: ['technology', 'film & media', 'real estate', 'tourism', 'clean tech'],
+    districts: ['Yaletown & Gastown', 'Mount Pleasant', 'Burnaby & Surrey tech corridor'],
+    hook: 'A film-production and clean-tech hub with a growing startup scene that leans heavily on lean, fast-shipping software partners.',
+    demand: 'SaaS MVPs, production scheduling tools, real-estate platforms, and hospitality booking systems' },
+
+  { slug: 'montreal', city: 'Montreal', state: 'Quebec', abbr: 'QC', country: 'CA', metro: 'Greater Montreal', pop: '4.3M', lat: 45.5019, lng: -73.5674, tz: 'America/Toronto',
+    econ: ['AI research', 'aerospace', 'gaming', 'manufacturing', 'creative industries'],
+    districts: ['Ville-Marie / Downtown', 'Mile End', 'Saint-Laurent (aerospace corridor)'],
+    hook: 'A bilingual market and one of the world\u2019s leading AI research clusters — French-language interfaces are a default requirement here, not an add-on.',
+    demand: 'bilingual (French/English) web and mobile apps, AI-integrated products, manufacturing tracking, and game/creative production tools' },
+
+  { slug: 'calgary', city: 'Calgary', state: 'Alberta', abbr: 'AB', country: 'CA', metro: 'Calgary', pop: '1.7M', lat: 51.0447, lng: -114.0719, tz: 'America/Edmonton',
+    econ: ['energy', 'logistics', 'construction', 'agri-business', 'professional services'],
+    districts: ['Downtown Calgary', 'Beltline', 'Quarry Park'],
+    hook: 'An energy-sector economy that has been actively diversifying into tech and logistics, producing a steady stream of operationally-minded software buyers.',
+    demand: 'field-service and dispatch software, construction job costing, energy asset tracking, and logistics dashboards' },
+
+  { slug: 'ottawa', city: 'Ottawa', state: 'Ontario', abbr: 'ON', country: 'CA', metro: 'Ottawa–Gatineau', pop: '1.5M', lat: 45.4215, lng: -75.6972, tz: 'America/Toronto',
+    econ: ['government', 'technology (Kanata tech corridor)', 'telecom', 'higher education', 'defence'],
+    districts: ['Kanata North (Silicon Valley North)', 'Downtown / ByWard Market', 'Gatineau (Quebec side)'],
+    hook: 'Canada\u2019s capital and a serious tech corridor in its own right, where security clearance and bilingual federal requirements come up often.',
+    demand: 'secure internal portals, government-adjacent systems, telecom and B2B SaaS, and bilingual public-facing platforms' },
+
+  { slug: 'edmonton', city: 'Edmonton', state: 'Alberta', abbr: 'AB', country: 'CA', metro: 'Edmonton', pop: '1.5M', lat: 53.5461, lng: -113.4938, tz: 'America/Edmonton',
+    econ: ['energy', 'public sector', 'agriculture', 'logistics', 'healthcare'],
+    districts: ['Downtown Edmonton', 'Refinery Row', 'South Edmonton / Nisku'],
+    hook: 'An energy and logistics hub next to a major refining corridor, where asset tracking and compliance reporting are constant themes.',
+    demand: 'asset and equipment tracking, agricultural operations software, clinic management, and logistics/warehouse systems' },
+
+  { slug: 'winnipeg', city: 'Winnipeg', state: 'Manitoba', abbr: 'MB', country: 'CA', metro: 'Winnipeg', pop: '850K', lat: 49.8951, lng: -97.1384, tz: 'America/Winnipeg',
+    econ: ['agriculture & agribusiness', 'manufacturing', 'transportation', 'insurance', 'aerospace'],
+    districts: ['Downtown Winnipeg', 'St. Boniface', 'CentrePort logistics area'],
+    hook: 'A rail and trucking crossroads at the centre of the continent, with an agribusiness base that runs on tight seasonal deadlines.',
+    demand: 'agricultural and commodity tracking, freight and dispatch software, manufacturing ERP, and insurance workflow tools' },
+
+  { slug: 'quebec-city', city: 'Quebec City', state: 'Quebec', abbr: 'QC', country: 'CA', metro: 'Quebec City', pop: '840K', lat: 46.8139, lng: -71.2080, tz: 'America/Toronto',
+    econ: ['insurance', 'public sector', 'tourism', 'life sciences', 'video games'],
+    districts: ['Vieux-Québec / Downtown', 'Sainte-Foy', 'Lebourgneuf tech corridor'],
+    hook: 'An overwhelmingly French-speaking capital where product copy, support and checkout flows need to work in French first, English second.',
+    demand: 'French-first e-commerce and booking systems, insurance software, tourism platforms, and clinic management' },
+
+  { slug: 'hamilton', city: 'Hamilton', state: 'Ontario', abbr: 'ON', country: 'CA', metro: 'Hamilton', pop: '785K', lat: 43.2557, lng: -79.8711, tz: 'America/Toronto',
+    econ: ['manufacturing & steel', 'healthcare', 'logistics', 'construction', 'retail'],
+    districts: ['Downtown Hamilton', 'Stoney Creek', 'Ancaster'],
+    hook: 'A manufacturing city rebuilding around healthcare and logistics, with a large base of shops still running on spreadsheets.',
+    demand: 'manufacturing job tracking, warehouse and inventory systems, construction estimating, and clinic scheduling' },
+
+  { slug: 'kitchener-waterloo', city: 'Kitchener-Waterloo', state: 'Ontario', abbr: 'ON', country: 'CA', metro: 'Kitchener-Cambridge-Waterloo', pop: '575K', lat: 43.4516, lng: -80.4925, tz: 'America/Toronto',
+    econ: ['technology & startups', 'insurance', 'advanced manufacturing', 'higher education'],
+    districts: ['Downtown Kitchener / Innovation District', 'Uptown Waterloo', 'Cambridge'],
+    hook: 'Home to one of Canada\u2019s densest startup ecosystems, built around two major universities producing a steady stream of technical founders.',
+    demand: 'SaaS MVPs, manufacturing execution systems, insurance tooling, and university-adjacent platforms' },
+
+  { slug: 'london-ontario', city: 'London', state: 'Ontario', abbr: 'ON', country: 'CA', metro: 'London', pop: '555K', lat: 42.9849, lng: -81.2453, tz: 'America/Toronto',
+    econ: ['healthcare & research', 'insurance', 'manufacturing', 'agriculture', 'education'],
+    districts: ['Downtown London', 'Masonville', 'White Oaks'],
+    hook: 'A hospital-and-university anchored economy where clinic software and research tooling see steady, unglamorous demand.',
+    demand: 'clinic and practice management, insurance back-office tools, agricultural software, and manufacturing tracking' },
+
+  { slug: 'halifax', city: 'Halifax', state: 'Nova Scotia', abbr: 'NS', country: 'CA', metro: 'Halifax', pop: '480K', lat: 44.6488, lng: -63.5752, tz: 'America/Halifax',
+    econ: ['port & shipping', 'defence', 'higher education', 'tourism', 'fisheries'],
+    districts: ['Downtown Halifax', 'Dartmouth', 'Bedford'],
+    hook: 'Atlantic Canada\u2019s largest port city, where logistics visibility and seasonal tourism booking dominate the software conversation.',
+    demand: 'port and freight logistics tools, fisheries and cold-chain tracking, hospitality booking, and university systems' },
+
+  { slug: 'victoria', city: 'Victoria', state: 'British Columbia', abbr: 'BC', country: 'CA', metro: 'Greater Victoria', pop: '440K', lat: 48.4284, lng: -123.3656, tz: 'America/Vancouver',
+    econ: ['public sector (provincial government)', 'tourism', 'technology', 'marine industries'],
+    districts: ['Downtown Victoria', 'Saanich', 'Langford'],
+    hook: 'British Columbia\u2019s provincial capital, where government-adjacent accessibility standards routinely apply to vendors serving public bodies.',
+    demand: 'accessible public-facing portals, tourism and booking platforms, marine trade tools, and small-business POS' },
+
+  { slug: 'saskatoon', city: 'Saskatoon', state: 'Saskatchewan', abbr: 'SK', country: 'CA', metro: 'Saskatoon', pop: '350K', lat: 52.1332, lng: -106.6700, tz: 'America/Regina',
+    econ: ['agriculture & agtech', 'mining (potash & uranium)', 'biotechnology', 'construction'],
+    districts: ['Downtown Saskatoon', 'Stonebridge', 'Sutherland Industrial'],
+    hook: 'A prairie agtech and mining centre where field data, yield tracking and equipment maintenance drive most software conversations.',
+    demand: 'agricultural data and yield-tracking platforms, mining asset and safety software, and construction management tools' },
+
+  { slug: 'mississauga', city: 'Mississauga', state: 'Ontario', abbr: 'ON', country: 'CA', metro: 'Greater Toronto Area', pop: '720K', lat: 43.5890, lng: -79.6441, tz: 'America/Toronto',
+    econ: ['logistics & distribution', 'corporate HQs', 'aviation (Pearson corridor)', 'manufacturing', 'retail'],
+    districts: ['City Centre', 'Airport Corporate Centre', 'Meadowvale'],
+    hook: 'A logistics and distribution powerhouse built around Pearson Airport, home to more corporate head offices per capita than almost anywhere in Canada.',
+    demand: 'warehouse and distribution software, air-freight tracking, multi-site retail POS, and B2B ordering portals' },
 ]
 
 export const locationBySlug = Object.fromEntries(locations.map(l => [l.slug, l]))

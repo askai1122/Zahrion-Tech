@@ -39,8 +39,8 @@ export default function Home() {
   return (
     <PageWrapper>
       <Seo
-        title="Custom Software Development Company in the USA | ZahrionTech"
-        description="ZahrionTech builds custom software for US businesses — web and mobile apps, POS systems, CRM, ERP, CMS and business management software. 50+ metros served. Fixed quotes, code you own."
+        title="Custom Software Development Company — USA, UAE & Canada | ZahrionTech"
+        description="ZahrionTech builds custom software for businesses across the USA, UAE and Canada — web and mobile apps, POS systems, CRM, ERP, CMS and business management software. 70+ cities served."
         path="/"
         schema={{
           '@context': 'https://schema.org',
@@ -49,7 +49,11 @@ export default function Home() {
           url: 'https://zahriontech.com',
           image: 'https://zahriontech.com/zahriontech-logo.png',
           priceRange: '$$',
-          areaServed: { '@type': 'Country', name: 'United States' },
+          areaServed: [
+            { '@type': 'Country', name: 'United States' },
+            { '@type': 'Country', name: 'United Arab Emirates' },
+            { '@type': 'Country', name: 'Canada' },
+          ],
           hasOfferCatalog: {
             '@type': 'OfferCatalog',
             name: 'Software Development Services',
@@ -307,15 +311,23 @@ export default function Home() {
             </div>
             <div>
               <h2 className="font-display font-bold text-2xl dark:text-white text-slate-900 mb-2">
-                Serving businesses across the US
+                Serving businesses in the USA, UAE & Canada
               </h2>
               <p className="dark:text-slate-400 text-slate-600 text-sm mb-5 leading-relaxed">
-                Remote delivery with calls scheduled in your local business hours, in {locations.length}+ metro areas.
+                Remote delivery with calls scheduled in your local business hours, in {locations.length}+ cities across three countries.
               </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <Link to="/software-development-company/uae" className="px-3 py-1.5 rounded-lg bg-brand-500/10 text-xs dark:text-brand-400 text-brand-600 font-medium border dark:border-brand-500/30 border-brand-200">
+                  🇦🇪 UAE Overview
+                </Link>
+                <Link to="/software-development-company/canada" className="px-3 py-1.5 rounded-lg bg-brand-500/10 text-xs dark:text-brand-400 text-brand-600 font-medium border dark:border-brand-500/30 border-brand-200">
+                  🇨🇦 Canada Overview
+                </Link>
+              </div>
               <div className="flex flex-wrap gap-2">
                 {locations.slice(0, 24).map(l => (
                   <Link key={l.slug} to={`/software-development-company/${l.slug}`} className="px-3 py-1.5 rounded-lg glass text-xs dark:text-slate-300 text-slate-700 dark:hover:text-brand-400 hover:text-brand-500 transition-colors border dark:border-white/5 border-slate-200">
-                    {l.city}, {l.abbr}
+                    {l.city}
                   </Link>
                 ))}
                 <Link to="/locations" className="px-3 py-1.5 rounded-lg text-xs dark:text-brand-400 text-brand-600 font-medium border dark:border-brand-500/30 border-brand-200">

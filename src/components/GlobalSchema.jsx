@@ -19,8 +19,8 @@ export default function GlobalSchema() {
           'Custom software development agency building web applications, mobile apps, POS systems, CRM, ERP and business management software for clients across the United States.',
         areaServed: [
           { '@type': 'Country', name: 'United States' },
-          { '@type': 'Country', name: 'United Kingdom' },
-          { '@type': 'Country', name: 'Germany' },
+          { '@type': 'Country', name: 'United Arab Emirates' },
+          { '@type': 'Country', name: 'Canada' },
         ],
         knowsAbout: [
           'Custom software development',
