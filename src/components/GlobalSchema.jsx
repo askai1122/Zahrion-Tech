@@ -20,6 +20,7 @@ export default function GlobalSchema() {
         areaServed: [
           { '@type': 'Country', name: 'United States' },
           { '@type': 'Country', name: 'United Arab Emirates' },
+          { '@type': 'Country', name: 'United Kingdom' },
           { '@type': 'Country', name: 'Canada' },
         ],
         knowsAbout: [

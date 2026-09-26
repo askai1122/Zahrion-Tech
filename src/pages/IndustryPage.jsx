@@ -16,9 +16,10 @@ export default function IndustryPage() {
   const path = `/industries/${ind.slug}`
   const others = industries.filter(i => i.slug !== ind.slug).slice(0, 8)
   const topCities = [
-    ...locations.filter(l => (l.country || 'US') === 'US').slice(0, 8),
-    ...locations.filter(l => l.country === 'UAE').slice(0, 4),
-    ...locations.filter(l => l.country === 'CA').slice(0, 4),
+    ...locations.filter(l => (l.country || 'US') === 'US').slice(0, 6),
+    ...locations.filter(l => l.country === 'UAE').slice(0, 3),
+    ...locations.filter(l => l.country === 'UK').slice(0, 3),
+    ...locations.filter(l => l.country === 'CA').slice(0, 3),
   ]
 
   return (
@@ -125,7 +126,7 @@ export default function IndustryPage() {
       <section className="py-16 dark:bg-slate-900/50 bg-slate-100/50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display font-semibold dark:text-white text-slate-900 text-xl mb-6">
-            Available across the USA, UAE & Canada
+            Available across the USA, UAE, UK & Canada
           </h2>
           <div className="flex flex-wrap gap-2 justify-center">
             {topCities.map(c => (

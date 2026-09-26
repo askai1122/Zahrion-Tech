@@ -39,8 +39,8 @@ export default function Home() {
   return (
     <PageWrapper>
       <Seo
-        title="Custom Software Development Company — USA, UAE & Canada | ZahrionTech"
-        description="ZahrionTech builds custom software for businesses across the USA, UAE and Canada — web and mobile apps, POS systems, CRM, ERP, CMS and business management software. 70+ cities served."
+        title="Custom Software Development Company — USA, UAE, UK & Canada | ZahrionTech"
+        description="ZahrionTech builds custom software for businesses across the USA, UAE (Dubai), UK and Canada — web and mobile apps, POS systems, CRM, ERP, CMS and business management software. 80+ cities served."
         path="/"
         schema={{
           '@context': 'https://schema.org',
@@ -52,6 +52,7 @@ export default function Home() {
           areaServed: [
             { '@type': 'Country', name: 'United States' },
             { '@type': 'Country', name: 'United Arab Emirates' },
+            { '@type': 'Country', name: 'United Kingdom' },
             { '@type': 'Country', name: 'Canada' },
           ],
           hasOfferCatalog: {
@@ -81,7 +82,7 @@ export default function Home() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono dark:bg-white/5 bg-slate-100 dark:text-slate-300 text-slate-600 dark:border-white/10 border-slate-200 border mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            Serving clients across the USA, UK & Europe
+            Serving clients across the USA, UAE, UK & Canada
           </motion.div>
 
           <motion.h1
@@ -102,7 +103,7 @@ export default function Home() {
             className="dark:text-slate-400 text-slate-600 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
           >
             From concept to deployment — we craft high-performance websites, mobile apps,
-            and enterprise software for businesses across the USA, UK, Germany, and Europe.
+            and enterprise software for businesses across the USA, UAE, UK, and Canada.
           </motion.p>
 
           <motion.div
@@ -311,7 +312,7 @@ export default function Home() {
             </div>
             <div>
               <h2 className="font-display font-bold text-2xl dark:text-white text-slate-900 mb-2">
-                Serving businesses in the USA, UAE & Canada
+                Serving businesses in the USA, UAE, UK & Canada
               </h2>
               <p className="dark:text-slate-400 text-slate-600 text-sm mb-5 leading-relaxed">
                 Remote delivery with calls scheduled in your local business hours, in {locations.length}+ cities across three countries.
@@ -319,6 +320,9 @@ export default function Home() {
               <div className="flex flex-wrap gap-2 mb-4">
                 <Link to="/software-development-company/uae" className="px-3 py-1.5 rounded-lg bg-brand-500/10 text-xs dark:text-brand-400 text-brand-600 font-medium border dark:border-brand-500/30 border-brand-200">
                   🇦🇪 UAE Overview
+                </Link>
+                <Link to="/software-development-company/uk" className="px-3 py-1.5 rounded-lg bg-brand-500/10 text-xs dark:text-brand-400 text-brand-600 font-medium border dark:border-brand-500/30 border-brand-200">
+                  🇬🇧 UK Overview
                 </Link>
                 <Link to="/software-development-company/canada" className="px-3 py-1.5 rounded-lg bg-brand-500/10 text-xs dark:text-brand-400 text-brand-600 font-medium border dark:border-brand-500/30 border-brand-200">
                   🇨🇦 Canada Overview

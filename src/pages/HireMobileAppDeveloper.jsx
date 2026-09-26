@@ -28,23 +28,23 @@ const faqs = [
   { q: 'How long does it take to build a mobile app?', a: 'A simple MVP app usually takes 4-8 weeks. Apps with more complex features (payments, real-time chat, backend dashboards) can take 10-16 weeks. You get a clear timeline before we start.' },
   { q: 'Will you publish the app to the App Store and Play Store for me?', a: 'Yes, publishing and store submission (including handling review feedback) is part of our mobile app development service.' },
   { q: 'Can you add a backend/admin dashboard to manage the app?', a: 'Yes. We build the backend API and an admin dashboard alongside the mobile app when needed, so you can manage users, content, and data from one place.' },
-  { q: 'Do you work with clients in the USA, UK, and Europe?', a: 'Yes, we regularly build apps for clients across the United States, United Kingdom, Germany, and the rest of Europe, with overlapping call hours and clear async updates throughout the project.' },
+  { q: 'Do you work with clients in the USA, UAE, UK, and Canada?', a: 'Yes, we regularly build apps for clients across the United States, the United Arab Emirates, the United Kingdom, and Canada, with overlapping call hours and clear async updates throughout the project.' },
 ]
 
 export default function HireMobileAppDeveloper() {
   return (
     <PageWrapper>
       <Helmet>
-        <title>Hire a Mobile App Developer in USA, UK & Europe – ZahrionTech</title>
+        <title>Hire a Mobile App Developer in the USA, UAE, UK & Canada – ZahrionTech</title>
         <meta
           name="description"
-          content="Hire a mobile app developer for your business in the USA, UK, Germany, or Europe. Build your iOS and Android app with Flutter or React Native, App Store publishing included."
+          content="Hire a mobile app developer for your business in the USA, UAE, UK, or Canada. Build your iOS and Android app with Flutter or React Native, App Store publishing included."
         />
         <link rel="canonical" href="https://zahriontech.com/hire-mobile-app-developer" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zahriontech.com/hire-mobile-app-developer" />
-        <meta property="og:title" content="Hire a Mobile App Developer in USA, UK & Europe – ZahrionTech" />
-        <meta property="og:description" content="iOS & Android app development for USA, UK, and European businesses." />
+        <meta property="og:title" content="Hire a Mobile App Developer in the USA, UAE, UK & Canada – ZahrionTech" />
+        <meta property="og:description" content="iOS & Android app development for businesses across the USA, UAE, UK, and Canada." />
         <meta property="og:image" content="https://zahriontech.com/zahriontech-logo.png" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -54,11 +54,11 @@ export default function HireMobileAppDeveloper() {
             provider: { '@type': 'ProfessionalService', name: 'ZahrionTech', url: 'https://zahriontech.com' },
             areaServed: [
               { '@type': 'Country', name: 'United States' },
+              { '@type': 'Country', name: 'United Arab Emirates' },
               { '@type': 'Country', name: 'United Kingdom' },
-              { '@type': 'Country', name: 'Germany' },
-              { '@type': 'Continent', name: 'Europe' },
+              { '@type': 'Country', name: 'Canada' },
             ],
-            description: 'iOS and Android mobile app development using Flutter and React Native for clients in the USA, UK, Germany, and Europe.',
+            description: 'iOS and Android mobile app development using Flutter and React Native for clients in the USA, UAE, UK, and Canada.',
           })}
         </script>
         <script type="application/ld+json">
@@ -84,10 +84,10 @@ export default function HireMobileAppDeveloper() {
               Mobile App Development
             </span>
             <h1 className="font-poppins font-black text-4xl sm:text-5xl lg:text-6xl dark:text-white text-slate-900 leading-tight mb-6">
-              Hire a Mobile App Developer <span className="gradient-text">in the USA, UK & Europe</span>
+              Hire a Mobile App Developer <span className="gradient-text">in the USA, UAE, UK & Canada</span>
             </h1>
             <p className="dark:text-slate-400 text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
-              Serving businesses in the United States, UK, Germany, and across Europe — from MVP to full-featured app,
+              Serving businesses in the United States, the UAE, the UK, and Canada — from MVP to full-featured app,
               ZahrionTech's mobile developers build smooth, native-quality iOS and Android apps with Flutter and
               React Native, and take care of App Store publishing too.
             </p>

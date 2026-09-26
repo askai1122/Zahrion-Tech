@@ -28,23 +28,23 @@ const faqs = [
   { q: 'Can you connect the backend to our existing app or website?', a: 'Yes. We regularly integrate new backends with existing frontends, mobile apps, or third-party platforms without requiring a full rebuild.' },
   { q: 'Do you handle hosting and deployment?', a: 'Yes, we deploy to cloud platforms like AWS, Railway, or DigitalOcean and can also manage ongoing hosting and monitoring if you prefer not to handle it in-house.' },
   { q: 'Is Node.js good for scaling as our user base grows?', a: 'Yes, Node.js is well suited for handling high-concurrency workloads and scales well when the architecture is designed properly from the start \u2014 which is part of what we plan for in the architecture phase.' },
-  { q: 'Do you work with clients in the USA, UK, and Europe?', a: 'Yes, we regularly build backends for clients across the United States, United Kingdom, Germany, and the rest of Europe, with overlapping working hours for calls and clear async communication throughout.' },
+  { q: 'Do you work with clients in the USA, UAE, UK, and Canada?', a: 'Yes, we regularly build backends for clients across the United States, the United Arab Emirates, the United Kingdom, and Canada, with overlapping working hours for calls and clear async communication throughout.' },
 ]
 
 export default function HireNodeJsDeveloper() {
   return (
     <PageWrapper>
       <Helmet>
-        <title>Hire a Node.js Developer in USA, UK & Europe – ZahrionTech</title>
+        <title>Hire a Node.js Developer in the USA, UAE, UK & Canada – ZahrionTech</title>
         <meta
           name="description"
-          content="Hire an experienced Node.js developer for your business in the USA, UK, Germany, or Europe. Secure, scalable backend and API development, cloud deployment included."
+          content="Hire an experienced Node.js developer for your business in the USA, UAE, UK, or Canada. Secure, scalable backend and API development, cloud deployment included."
         />
         <link rel="canonical" href="https://zahriontech.com/hire-nodejs-developer" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zahriontech.com/hire-nodejs-developer" />
-        <meta property="og:title" content="Hire a Node.js Developer in USA, UK & Europe – ZahrionTech" />
-        <meta property="og:description" content="Scalable Node.js backend and API development for USA, UK, and European businesses." />
+        <meta property="og:title" content="Hire a Node.js Developer in the USA, UAE, UK & Canada – ZahrionTech" />
+        <meta property="og:description" content="Scalable Node.js backend and API development for businesses across the USA, UAE, UK, and Canada." />
         <meta property="og:image" content="https://zahriontech.com/zahriontech-logo.png" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -54,11 +54,11 @@ export default function HireNodeJsDeveloper() {
             provider: { '@type': 'ProfessionalService', name: 'ZahrionTech', url: 'https://zahriontech.com' },
             areaServed: [
               { '@type': 'Country', name: 'United States' },
+              { '@type': 'Country', name: 'United Arab Emirates' },
               { '@type': 'Country', name: 'United Kingdom' },
-              { '@type': 'Country', name: 'Germany' },
-              { '@type': 'Continent', name: 'Europe' },
+              { '@type': 'Country', name: 'Canada' },
             ],
-            description: 'Node.js backend, REST/GraphQL API development, and cloud deployment services for clients in the USA, UK, Germany, and Europe.',
+            description: 'Node.js backend, REST/GraphQL API development, and cloud deployment services for clients in the USA, UAE, UK, and Canada.',
           })}
         </script>
         <script type="application/ld+json">
@@ -84,11 +84,11 @@ export default function HireNodeJsDeveloper() {
               Backend Development
             </span>
             <h1 className="font-poppins font-black text-4xl sm:text-5xl lg:text-6xl dark:text-white text-slate-900 leading-tight mb-6">
-              Hire a Node.js Developer <span className="gradient-text">in the USA, UK & Europe</span>
+              Hire a Node.js Developer <span className="gradient-text">in the USA, UAE, UK & Canada</span>
             </h1>
             <p className="dark:text-slate-400 text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
               Power your website, mobile app, or platform with a secure, well-architected Node.js backend.
-              We work with businesses across the United States, UK, Germany, and Europe, building APIs,
+              We work with businesses across the United States, the UAE, the UK, and Canada, building APIs,
               databases, and integrations that stay reliable as your user base grows.
             </p>
             <div className="mt-10">

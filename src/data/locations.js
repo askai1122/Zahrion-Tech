@@ -445,6 +445,55 @@ export const locations = [
     districts: ['City Centre', 'Airport Corporate Centre', 'Meadowvale'],
     hook: 'A logistics and distribution powerhouse built around Pearson Airport, home to more corporate head offices per capita than almost anywhere in Canada.',
     demand: 'warehouse and distribution software, air-freight tracking, multi-site retail POS, and B2B ordering portals' },
+
+  // ─────────────────────────── United Kingdom ───────────────────────────
+  { slug: 'london', city: 'London', state: 'Greater London', abbr: 'LDN', country: 'UK', metro: 'Greater London', pop: '9.6M', lat: 51.5072, lng: -0.1276, tz: 'Europe/London',
+    econ: ['finance', 'professional services', 'fintech', 'media', 'hospitality'],
+    districts: ['City of London & Canary Wharf', 'Shoreditch / Tech City', 'West End'],
+    hook: 'A global financial centre and Europe\u2019s densest fintech cluster, where enterprise integration and compliance expectations run higher than almost anywhere else in the UK.',
+    demand: 'fintech and back-office tools, hospitality and restaurant POS, real-estate platforms, and SaaS MVPs for funded startups' },
+
+  { slug: 'manchester', city: 'Manchester', state: 'Greater Manchester', abbr: 'MCR', country: 'UK', metro: 'Greater Manchester', pop: '2.8M', lat: 53.4808, lng: -2.2426, tz: 'Europe/London',
+    econ: ['digital & media', 'retail', 'logistics', 'higher education', 'financial services'],
+    districts: ['MediaCityUK / Salford Quays', 'Northern Quarter', 'City Centre'],
+    hook: 'The UK\u2019s second tech hub outside London, with a media and digital-agency base that expects fast, modern delivery over enterprise process.',
+    demand: 'SaaS MVPs, retail and e-commerce platforms, logistics dashboards, and university-adjacent systems' },
+
+  { slug: 'birmingham-uk', city: 'Birmingham', state: 'West Midlands', abbr: 'BHX', country: 'UK', metro: 'West Midlands', pop: '2.9M', lat: 52.4862, lng: -1.8904, tz: 'Europe/London',
+    econ: ['manufacturing', 'automotive', 'logistics', 'financial & professional services', 'retail'],
+    districts: ['City Centre & Colmore Business District', 'Digbeth', 'Solihull / automotive corridor'],
+    hook: 'The industrial heart of England, where manufacturing and automotive supply chains still run on processes a generic system rarely fits cleanly.',
+    demand: 'manufacturing job tracking, automotive supplier portals, warehouse systems, and retail POS' },
+
+  { slug: 'edinburgh', city: 'Edinburgh', state: 'Scotland', abbr: 'EDI', country: 'UK', metro: 'Edinburgh', pop: '900K', lat: 55.9533, lng: -3.1883, tz: 'Europe/London',
+    econ: ['financial services', 'fintech', 'higher education', 'tourism', 'life sciences'],
+    districts: ['New Town / Financial District', 'Leith', 'Old Town'],
+    hook: 'Scotland\u2019s financial capital and a growing fintech scene, with a tourism season intense enough to punish fragile booking systems.',
+    demand: 'fintech back-office tools, hospitality and tourism booking platforms, and university systems' },
+
+  { slug: 'bristol', city: 'Bristol', state: 'South West England', abbr: 'BRS', country: 'UK', metro: 'Bristol', pop: '700K', lat: 51.4545, lng: -2.5879, tz: 'Europe/London',
+    econ: ['aerospace', 'creative & media', 'technology', 'higher education', 'financial services'],
+    districts: ['Temple Quarter', 'Clifton', 'Harbourside'],
+    hook: 'An aerospace and creative-tech cluster with an unusually strong independent studio scene for a city this size.',
+    demand: 'aerospace supplier tracking, creative production tools, SaaS MVPs, and retail e-commerce' },
+
+  { slug: 'leeds', city: 'Leeds', state: 'West Yorkshire', abbr: 'LDS', country: 'UK', metro: 'Leeds City Region', pop: '2.4M', lat: 53.8008, lng: -1.5491, tz: 'Europe/London',
+    econ: ['financial & legal services', 'manufacturing', 'retail', 'healthcare', 'logistics'],
+    districts: ['City Centre / Financial Quarter', 'Holbeck / South Bank', 'Leeds Dock'],
+    hook: 'The largest financial and legal centre outside London, with a manufacturing base still running large parts of its operation on paper.',
+    demand: 'financial back-office tools, legal case management, manufacturing tracking, and retail POS' },
+
+  { slug: 'glasgow', city: 'Glasgow', state: 'Scotland', abbr: 'GLA', country: 'UK', metro: 'Greater Glasgow', pop: '1.85M', lat: 55.8642, lng: -4.2518, tz: 'Europe/London',
+    econ: ['manufacturing & engineering', 'financial services', 'life sciences', 'creative industries', 'renewable energy'],
+    districts: ['City Centre', 'Finnieston', 'Clyde Waterfront'],
+    hook: 'Scotland\u2019s largest economy, blending heavy engineering heritage with a growing renewable-energy and life-sciences sector.',
+    demand: 'engineering and manufacturing tracking, lab and research tools, renewable-asset monitoring, and financial workflow software' },
+
+  { slug: 'liverpool', city: 'Liverpool', state: 'Merseyside', abbr: 'LIV', country: 'UK', metro: 'Liverpool City Region', pop: '1.6M', lat: 53.4084, lng: -2.9916, tz: 'Europe/London',
+    econ: ['port & logistics', 'tourism & culture', 'manufacturing', 'healthcare', 'creative industries'],
+    districts: ['City Centre & Baltic Triangle', 'Liverpool Waters', 'Knowledge Quarter'],
+    hook: 'A major port city with a booming tourism and culture economy running alongside a modernising logistics sector.',
+    demand: 'port and freight logistics software, tourism and event booking platforms, and retail POS' },
 ]
 
 export const locationBySlug = Object.fromEntries(locations.map(l => [l.slug, l]))

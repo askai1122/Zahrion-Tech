@@ -41,13 +41,28 @@ const COPY = {
       { q: 'Do you only work with businesses in Toronto and Vancouver?', a: 'No — we work across every province, from Halifax to Victoria. Everything is delivered remotely with calls scheduled in your time zone, so being outside a major hub changes nothing about how the project runs.' },
     ],
   },
+  UK: {
+    heading: 'Software Development Company in the UK',
+    keyword: 'software development company UK',
+    intro:
+      'Custom software, web and mobile apps, POS systems, CRM and ERP builds for businesses across London, Manchester, Birmingham, Edinburgh and every region in between — delivered remotely with calls scheduled in UK business hours.',
+    marketNote:
+      'UK buyers tend to be cautious about outsourced software after being burned by agencies that disappear after launch or hand over code they cannot actually maintain. We quote fixed prices by milestone, hand over full source code with no lock-in, and are upfront about what a build will and will not include before you commit to anything.',
+    faqs: [
+      { q: 'Do you charge in GBP?', a: 'Yes, we quote in GBP for UK clients. Quotes account for 20% UK VAT where it applies, and the breakdown is itemised by milestone rather than a single lump figure.' },
+      { q: 'How do you handle UK GDPR and data protection?', a: 'We design with UK GDPR and the Data Protection Act 2018 in mind from the start — access control, encryption, audit logging and data retention rules — and flag anything that needs sign-off from your own Data Protection Officer.' },
+      { q: 'Will you disappear after launch like our last agency?', a: 'No. You get full source code ownership on day one, not just at the end of a support contract, and post-launch maintenance is optional rather than something you are locked into to keep the software working.' },
+      { q: 'Which UK industries do you have the most experience in?', a: 'Retail and hospitality POS, fintech and financial back-office tools, logistics and manufacturing systems, and healthcare/clinic software — see the industry pages below for what a typical build includes in each.' },
+      { q: 'Do you work with businesses outside London?', a: 'Yes — Manchester, Birmingham, Edinburgh, Bristol, Leeds, Glasgow and Liverpool are all covered, alongside every other UK city. Everything is remote, with calls scheduled in UK business hours regardless of where you are based.' },
+    ],
+  },
 }
 
 export default function CountryPage({ country }) {
   const ci = COUNTRY_INFO[country]
   const copy = COPY[country]
   const cities = locations.filter(l => (l.country || 'US') === country)
-  const slug = country === 'UAE' ? 'uae' : 'canada'
+  const slug = { UAE: 'uae', CA: 'canada', UK: 'uk' }[country]
   const path = `/software-development-company/${slug}`
   const title = `${copy.heading} | Custom Software, POS, CRM & ERP | ZahrionTech`
   const description = `ZahrionTech builds custom software for businesses across ${ci.name} — web and mobile apps, POS systems, CRM, ERP and business management software. ${cities.length} cities served.`

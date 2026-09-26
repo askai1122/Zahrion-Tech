@@ -27,7 +27,7 @@ const faqs = [
   { q: 'How much does it cost to hire a dedicated Python developer?', a: 'US-based freelance Python rates typically range $65-$120/hour depending on specialization, but working with an agency on a fixed-scope project is usually more predictable. We quote a fixed price after understanding your requirements, so there are no hourly-rate surprises.' },
   { q: 'Do you build with Django or Flask?', a: 'Both — we pick based on your project. Django suits larger applications needing built-in admin panels and structure out of the box; Flask suits lighter, more flexible APIs and microservices. We\u2019ll recommend the right fit during the discovery call.' },
   { q: 'Can a Python developer automate our manual business processes?', a: 'Yes. Python is one of the best languages for automating repetitive tasks — report generation, data entry, file processing, scraping, and connecting tools together via APIs. Many of our US small-business clients start here before building a full application.' },
-  { q: 'Do you work with startups and small businesses in the USA?', a: 'Yes, US startups and small businesses are our primary focus, alongside clients in the UK, Germany, and the rest of Europe. We accommodate US working hours for calls and keep async communication clear throughout.' },
+  { q: 'Do you work with startups and small businesses in the USA?', a: 'Yes, US startups and small businesses are our primary focus, alongside clients in the UAE, UK, and Canada. We accommodate overlapping working hours for calls and keep async communication clear throughout.' },
 ]
 
 export default function HirePythonDeveloper() {
@@ -53,11 +53,11 @@ export default function HirePythonDeveloper() {
             provider: { '@type': 'ProfessionalService', name: 'ZahrionTech', url: 'https://zahriontech.com' },
             areaServed: [
               { '@type': 'Country', name: 'United States' },
+              { '@type': 'Country', name: 'United Arab Emirates' },
               { '@type': 'Country', name: 'United Kingdom' },
-              { '@type': 'Country', name: 'Germany' },
-              { '@type': 'Continent', name: 'Europe' },
+              { '@type': 'Country', name: 'Canada' },
             ],
-            description: 'Python development services including Django and Flask web applications, automation, and API integrations for clients in the USA, UK, Germany, and Europe.',
+            description: 'Python development services including Django and Flask web applications, automation, and API integrations for clients in the USA, UAE, UK, and Canada.',
           })}
         </script>
         <script type="application/ld+json">
@@ -88,7 +88,7 @@ export default function HirePythonDeveloper() {
             <p className="dark:text-slate-400 text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
               From Django and Flask web applications to automation scripts that save your team hours every week —
               our dedicated Python developers build reliable, production-ready code for startups and small
-              businesses across the USA, UK, Germany, and Europe.
+              businesses across the USA, the UAE, the UK, and Canada.
             </p>
             <div className="mt-10">
               <Link

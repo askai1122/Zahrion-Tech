@@ -22,7 +22,7 @@ export default function CityPage() {
 
   const ci = countryInfo(loc)
   const isIntl = ci.code !== 'US'
-  const locationLabel = loc.country === 'UAE' ? `${loc.city}, ${ci.demonym}` : `${loc.city}, ${loc.abbr}`
+  const locationLabel = (loc.country === 'UAE' || loc.country === 'UK') ? `${loc.city}, ${ci.demonym}` : `${loc.city}, ${loc.abbr}`
 
   const path = `/software-development-company/${loc.slug}`
   const title = `Software Development Company in ${locationLabel} | Custom Software | ZahrionTech`

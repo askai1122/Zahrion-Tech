@@ -44,7 +44,7 @@ export default function POSSoftwareDevelopment() {
         <title>Custom POS Software Development for Retail, Restaurants & Pharmacies – ZahrionTech</title>
         <meta
           name="description"
-          content="Custom POS software development for retail, restaurant, pharmacy, and supermarket businesses in the USA, UK, and Europe. Billing, inventory, and multi-location support built around how you operate."
+          content="Custom POS software development for retail, restaurant, pharmacy, and supermarket businesses in the USA, UAE, UK, and Canada. Billing, inventory, and multi-location support built around how you operate."
         />
         <link rel="canonical" href="https://zahriontech.com/pos-software-development" />
         <meta property="og:type" content="website" />
@@ -60,9 +60,9 @@ export default function POSSoftwareDevelopment() {
             provider: { '@type': 'ProfessionalService', name: 'ZahrionTech', url: 'https://zahriontech.com' },
             areaServed: [
               { '@type': 'Country', name: 'United States' },
+              { '@type': 'Country', name: 'United Arab Emirates' },
               { '@type': 'Country', name: 'United Kingdom' },
-              { '@type': 'Country', name: 'Germany' },
-              { '@type': 'Continent', name: 'Europe' },
+              { '@type': 'Country', name: 'Canada' },
             ],
             description: 'Custom point-of-sale (POS) and billing software development for retail, restaurant, pharmacy, and supermarket businesses.',
           })}
@@ -95,7 +95,7 @@ export default function POSSoftwareDevelopment() {
             <p className="dark:text-slate-400 text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
               Whether you run a retail store, restaurant, pharmacy, or supermarket, we build point-of-sale and
               billing systems that match your exact workflow — not a rigid template — for businesses across the
-              USA, UK, and Europe.
+              USA, the UAE, the UK, and Canada.
             </p>
             <div className="mt-10">
               <Link

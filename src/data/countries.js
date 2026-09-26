@@ -36,6 +36,17 @@ export const COUNTRY_INFO = {
     hreflang: 'en-CA',
     flag: '🇨🇦',
   },
+  UK: {
+    code: 'GB',
+    name: 'United Kingdom',
+    demonym: 'UK',
+    currency: 'GBP',
+    symbol: '£',
+    taxNote: '20% UK VAT',
+    complianceNote: 'UK GDPR and the Data Protection Act 2018 where relevant',
+    hreflang: 'en-GB',
+    flag: '🇬🇧',
+  },
 }
 
 export const countryInfo = loc => COUNTRY_INFO[loc.country || 'US']

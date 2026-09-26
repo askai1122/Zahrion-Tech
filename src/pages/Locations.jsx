@@ -7,7 +7,7 @@ import Seo from '../components/Seo'
 import { locations } from '../data/locations'
 import { COUNTRY_INFO } from '../data/countries'
 
-const COUNTRY_ORDER = ['US', 'UAE', 'CA']
+const COUNTRY_ORDER = ['US', 'UAE', 'UK', 'CA']
 
 export default function Locations() {
   const byCountry = locations.reduce((acc, l) => {
@@ -19,8 +19,8 @@ export default function Locations() {
   return (
     <PageWrapper>
       <Seo
-        title="Software Development Company — USA, UAE & Canada | ZahrionTech"
-        description="ZahrionTech builds custom software, websites, mobile apps, POS, CRM and ERP systems for businesses across the United States, the UAE and Canada. Find your city."
+        title="Software Development Company — USA, UAE, UK & Canada | ZahrionTech"
+        description="ZahrionTech builds custom software, websites, mobile apps, POS, CRM and ERP systems for businesses across the United States, the UAE (Dubai), the UK and Canada. Find your city."
         path="/locations"
         breadcrumbs={[{ name: 'Home', path: '/' }, { name: 'Locations', path: '/locations' }]}
         schema={{
@@ -41,13 +41,13 @@ export default function Locations() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono dark:bg-brand-500/10 bg-brand-50 dark:text-brand-400 text-brand-600 dark:border-brand-500/20 border-brand-200 border mb-6">
-              <MapPin size={12} /> Three Countries, {locations.length} Cities
+              <MapPin size={12} /> Four Countries, {locations.length} Cities
             </span>
             <h1 className="font-poppins font-black text-4xl sm:text-5xl lg:text-6xl dark:text-white text-slate-900 leading-tight mb-6">
-              Serving Businesses in the <span className="gradient-text">USA, UAE & Canada</span>
+              Serving Businesses in the <span className="gradient-text">USA, UAE, UK & Canada</span>
             </h1>
             <p className="dark:text-slate-400 text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
-              We work remotely with clients across three countries, with calls scheduled in your local
+              We work remotely with clients across four countries, with calls scheduled in your local
               business hours. Pick your country, then your city.
             </p>
           </motion.div>

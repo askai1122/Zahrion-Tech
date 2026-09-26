@@ -62,6 +62,7 @@ export default function App() {
             <Route path="/locations" element={<Locations />} />
             <Route path="/software-development-company/uae" element={<CountryPage country="UAE" />} />
             <Route path="/software-development-company/canada" element={<CountryPage country="CA" />} />
+            <Route path="/software-development-company/uk" element={<CountryPage country="UK" />} />
             <Route path="/software-development-company/:citySlug" element={<CityPage />} />
             <Route path="/industries" element={<IndustriesHub />} />
             <Route path="/industries/:industrySlug" element={<IndustryPage />} />

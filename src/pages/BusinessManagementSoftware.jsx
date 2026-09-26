@@ -44,7 +44,7 @@ export default function BusinessManagementSoftware() {
         <title>Custom Business Management Software – Schools, Hospitals, Hotels – ZahrionTech</title>
         <meta
           name="description"
-          content="Custom business management software for schools, hospitals, clinics, hotels, and warehouses in the USA, UK, and Europe. Built around how your organization actually operates."
+          content="Custom business management software for schools, hospitals, clinics, hotels, and warehouses in the USA, UAE, UK, and Canada. Built around how your organization actually operates."
         />
         <link rel="canonical" href="https://zahriontech.com/business-management-software" />
         <meta property="og:type" content="website" />
@@ -60,9 +60,9 @@ export default function BusinessManagementSoftware() {
             provider: { '@type': 'ProfessionalService', name: 'ZahrionTech', url: 'https://zahriontech.com' },
             areaServed: [
               { '@type': 'Country', name: 'United States' },
+              { '@type': 'Country', name: 'United Arab Emirates' },
               { '@type': 'Country', name: 'United Kingdom' },
-              { '@type': 'Country', name: 'Germany' },
-              { '@type': 'Continent', name: 'Europe' },
+              { '@type': 'Country', name: 'Canada' },
             ],
             description: 'Custom business management software for schools, hospitals, clinics, hotels, and warehouses/distribution businesses.',
           })}
@@ -94,7 +94,7 @@ export default function BusinessManagementSoftware() {
             </h1>
             <p className="dark:text-slate-400 text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
               Schools, hospitals, hotels, and warehouses all run differently. We build management software around
-              how your organization actually operates — for clients across the USA, UK, and Europe.
+              how your organization actually operates — for clients across the USA, the UAE, the UK, and Canada.
             </p>
             <div className="mt-10">
               <Link

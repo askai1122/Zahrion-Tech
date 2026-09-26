@@ -4,10 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Google tag (gtag.js) — loaded on every page, including every
+       prerendered static HTML file, since this sits in the base template
+       that scripts/prerender.mjs builds each page from. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9Y88CQNX9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B9Y88CQNX9');
+  </script>
+
   <!-- Per-page SEO tags are injected by react-helmet-async and baked into
        static HTML at build time by scripts/prerender.mjs -->
-  <title>ZahrionTech — Custom Software Development Company | USA</title>
-  <meta name="description" content="ZahrionTech builds custom software, websites, mobile apps, POS, CRM and ERP systems for businesses across the United States." />
+  <title>ZahrionTech — Custom Software Development Company | USA, UAE, UK &amp; Canada</title>
+  <meta name="description" content="ZahrionTech builds custom software, websites, mobile apps, POS, CRM and ERP systems for businesses across the USA, UAE (Dubai), UK and Canada." />
   <link rel="canonical" href="https://zahriontech.com/" />
 
   <!-- Fonts -->

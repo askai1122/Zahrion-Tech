@@ -34,7 +34,7 @@ const faqs = [
   { q: 'Do you build custom CRM/ERP software or use existing platforms like Salesforce?', a: 'We build fully custom systems tailored to your exact workflow. This makes sense when off-the-shelf platforms like Salesforce or SAP are too expensive, too generic, or don\u2019t match how your business actually operates — which is common for small and mid-sized businesses.' },
   { q: 'Can you add employee management or accounting features to our CRM?', a: 'Yes. We build modular systems, so employee management, accounting, invoicing, or booking management can be added as your business needs grow, without disrupting what\u2019s already working.' },
   { q: 'How long does custom CRM/ERP development take?', a: 'A focused CRM module typically takes 6-10 weeks. A fuller ERP system with multiple modules (inventory, HR, accounting) can take 3-6 months depending on scope. We break the build into phases so you get usable software early rather than waiting for everything at once.' },
-  { q: 'Do you support businesses in the USA, UK, and Europe?', a: 'Yes, this is one of our core service areas for clients across the United States, United Kingdom, Germany, and the rest of Europe, with flexible communication across time zones.' },
+  { q: 'Do you support businesses in the USA, UAE, UK, and Canada?', a: 'Yes, this is one of our core service areas for clients across the United States, the United Arab Emirates, the United Kingdom, and Canada, with flexible communication across time zones.' },
 ]
 
 export default function CRMERPDevelopment() {
@@ -44,7 +44,7 @@ export default function CRMERPDevelopment() {
         <title>Custom CRM & ERP Software Development – ZahrionTech</title>
         <meta
           name="description"
-          content="Custom CRM and ERP software development for growing businesses in the USA, UK, and Europe. Customer management, inventory, accounting, and employee management built around your workflow."
+          content="Custom CRM and ERP software development for growing businesses in the USA, UAE, UK, and Canada. Customer management, inventory, accounting, and employee management built around your workflow."
         />
         <link rel="canonical" href="https://zahriontech.com/crm-erp-development" />
         <meta property="og:type" content="website" />
@@ -60,9 +60,9 @@ export default function CRMERPDevelopment() {
             provider: { '@type': 'ProfessionalService', name: 'ZahrionTech', url: 'https://zahriontech.com' },
             areaServed: [
               { '@type': 'Country', name: 'United States' },
+              { '@type': 'Country', name: 'United Arab Emirates' },
               { '@type': 'Country', name: 'United Kingdom' },
-              { '@type': 'Country', name: 'Germany' },
-              { '@type': 'Continent', name: 'Europe' },
+              { '@type': 'Country', name: 'Canada' },
             ],
             description: 'Custom CRM and ERP software development, including customer management, inventory, accounting, and employee management modules.',
           })}
@@ -94,7 +94,7 @@ export default function CRMERPDevelopment() {
             </h1>
             <p className="dark:text-slate-400 text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
               Replace scattered spreadsheets and rigid off-the-shelf platforms with a CRM or ERP system built
-              around how your business actually runs — for teams across the USA, UK, and Europe.
+              around how your business actually runs — for teams across the USA, the UAE, the UK, and Canada.
             </p>
             <div className="mt-10">
               <Link
