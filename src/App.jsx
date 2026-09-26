@@ -24,6 +24,7 @@ import IndustriesHub from './pages/IndustriesHub'
 import IndustryPage from './pages/IndustryPage'
 import CountryPage from './pages/CountryPage'
 import NotFound from './pages/NotFound'
+import { API_BASE } from './config/api'
 
 export default function App() {
   const { pathname } = useLocation()
@@ -36,7 +37,7 @@ export default function App() {
     if (pathname.startsWith('/admin') || sessionStorage.getItem('nx_visitor_tracked')) return
 
     sessionStorage.setItem('nx_visitor_tracked', '1')
-    fetch('https://zahrion-tech-production.up.railway.app/api/visitors/track', { method: 'POST' }).catch(() => {})
+    fetch(`${API_BASE}/api/visitors/track`, { method: 'POST' }).catch(() => {})
   }, [pathname])
 
   return (

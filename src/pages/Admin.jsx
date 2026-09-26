@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Lock, Mail, Trash2, Eye, RefreshCw, LogOut, MessageSquare, CheckCircle2, Users, ChevronLeft, ChevronRight } from 'lucide-react'
 import toast from 'react-hot-toast'
 import PageWrapper from '../components/PageWrapper'
+import { API_BASE } from '../config/api'
 
 export default function Admin() {
   const [token, setToken] = useState(() => localStorage.getItem('zt_admin'))
@@ -23,7 +24,7 @@ export default function Admin() {
     e.preventDefault()
     setLoading(true)
     try {
-      const res = await fetch('https://zahrion-tech-production.up.railway.app/api/admin/login', {
+      const res = await fetch(`${API_BASE}/api/admin/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(creds),
@@ -43,7 +44,7 @@ export default function Admin() {
   const fetchMessages = async () => {
     setLoading(true)
     try {
-      const res = await fetch('https://zahrion-tech-production.up.railway.app/api/admin/messages', { headers: { Authorization: token } })
+      const res = await fetch(`${API_BASE}/api/admin/messages`, { headers: { Authorization: token } })
       const data = await res.json()
       setMessages(Array.isArray(data) ? data : [])
     } catch { toast.error('Failed to load messages.') }
@@ -53,7 +54,7 @@ export default function Admin() {
   const fetchVisitors = async (page = visitorPage) => {
     setVisitorsLoading(true)
     try {
-      const res = await fetch(`https://zahrion-tech-production.up.railway.app/api/admin/visitors?page=${page}&limit=10`, { headers: { Authorization: token } })
+      const res = await fetch(`${API_BASE}/api/admin/visitors?page=${page}&limit=10`, { headers: { Authorization: token } })
       const data = await res.json()
       setVisitors(Array.isArray(data.visitors) ? data.visitors : [])
       setVisitorMeta({
@@ -66,13 +67,13 @@ export default function Admin() {
   }
 
   const markRead = async id => {
-    await fetch(`https://zahrion-tech-production.up.railway.app/api/admin/messages/${id}/read`, { method: 'POST', headers: { Authorization: token } })
+    await fetch(`${API_BASE}/api/admin/messages/${id}/read`, { method: 'POST', headers: { Authorization: token } })
     setMessages(ms => ms.map(m => m.id === id ? { ...m, read: 1 } : m))
   }
 
   const deleteMsg = async id => {
     if (!confirm('Delete this message?')) return
-    await fetch(`https://zahrion-tech-production.up.railway.app/api/admin/messages/${id}`, { method: 'DELETE', headers: { Authorization: token } })
+    await fetch(`${API_BASE}/api/admin/messages/${id}`, { method: 'DELETE', headers: { Authorization: token } })
     setMessages(ms => ms.filter(m => m.id !== id))
     if (selected?.id === id) setSelected(null)
     toast.success('Deleted.')
