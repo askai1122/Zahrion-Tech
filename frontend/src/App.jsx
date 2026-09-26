@@ -21,7 +21,7 @@ export default function App() {
     if (pathname.startsWith('/admin') || sessionStorage.getItem('nx_visitor_tracked')) return
 
     sessionStorage.setItem('nx_visitor_tracked', '1')
-    fetch('https://zahrion-tech-production.up.railway.app/api/visitors/track', { method: 'POST' }).catch(() => {})
+    fetch('https://api.zahriontech.com/api/visitors/track', { method: 'POST' }).catch(() => {})
   }, [pathname])
 
   return (
