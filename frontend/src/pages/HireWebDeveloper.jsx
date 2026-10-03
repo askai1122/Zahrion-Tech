@@ -38,7 +38,7 @@ export default function HireWebDeveloper() {
         <title>Hire a Web Developer in USA, UK & Europe – ZahrionTech</title>
         <meta
           name="description"
-          content="Hire an experienced web developer for your business in the USA, UK, Germany, or Europe. Fast, custom, SEO-optimized websites and web apps. Transparent pricing."
+          content="Hire an experienced web developer for your business in the USA, UK, Germany, or Europe. Fast, custom, SEO-optimized websites."
         />
         <link rel="canonical" href="https://zahriontech.com/hire-web-developer" />
         <meta property="og:type" content="website" />
@@ -59,17 +59,6 @@ export default function HireWebDeveloper() {
               { '@type': 'Continent', name: 'Europe' },
             ],
             description: 'Custom web development services including React and Next.js websites and web applications for clients in the USA, UK, Germany, and Europe.',
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map(f => ({
-              '@type': 'Question',
-              name: f.q,
-              acceptedAnswer: { '@type': 'Answer', text: f.a },
-            })),
           })}
         </script>
       </Helmet>

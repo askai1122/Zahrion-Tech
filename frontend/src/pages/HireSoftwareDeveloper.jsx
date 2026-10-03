@@ -38,7 +38,7 @@ export default function HireSoftwareDeveloper() {
         <title>Hire a Software Developer in USA, UK & Europe – ZahrionTech</title>
         <meta
           name="description"
-          content="Need a software developer or software engineer in the USA, UK, Germany, or Europe? ZahrionTech builds custom web, mobile, and desktop software with transparent pricing."
+          content="Need a software developer in the USA, UK, Germany, or Europe? ZahrionTech builds custom web, mobile, and desktop software."
         />
         <link rel="canonical" href="https://zahriontech.com/hire-software-developer" />
         <meta property="og:type" content="website" />
@@ -59,17 +59,6 @@ export default function HireSoftwareDeveloper() {
               { '@type': 'Continent', name: 'Europe' },
             ],
             description: 'Custom software development services covering web, mobile, desktop, and backend engineering for clients in the USA, UK, Germany, and Europe.',
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map(f => ({
-              '@type': 'Question',
-              name: f.q,
-              acceptedAnswer: { '@type': 'Answer', text: f.a },
-            })),
           })}
         </script>
       </Helmet>

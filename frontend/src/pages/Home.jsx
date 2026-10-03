@@ -37,8 +37,8 @@ export default function Home() {
   return (
     <PageWrapper>
       <Helmet>
-        <title>ZahrionTech – Software Development Agency for USA, UK & Europe</title>
-        <meta name="description" content="ZahrionTech builds custom websites, mobile apps, and software for businesses across the USA, UK, Germany, and Europe. Expert developers, transparent pricing." />
+        <title>ZahrionTech – Software Development for USA, UK & EU</title>
+        <meta name="description" content="ZahrionTech builds custom websites, mobile apps, and software for businesses in the USA, UK, Germany, and Europe." />
         <link rel="canonical" href="https://zahriontech.com/" />
       </Helmet>
 

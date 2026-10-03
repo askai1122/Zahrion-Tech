@@ -13,6 +13,14 @@ import HireWebDeveloper from './pages/HireWebDeveloper'
 import HireMobileAppDeveloper from './pages/HireMobileAppDeveloper'
 import HireNodeJsDeveloper from './pages/HireNodeJsDeveloper'
 import HireSoftwareDeveloper from './pages/HireSoftwareDeveloper'
+import CustomPOSSoftware from './pages/CustomPOSSoftware'
+import CustomCMSDevelopment from './pages/CustomCMSDevelopment'
+import BillingSoftwareDevelopment from './pages/BillingSoftwareDevelopment'
+import VeterinaryClinicApp from './pages/VeterinaryClinicApp'
+import LocationServicePage from './pages/LocationServicePage'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
+import NotFound from './pages/NotFound'
 
 export default function App() {
   const { pathname } = useLocation()
@@ -39,7 +47,18 @@ export default function App() {
             <Route path="/hire-mobile-app-developer" element={<HireMobileAppDeveloper />} />
             <Route path="/hire-nodejs-developer" element={<HireNodeJsDeveloper />} />
             <Route path="/hire-software-developer" element={<HireSoftwareDeveloper />} />
+            <Route path="/custom-pos-software-development" element={<CustomPOSSoftware />} />
+            <Route path="/custom-cms-development" element={<CustomCMSDevelopment />} />
+            <Route path="/billing-software-development" element={<BillingSoftwareDevelopment />} />
+            <Route path="/veterinary-clinic-app-development" element={<VeterinaryClinicApp />} />
+            <Route path="/software-development-agency-nashville" element={<LocationServicePage />} />
+            <Route path="/custom-software-development-edmonton" element={<LocationServicePage />} />
+            <Route path="/it-outsourcing-hartford" element={<LocationServicePage />} />
+            <Route path="/pos-software-systems-chicago" element={<LocationServicePage />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
       </main>

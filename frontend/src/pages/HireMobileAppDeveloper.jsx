@@ -35,15 +35,15 @@ export default function HireMobileAppDeveloper() {
   return (
     <PageWrapper>
       <Helmet>
-        <title>Hire a Mobile App Developer in USA, UK & Europe – ZahrionTech</title>
+        <title>Hire a Mobile App Developer | ZahrionTech</title>
         <meta
           name="description"
-          content="Hire a mobile app developer for your business in the USA, UK, Germany, or Europe. Build your iOS and Android app with Flutter or React Native, App Store publishing included."
+          content="Hire a mobile app developer for your business in the USA, UK, Germany, or Europe. iOS and Android apps with Flutter or React Native."
         />
         <link rel="canonical" href="https://zahriontech.com/hire-mobile-app-developer" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zahriontech.com/hire-mobile-app-developer" />
-        <meta property="og:title" content="Hire a Mobile App Developer in USA, UK & Europe – ZahrionTech" />
+        <meta property="og:title" content="Hire a Mobile App Developer | ZahrionTech" />
         <meta property="og:description" content="iOS & Android app development for USA, UK, and European businesses." />
         <meta property="og:image" content="https://zahriontech.com/zahriontech-logo.png" />
         <script type="application/ld+json">
@@ -59,17 +59,6 @@ export default function HireMobileAppDeveloper() {
               { '@type': 'Continent', name: 'Europe' },
             ],
             description: 'iOS and Android mobile app development using Flutter and React Native for clients in the USA, UK, Germany, and Europe.',
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map(f => ({
-              '@type': 'Question',
-              name: f.q,
-              acceptedAnswer: { '@type': 'Answer', text: f.a },
-            })),
           })}
         </script>
       </Helmet>

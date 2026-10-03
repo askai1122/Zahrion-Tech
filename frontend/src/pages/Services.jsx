@@ -61,7 +61,7 @@ export default function Services() {
     <PageWrapper>
       <Helmet>
         <title>Services – ZahrionTech</title>
-        <meta name="description" content="Explore ZahrionTech's full range of services for clients in the USA, UK, Germany, and Europe: web development, mobile apps, desktop software, social media management, bug fixing and more." />
+        <meta name="description" content="Explore ZahrionTech's services for clients in the USA, UK, Germany, and Europe: web, mobile, and desktop development, and more." />
         <link rel="canonical" href="https://zahriontech.com/services" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zahriontech.com/services" />

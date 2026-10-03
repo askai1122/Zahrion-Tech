@@ -13,6 +13,17 @@ const links = {
     { to: '/hire-mobile-app-developer', label: 'Hire a Mobile App Developer' },
     { to: '/hire-nodejs-developer', label: 'Hire a Node.js Developer' },
     { to: '/hire-software-developer', label: 'Hire a Software Developer' },
+    { to: '/custom-cms-development', label: 'Custom CMS Development' },
+    { to: '/custom-pos-software-development', label: 'Custom POS Software' },
+    { to: '/billing-software-development', label: 'Billing Software Development' },
+    { to: '/veterinary-clinic-app-development', label: 'Veterinary Clinic Apps' },
+  ],
+  Locations: [
+    { to: '/software-development-agency-nashville', label: 'Nashville, TN' },
+    { to: '/custom-software-development-edmonton', label: 'Edmonton, AB' },
+    { to: '/it-outsourcing-hartford', label: 'Hartford, CT' },
+    { to: '/pos-software-systems-chicago', label: 'Chicago, IL' },
+    { to: '/blog', label: 'Blog' },
   ],
 }
 
@@ -27,7 +38,7 @@ export default function Footer() {
   return (
     <footer className="relative dark:bg-slate-900 bg-slate-100 border-t dark:border-white/5 border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center mb-4">

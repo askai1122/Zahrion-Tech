@@ -38,7 +38,7 @@ export default function HireNodeJsDeveloper() {
         <title>Hire a Node.js Developer in USA, UK & Europe – ZahrionTech</title>
         <meta
           name="description"
-          content="Hire an experienced Node.js developer for your business in the USA, UK, Germany, or Europe. Secure, scalable backend and API development, cloud deployment included."
+          content="Hire an experienced Node.js developer for your business in the USA, UK, Germany, or Europe. Scalable backend and API development."
         />
         <link rel="canonical" href="https://zahriontech.com/hire-nodejs-developer" />
         <meta property="og:type" content="website" />
@@ -59,17 +59,6 @@ export default function HireNodeJsDeveloper() {
               { '@type': 'Continent', name: 'Europe' },
             ],
             description: 'Node.js backend, REST/GraphQL API development, and cloud deployment services for clients in the USA, UK, Germany, and Europe.',
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map(f => ({
-              '@type': 'Question',
-              name: f.q,
-              acceptedAnswer: { '@type': 'Answer', text: f.a },
-            })),
           })}
         </script>
       </Helmet>

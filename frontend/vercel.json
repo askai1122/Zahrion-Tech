@@ -1,5 +1,15 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/services", "destination": "/index.html" },
+    { "source": "/portfolio", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/index.html" },
+    { "source": "/hire-web-developer", "destination": "/index.html" },
+    { "source": "/hire-mobile-app-developer", "destination": "/index.html" },
+    { "source": "/hire-nodejs-developer", "destination": "/index.html" },
+    { "source": "/hire-software-developer", "destination": "/index.html" },
+    { "source": "/admin", "destination": "/index.html" }
+  ],
+  "cleanUrls": true
 }
