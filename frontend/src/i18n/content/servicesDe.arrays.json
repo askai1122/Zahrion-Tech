@@ -1,0 +1,166 @@
+{
+ "hire-web-developer": {
+  "included": [
+   "Individuelles Website-Design (keine Vorlagen)",
+   "Entwicklung mit React / Next.js",
+   "SEO-freundliche, schnell ladende Seiten",
+   "Mobil optimiert auf jedem Gerät",
+   "CMS / Admin-Dashboard bei Bedarf",
+   "Laufender Support nach dem Launch"
+  ],
+  "process": [
+   {"title": "Erstgespräch", "desc": "Wir lernen Ihr Unternehmen, Ihre Ziele und die Aufgaben Ihrer Website kennen."},
+   {"title": "Design & Planung", "desc": "Wireframes und UI-Design passend zu Ihrer Marke – freigegeben, bevor wir eine Zeile Code schreiben."},
+   {"title": "Entwicklung", "desc": "Sauberer, skalierbarer Code mit modernen Frameworks – mit regelmäßigen Fortschrittsberichten."},
+   {"title": "Launch & Support", "desc": "Wir veröffentlichen Ihre Website, testen alles und stehen für Updates und Korrekturen bereit."}
+  ],
+  "faqs": [
+   {"q": "Was kostet es, einen Webentwickler zu beauftragen?", "a": "Das hängt vom Umfang ab – eine einfache Unternehmenswebsite unterscheidet sich stark von einer individuellen Webanwendung mit Login, Dashboards oder Zahlungen. Nach einem kostenlosen Erstgespräch erhalten Sie ein Festpreisangebot, sodass Sie die Gesamtkosten vorab kennen."},
+   {"q": "Wie lange dauert die Erstellung einer Website?", "a": "Eine klassische Unternehmenswebsite dauert in der Regel 2–4 Wochen. Komplexere Webanwendungen mit individuellen Funktionen benötigen 6–12 Wochen. Sie erhalten vor dem Start einen realistischen Zeitplan."},
+   {"q": "Bauen Sie Websites, die bei Google ranken?", "a": "Ja. Jede Website wird von Anfang an für SEO aufgebaut – sauberes semantisches HTML, kurze Ladezeiten, mobile Optimierung und korrekte Meta-Tags –, damit sie echte Chancen auf gute Rankings hat."},
+   {"q": "Können Sie meine bestehende Website überarbeiten oder reparieren?", "a": "Ja, neben Neuentwicklungen übernehmen wir auch Relaunches, Migrationen und Fehlerbehebungen für bestehende Websites."},
+   {"q": "Welche Technologien setzen Sie ein?", "a": "Hauptsächlich React und Next.js im Frontend, dazu Node.js, Express oder andere Backend-Stacks – je nachdem, was zu Ihrem Projekt passt, statt einer Einheitslösung."},
+   {"q": "Arbeiten Sie mit Kunden in Deutschland und Europa?", "a": "Ja, wir arbeiten regelmäßig mit Kunden in Deutschland, Europa, Großbritannien und den USA. Wir bieten überlappende Arbeitszeiten für Calls und halten die Kommunikation asynchron (E-Mail/Slack), damit Zeitunterschiede Ihr Projekt nicht ausbremsen."}
+  ]
+ },
+ "hire-mobile-app-developer": {
+  "included": [
+   "iOS- & Android-Apps (Flutter / React Native)",
+   "Pixelgenaue UI mit nativem Look & Feel",
+   "Veröffentlichung im App Store & Play Store",
+   "Push-Benachrichtigungen & Offline-Modus",
+   "Anbindung von Zahlungsanbietern",
+   "Einrichtung von Analytics & Crash-Reporting"
+  ],
+  "process": [
+   {"title": "Erstgespräch", "desc": "Wir verstehen Ihre App-Idee, Ihre Zielgruppe und die unverzichtbaren Funktionen."},
+   {"title": "UI/UX-Design", "desc": "Klickbare Prototypen, damit Sie die App vor der Entwicklung sehen und freigeben können."},
+   {"title": "Entwicklung", "desc": "Cross-Platform-Entwicklung mit Flutter oder React Native – iOS und Android aus einer Codebasis."},
+   {"title": "Launch & Support", "desc": "Wir übernehmen die Einreichung im App Store / Play Store und betreuen Sie nach dem Launch."}
+  ],
+  "faqs": [
+   {"q": "Was kostet ein Mobile-App-Entwickler?", "a": "Die Kosten hängen von der Komplexität ab – ein einfaches MVP mit wenigen Screens kostet deutlich weniger als eine App mit Echtzeit-Funktionen, Zahlungen oder Backend-Integrationen. Nach Klärung Ihrer Anforderungen erhalten Sie ein Festpreisangebot ohne versteckte Kosten."},
+   {"q": "Entwickeln Sie für iOS und Android?", "a": "Ja. Meist setzen wir Flutter oder React Native ein, sodass beide Plattformen aus einer Codebasis entstehen – das spart Zeit und Kosten gegenüber zwei getrennten nativen Apps."},
+   {"q": "Wie lange dauert die Entwicklung einer App?", "a": "Ein einfaches MVP dauert meist 4–8 Wochen. Apps mit komplexeren Funktionen (Zahlungen, Echtzeit-Chat, Backend-Dashboards) benötigen 10–16 Wochen. Den Zeitplan kennen Sie vor dem Start."},
+   {"q": "Veröffentlichen Sie die App im App Store und Play Store?", "a": "Ja, die Veröffentlichung und Einreichung in den Stores (inklusive Umgang mit Review-Feedback) ist Teil unserer App-Entwicklung."},
+   {"q": "Können Sie ein Backend bzw. Admin-Dashboard zur Verwaltung der App bauen?", "a": "Ja. Bei Bedarf entwickeln wir die Backend-API und ein Admin-Dashboard parallel zur App, damit Sie Nutzer, Inhalte und Daten zentral verwalten können."},
+   {"q": "Arbeiten Sie mit Kunden in Deutschland und Europa?", "a": "Ja, wir entwickeln regelmäßig Apps für Kunden in Deutschland, Europa, Großbritannien und den USA – mit überlappenden Call-Zeiten und klaren asynchronen Updates im gesamten Projekt."}
+  ]
+ },
+ "hire-nodejs-developer": {
+  "included": [
+   "Entwicklung von REST- & GraphQL-APIs",
+   "Datenbankdesign (PostgreSQL, MongoDB, MySQL)",
+   "Authentifizierung & rollenbasierter Zugriff",
+   "Drittanbieter-Integrationen (Stripe, Twilio usw.)",
+   "Cloud-Deployment (AWS, Railway, DigitalOcean)",
+   "Performance-Optimierung & Monitoring"
+  ],
+  "process": [
+   {"title": "Anforderungsanalyse", "desc": "Wir klären Datenmodell, Integrationen und Skalierungsbedarf, bevor Code entsteht."},
+   {"title": "Architekturplanung", "desc": "Wir entwerfen eine saubere, wartbare Backend-Architektur passend zu Last und Wachstum."},
+   {"title": "Entwicklung", "desc": "Gut getestete Node.js/Express-APIs mit sauberer Fehlerbehandlung und Dokumentation."},
+   {"title": "Deployment & Support", "desc": "Wir bringen das System in Produktion und begleiten Skalierung, Monitoring und Korrekturen."}
+  ],
+  "faqs": [
+   {"q": "Was kann ein Node.js-Entwickler für mein Unternehmen bauen?", "a": "Mit Node.js entsteht die Backend-/API-Schicht für Websites, Apps und Dashboards – sie verarbeitet Daten, Nutzerkonten, Zahlungen und Anbindungen an andere Dienste. Braucht Ihr Projekt einen Server, kommt Node.js ins Spiel."},
+   {"q": "Was kostet ein Node.js-Entwickler?", "a": "Das hängt von der Komplexität Ihres Backends ab – Anzahl der Endpunkte, Integrationen und erwartetem Traffic. Nach Prüfung Ihrer Anforderungen erhalten Sie ein Festpreisangebot."},
+   {"q": "Können Sie das Backend an unsere bestehende App oder Website anbinden?", "a": "Ja. Wir integrieren neue Backends regelmäßig in bestehende Frontends, Apps oder Drittplattformen, ohne alles neu zu bauen."},
+   {"q": "Übernehmen Sie Hosting und Deployment?", "a": "Ja, wir deployen auf Cloud-Plattformen wie AWS, Railway oder DigitalOcean und übernehmen auf Wunsch auch Hosting und Monitoring."},
+   {"q": "Ist Node.js für wachsende Nutzerzahlen geeignet?", "a": "Ja, Node.js eignet sich gut für hohe Parallelität und skaliert zuverlässig, wenn die Architektur von Anfang an stimmt – genau das planen wir in der Architekturphase mit."},
+   {"q": "Arbeiten Sie mit Kunden in Deutschland und Europa?", "a": "Ja, wir bauen regelmäßig Backends für Kunden in Deutschland, Europa, Großbritannien und den USA – mit überlappenden Arbeitszeiten und klarer asynchroner Kommunikation."}
+  ]
+ },
+ "hire-software-developer": {
+  "included": [
+   "Dedizierte Entwickler für Ihr Projekt",
+   "Web-, Mobile- oder Desktop-Software",
+   "Direkte Kommunikation ohne Zwischenstufen",
+   "Festpreis oder Abrechnung nach Meilensteinen",
+   "Code, der Ihnen gehört – ohne Lock-in",
+   "Wartung nach dem Launch möglich"
+  ],
+  "process": [
+   {"title": "Sagen Sie uns, was Sie brauchen", "desc": "Schildern Sie Ihr Projekt – Neuentwicklung, bestehende Codebasis oder eine Idee, die noch Form braucht."},
+   {"title": "Umfang & Angebot", "desc": "Wir gliedern die Arbeit in klare Meilensteine mit transparentem Festpreisangebot."},
+   {"title": "Umsetzung", "desc": "Unsere Entwickler legen los – mit regelmäßigen Check-ins, damit Sie jederzeit den Stand kennen."},
+   {"title": "Übergabe & Support", "desc": "Sie erhalten funktionierende Software, den vollständigen Quellcode und bei Bedarf laufenden Support."}
+  ],
+  "faqs": [
+   {"q": "Ich brauche einen Softwareentwickler – wo fange ich an?", "a": "Starten Sie mit einem kostenlosen Erstgespräch. Erzählen Sie uns, was Sie bauen möchten (oder welches Problem Sie lösen wollen), und wir empfehlen den passenden Ansatz, die Technologie sowie Budget und Zeitplan – unverbindlich."},
+   {"q": "Welchen Softwareentwickler brauche ich?", "a": "Das hängt vom Projekt ab: Für eine Website brauchen Sie einen Webentwickler, für eine App einen Mobile-Entwickler, und die meisten modernen Projekte benötigen zusätzlich Backend-/API-Entwicklung. Nennen Sie uns Ihr Ziel, wir sagen Ihnen, welche Skills gefragt sind."},
+   {"q": "Arbeiten Sie mit Startups und kleinen Unternehmen oder nur mit Konzernen?", "a": "Mit beiden. Wir arbeiten mit Gründern, die ein MVP bauen, mit kleinen Unternehmen, die ein funktionierendes Tool brauchen, und mit größeren Teams, die zusätzliche Entwicklungskapazität benötigen."},
+   {"q": "Gehört mir der Code nach Projektende?", "a": "Ja. Sie erhalten das volle Eigentum am Quellcode und allen Ergebnissen – es gibt keine Bindung an unser Team."},
+   {"q": "Können Sie ein angefangenes Projekt eines anderen Entwicklers übernehmen oder reparieren?", "a": "Ja, wir steigen regelmäßig in bestehende Codebasen ein, beheben Fehler, vollenden unfertige Funktionen oder übernehmen die langfristige Wartung."},
+   {"q": "Arbeiten Sie mit Kunden in Deutschland und Europa?", "a": "Ja, Deutschland, Europa, Großbritannien und die USA sind unsere Hauptmärkte – mit überlappenden Call-Zeiten und klarer asynchroner Kommunikation während des gesamten Projekts."}
+  ]
+ },
+ "custom-pos-software-development": {
+  "included": [
+   "Kassenoberflächen nach Ihrem tatsächlichen Kassenablauf",
+   "Bestandsabgleich über mehrere Kassen und Standorte",
+   "Zahlungsanbindung (Karte, Bargeld, mobile Wallets)",
+   "Mitarbeiterkonten, Berechtigungen und Schichtberichte",
+   "Offline-fähig und Synchronisierung bei Verbindung",
+   "Voller Quellcode – keine monatlichen Lizenzbindungen"
+  ],
+  "faqs": [
+   {"q": "Warum eine individuelle Kassensoftware statt einer Standardlösung?", "a": "Standard-Kassensysteme verlangen laufende Gebühren pro Kasse und zwingen Ihren Ablauf in ihre Software. Eine individuelle Lösung ist eine einmalige Entwicklungsinvestition, passt exakt zu Ihrem Kassen- und Lagerprozess und gehört Ihnen – ohne wiederkehrende Lizenz."},
+   {"q": "Lässt sie sich an unsere Warenwirtschaft oder Buchhaltung anbinden?", "a": "Ja. Wir verbinden Kassensysteme regelmäßig mit bestehenden Bestandsdatenbanken, Buchhaltungstools und Onlineshops, damit Bestände und Umsätze automatisch synchron bleiben."},
+   {"q": "Funktioniert das für mehrere Filialen?", "a": "Ja, unsere Kassenlösungen unterstützen Mehr-Standort-Bestand und Umsatzberichte in einem Dashboard, wobei jede Kasse zentral synchronisiert."},
+   {"q": "Was passiert, wenn mitten im Verkauf das Internet ausfällt?", "a": "Wir entwickeln offline-first: Die Kasse verkauft lokal weiter und synchronisiert automatisch, sobald die Verbindung zurück ist – ein Ausfall stoppt keinen Verkauf."},
+   {"q": "Wie lange dauert die Entwicklung einer individuellen Kassensoftware?", "a": "Eine fokussierte Lösung für einen Standort dauert meist 4–8 Wochen, abhängig von Integrationen (Zahlungsanbieter, Lager, Kundenkarten). Den genauen Umfang klären wir im kostenlosen Erstgespräch."}
+  ]
+ },
+ "custom-cms-development": {
+  "included": [
+   "Individuelle Inhaltstypen für das, was Sie wirklich veröffentlichen",
+   "Rollenbasierte Redakteurskonten für Ihr Team",
+   "Keine Gebühren pro Plugin oder Nutzer",
+   "Headless-Option – Inhalte für Web, Mobile und Apps an einem Ort",
+   "Integrierte SEO-Felder, Weiterleitungen und Sitemap-Erzeugung",
+   "Code und Datenbank gehören Ihnen und sind vollständig portabel"
+  ],
+  "faqs": [
+   {"q": "Warum ein individuelles CMS statt WordPress oder Webflow?", "a": "Standard-CMS sind ideal für generische Blogs, werden aber langsam und plugin-lastig, sobald Ihr Inhaltsmodell speziell ist – Produktkataloge, Buchungen, Multi-Marken-Seiten. Ein individuelles CMS bietet genau die Redaktionsoberfläche, die Ihr Team braucht – ohne Plugin-Konflikte oder Verlängerungsgebühren."},
+   {"q": "Kann unser nicht-technisches Team es wirklich bedienen?", "a": "Ja – das ist das Hauptziel. Wir bauen die Redaktionsoberfläche rund um die Arbeitsweise Ihres Teams, sodass das Veröffentlichen einer Seite oder eines Produkts wenige Klicks dauert – ohne Entwickler."},
+   {"q": "Was ist ein Headless-CMS und brauchen wir eines?", "a": "Ein Headless-CMS speichert und verwaltet Inhalte getrennt von ihrer Darstellung, sodass dieselben Inhalte Website, App und weitere Bildschirme gleichzeitig speisen. Haben Sie nur eine Website, ist ein klassisches CMS meist einfacher und günstiger."},
+   {"q": "Können Sie bestehende Inhalte aus WordPress oder einem anderen CMS migrieren?", "a": "Ja, die Inhaltsmigration gehört zum Projekt, damit Sie bestehende Seiten, Beiträge und SEO-Rankings beim Umzug nicht verlieren."},
+   {"q": "Wie lange dauert ein individuelles CMS?", "a": "Ein fokussiertes CMS für eine Website dauert meist 3–6 Wochen. Komplexere Multi-Marken- oder Headless-Setups brauchen länger – den genauen Umfang klären wir im kostenlosen Gespräch."}
+  ]
+ },
+ "billing-software-development": {
+  "included": [
+   "Wiederkehrende und einmalige Rechnungen, automatisiert",
+   "Stripe, PayPal oder Ihr bevorzugter Zahlungsanbieter integriert",
+   "Nutzungsbasierte oder gestaffelte Abrechnung – genau nach Ihrer Preislogik",
+   "Automatische Zahlungserinnerungen und Wiederholungslogik",
+   "Kundenportal für Rechnungen und Admin-Dashboard",
+   "Saubere Exporte in Ihre Buchhaltungssoftware"
+  ],
+  "faqs": [
+   {"q": "Warum eine individuelle Abrechnungssoftware statt einer Billing-Plattform?", "a": "Plattformen wie Chargebee oder Recurly verlangen zusätzlich zur Abogebühr einen Umsatzanteil und zwängen Sie in ihre Preismodell-Regeln. Individuelle Abrechnungssoftware ist eine einmalige Entwicklung, kennt keine Umsatzbeteiligung und bildet jedes Preismodell ab – gestaffelt, nutzungsbasiert oder hybrid."},
+   {"q": "Kann sie nutzungsbasierte bzw. verbrauchsabhängige Abrechnung?", "a": "Ja. Wir bauen die Abrechnungslogik nach Ihrem tatsächlichen Preismodell – inklusive verbrauchsabhängiger Nutzung, Mehrverbrauch, gestaffelten Tarifen und gemischten Einmal- und Abo-Rechnungen."},
+   {"q": "Welche Zahlungsanbieter lassen sich anbinden?", "a": "Meist Stripe oder PayPal, wir integrieren aber jeden Anbieter mit Entwickler-API, auch regionale Gateways für Deutschland und die EU."},
+   {"q": "Lässt sie sich mit unserer Buchhaltungssoftware verbinden?", "a": "Ja, wir bauen Exporte oder direkte Schnittstellen zu gängigen Buchhaltungstools wie DATEV, QuickBooks und Xero, damit Ihre Buchhaltung ohne manuelle Nacherfassung stimmt."},
+   {"q": "Wie lange dauert eine Abrechnungslösung?", "a": "Ein klassisches System für wiederkehrende Abrechnung dauert meist 3–6 Wochen, abhängig von Preismodellen und Integrationen. Den genauen Umfang klären wir im kostenlosen Erstgespräch."}
+  ]
+ },
+ "veterinary-clinic-app-development": {
+  "included": [
+   "Online-Terminbuchung, synchron mit dem Praxiskalender",
+   "Gesundheitsakte des Tieres, mobil für Halter einsehbar",
+   "Automatische Impf- und Vorsorge-Erinnerungen",
+   "Rezept-Nachbestellung direkt in der App",
+   "Push-Benachrichtigungen für Terminbestätigungen",
+   "Das Branding Ihrer Praxis – keine geteilte Verzeichnis-App"
+  ],
+  "faqs": [
+   {"q": "Warum eine eigene App statt einer gemeinsamen Haustier-App?", "a": "Geteilte Verzeichnis-Apps stellen Ihre Praxis neben Wettbewerber und kassieren Provisionen auf Buchungen. Eine eigene App gehört ganz Ihnen – Ihr Name, Ihr Logo, Ihre Kundenbeziehung, ohne Vermittlungsgebühren."},
+   {"q": "Können Kunden Termine buchen und die Akte ihres Tieres einsehen?", "a": "Ja – Terminbuchung, Impfhistorie und anstehende Erinnerungen sind für Tierhalter sichtbar und mit dem Terminsystem Ihrer Praxis synchronisiert."},
+   {"q": "Funktioniert das für Praxen mit mehreren Tierärzten oder Standorten?", "a": "Ja, die App kann Buchungen bestimmten Tierärzten oder Standorten zuordnen und Kalender sowie Akten je Praxis getrennt halten."},
+   {"q": "Können wir automatische Impf- und Vorsorge-Erinnerungen versenden?", "a": "Ja, automatische Push- und E-Mail-Erinnerungen sind ein Kernfeature – für Praxen meist der größte Treiber für Folgebesuche."},
+   {"q": "Wie lange dauert die Entwicklung einer individuellen Tierarzt-App?", "a": "Eine fokussierte Buchungs- und Akten-App für iOS und Android dauert meist 6–10 Wochen. Den genauen Umfang klären wir im kostenlosen Erstgespräch anhand Ihrer Praxisabläufe."}
+  ]
+ }
+}

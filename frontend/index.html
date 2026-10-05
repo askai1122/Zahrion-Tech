@@ -4,12 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Google Consent Mode v2: everything denied until the visitor accepts (see CookieBanner.jsx) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5XVFBZMRT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y5XVFBZMRT');
+  </script>
+
   <!-- Primary SEO -->
   <title>ZahrionTech – Software Development for USA, UK & EU</title>
-  <meta name="description" content="ZahrionTech builds custom websites, mobile apps, and software for businesses in the USA, UK, Germany, and Europe." />
   <meta name="keywords" content="hire software developer USA, hire web developer USA, hire mobile app developer, hire node.js developer, software development company USA, software engineer for hire UK, custom software development Germany, software agency Europe, web development USA, mobile app development UK, React developer, Node.js developer, remote software team" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://zahriontech.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -18,7 +39,6 @@
   <meta property="og:description" content="Custom web, mobile, and software development for businesses across the USA, UK, Germany, and Europe." />
   <meta property="og:image" content="https://zahriontech.com/zahriontech-logo.png" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:locale:alternate" content="en_GB" />
   <meta property="og:locale:alternate" content="de_DE" />
 
   <!-- Twitter Card -->

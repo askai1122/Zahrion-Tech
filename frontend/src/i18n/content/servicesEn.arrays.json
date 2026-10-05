@@ -1,0 +1,350 @@
+{
+ "hire-web-developer": {
+  "included": [
+   "Custom website design (no templates)",
+   "React / Next.js development",
+   "SEO-friendly, fast-loading pages",
+   "Mobile-responsive on every device",
+   "CMS / admin dashboard if needed",
+   "Ongoing support after launch"
+  ],
+  "process": [
+   {
+    "title": "Discovery Call",
+    "desc": "We learn about your business, goals, and what your website needs to achieve."
+   },
+   {
+    "title": "Design & Planning",
+    "desc": "Wireframes and UI design tailored to your brand, approved before we write a line of code."
+   },
+   {
+    "title": "Development",
+    "desc": "Clean, scalable code using modern frameworks — with regular progress updates."
+   },
+   {
+    "title": "Launch & Support",
+    "desc": "We deploy your site, test everything, and stay available for updates and fixes."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "How much does it cost to hire a web developer?",
+    "a": "Pricing depends on scope — a simple business website differs greatly from a custom web application with logins, dashboards, or payments. We provide a fixed quote after a free discovery call, so you know the full cost upfront before committing."
+   },
+   {
+    "q": "How long does it take to build a website?",
+    "a": "A standard business website typically takes 2-4 weeks. More complex web applications with custom features can take 6-12 weeks. We give you a realistic timeline before starting so there are no surprises."
+   },
+   {
+    "q": "Do you build websites that rank on Google?",
+    "a": "Yes. Every website we build is structured for SEO from day one — clean semantic HTML, fast load times, mobile optimization, and proper meta tags — so your site has a real chance to rank, not just look good."
+   },
+   {
+    "q": "Can you redesign or fix my existing website?",
+    "a": "Yes, we take on redesigns, migrations, and bug fixes for existing sites in addition to building new ones from scratch."
+   },
+   {
+    "q": "What technologies do you use?",
+    "a": "Primarily React and Next.js on the frontend, with Node.js, Express, or other backend stacks depending on your needs — chosen based on what fits your project best, not a one-size-fits-all template."
+   },
+   {
+    "q": "Do you work with clients in the USA, UK, and Europe?",
+    "a": "Yes, we regularly work with clients across the United States, United Kingdom, Germany, and the rest of Europe. We accommodate overlapping working hours for calls and keep communication async-friendly (email/Slack updates) so time zone differences don’t slow down your project."
+   }
+  ]
+ },
+ "hire-mobile-app-developer": {
+  "included": [
+   "iOS & Android apps (Flutter / React Native)",
+   "Pixel-perfect, native-feeling UI",
+   "App Store & Play Store publishing",
+   "Push notifications & offline mode",
+   "Payment gateway integration",
+   "Analytics & crash reporting setup"
+  ],
+  "process": [
+   {
+    "title": "Discovery Call",
+    "desc": "We understand your app idea, target users, and must-have features."
+   },
+   {
+    "title": "UI/UX Design",
+    "desc": "Clickable prototypes so you can see and approve the app before development starts."
+   },
+   {
+    "title": "Development",
+    "desc": "Cross-platform build with Flutter or React Native for iOS and Android from one codebase."
+   },
+   {
+    "title": "Launch & Support",
+    "desc": "We handle App Store / Play Store submission and provide post-launch support."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "How much does it cost to hire a mobile app developer?",
+    "a": "Cost depends on app complexity — a simple MVP with a few screens costs far less than an app with real-time features, payments, or backend integrations. We give you a fixed quote after understanding your requirements, with no hidden fees."
+   },
+   {
+    "q": "Do you build for both iOS and Android?",
+    "a": "Yes. We typically use Flutter or React Native, which lets us build for both platforms from a single codebase — saving you time and cost compared to building two separate native apps."
+   },
+   {
+    "q": "How long does it take to build a mobile app?",
+    "a": "A simple MVP app usually takes 4-8 weeks. Apps with more complex features (payments, real-time chat, backend dashboards) can take 10-16 weeks. You get a clear timeline before we start."
+   },
+   {
+    "q": "Will you publish the app to the App Store and Play Store for me?",
+    "a": "Yes, publishing and store submission (including handling review feedback) is part of our mobile app development service."
+   },
+   {
+    "q": "Can you add a backend/admin dashboard to manage the app?",
+    "a": "Yes. We build the backend API and an admin dashboard alongside the mobile app when needed, so you can manage users, content, and data from one place."
+   },
+   {
+    "q": "Do you work with clients in the USA, UK, and Europe?",
+    "a": "Yes, we regularly build apps for clients across the United States, United Kingdom, Germany, and the rest of Europe, with overlapping call hours and clear async updates throughout the project."
+   }
+  ]
+ },
+ "hire-nodejs-developer": {
+  "included": [
+   "REST & GraphQL API development",
+   "Database design (PostgreSQL, MongoDB, MySQL)",
+   "Authentication & role-based access",
+   "Third-party integrations (Stripe, Twilio, etc.)",
+   "Cloud deployment (AWS, Railway, DigitalOcean)",
+   "Performance optimization & monitoring"
+  ],
+  "process": [
+   {
+    "title": "Requirements Review",
+    "desc": "We map out your data model, integrations, and scalability needs before writing code."
+   },
+   {
+    "title": "Architecture Planning",
+    "desc": "We design a clean, maintainable backend architecture suited to your expected load and growth."
+   },
+   {
+    "title": "Development",
+    "desc": "Well-tested Node.js/Express APIs with proper error handling and documentation."
+   },
+   {
+    "title": "Deployment & Support",
+    "desc": "We deploy to production and stay available for scaling, monitoring, and fixes."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What can a Node.js developer build for my business?",
+    "a": "Node.js is used to build the backend/API layer that powers websites, mobile apps, and dashboards — handling data, user accounts, payments, and integrations with other services. If your project needs a server behind it, that’s where Node.js comes in."
+   },
+   {
+    "q": "How much does it cost to hire a Node.js developer?",
+    "a": "It depends on the complexity of your backend — number of endpoints, integrations, and expected traffic. We provide a fixed quote after reviewing your requirements, so costs are clear upfront."
+   },
+   {
+    "q": "Can you connect the backend to our existing app or website?",
+    "a": "Yes. We regularly integrate new backends with existing frontends, mobile apps, or third-party platforms without requiring a full rebuild."
+   },
+   {
+    "q": "Do you handle hosting and deployment?",
+    "a": "Yes, we deploy to cloud platforms like AWS, Railway, or DigitalOcean and can also manage ongoing hosting and monitoring if you prefer not to handle it in-house."
+   },
+   {
+    "q": "Is Node.js good for scaling as our user base grows?",
+    "a": "Yes, Node.js is well suited for handling high-concurrency workloads and scales well when the architecture is designed properly from the start — which is part of what we plan for in the architecture phase."
+   },
+   {
+    "q": "Do you work with clients in the USA, UK, and Europe?",
+    "a": "Yes, we regularly build backends for clients across the United States, United Kingdom, Germany, and the rest of Europe, with overlapping working hours for calls and clear async communication throughout."
+   }
+  ]
+ },
+ "hire-software-developer": {
+  "included": [
+   "Dedicated developer(s) for your project",
+   "Web, mobile, or desktop software",
+   "Direct communication, no middlemen",
+   "Fixed-price or milestone-based billing",
+   "Code you fully own, no lock-in",
+   "Post-launch maintenance available"
+  ],
+  "process": [
+   {
+    "title": "Tell Us What You Need",
+    "desc": "Share your project — a new build, an existing codebase, or just an idea to shape."
+   },
+   {
+    "title": "Scope & Quote",
+    "desc": "We break down the work into clear milestones with a transparent, fixed quote."
+   },
+   {
+    "title": "Build",
+    "desc": "Our engineers get to work, with regular check-ins so you always know where things stand."
+   },
+   {
+    "title": "Deliver & Support",
+    "desc": "You get working software, full source code, and ongoing support if you need it."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "I need a software developer — where do I start?",
+    "a": "Start with a free discovery call. Tell us what you’re trying to build (or what problem you’re solving), and we’ll recommend the right approach, technology, and a realistic budget/timeline before any commitment."
+   },
+   {
+    "q": "What kind of software engineer do I need?",
+    "a": "It depends on your project: a website needs a web developer, an app needs a mobile developer, and most modern projects also need a backend/API developer. If you’re not sure, tell us your goal and we’ll tell you which skillset applies — you don’t need to figure this out yourself."
+   },
+   {
+    "q": "Do you work with startups and small businesses, or only large companies?",
+    "a": "Both. We work with solo founders building an MVP, small businesses that need a working tool, and larger teams that need extra development capacity."
+   },
+   {
+    "q": "Will I own the code after the project is done?",
+    "a": "Yes. You receive full ownership of the source code and all deliverables — there is no ongoing lock-in to our team."
+   },
+   {
+    "q": "Can you take over or fix an existing project another developer started?",
+    "a": "Yes, we regularly step into existing codebases to fix bugs, finish incomplete features, or take over long-term maintenance."
+   },
+   {
+    "q": "Do you work with clients in the USA, UK, and Europe?",
+    "a": "Yes, we work with clients across the United States, United Kingdom, Germany, and the rest of Europe as our primary markets, with overlapping call hours and clear async communication throughout your project."
+   }
+  ]
+ },
+ "custom-pos-software-development": {
+  "included": [
+   "Point-of-sale screens built around your actual checkout flow",
+   "Inventory sync across multiple registers and locations",
+   "Payment gateway integration (card, cash, mobile wallets)",
+   "Staff accounts, permissions, and shift reporting",
+   "Works offline and syncs when connection returns",
+   "Full source code — no monthly licensing lock-in"
+  ],
+  "process": null,
+  "faqs": [
+   {
+    "q": "Why build custom POS software instead of buying an off-the-shelf system?",
+    "a": "Off-the-shelf POS platforms charge ongoing per-register fees and force your workflow to match their software. A custom build is a one-time development cost, fits your exact checkout and inventory process, and you own it outright — no recurring license."
+   },
+   {
+    "q": "Can it integrate with our existing inventory or accounting software?",
+    "a": "Yes. We regularly connect POS systems to existing inventory databases, accounting tools like QuickBooks, and e-commerce platforms so stock and sales numbers stay in sync automatically."
+   },
+   {
+    "q": "Does it work for multiple store locations?",
+    "a": "Yes, our POS builds support multi-location inventory and sales reporting from a single dashboard, with each register syncing centrally."
+   },
+   {
+    "q": "What happens if the internet goes down mid-sale?",
+    "a": "We build offline-first: the register keeps taking sales locally and syncs automatically once the connection is back, so a dropped connection never stops a checkout."
+   },
+   {
+    "q": "How long does a custom POS build take?",
+    "a": "A focused single-location POS typically takes 4-8 weeks depending on integrations (payment processors, inventory, loyalty programs). We scope this exactly on a free discovery call."
+   }
+  ]
+ },
+ "custom-cms-development": {
+  "included": [
+   "Custom content types built for what you actually publish",
+   "Role-based editor accounts for your team",
+   "No per-plugin or per-seat subscription fees",
+   "Headless option — feed content to web, mobile, and apps from one place",
+   "Built-in SEO fields, redirects, and sitemap generation",
+   "You own the code and the database, fully portable"
+  ],
+  "process": null,
+  "faqs": [
+   {
+    "q": "Why build a custom CMS instead of using WordPress or Webflow?",
+    "a": "Off-the-shelf CMS platforms are great for generic blogs, but they get slow and plugin-heavy once your content model is specific — product catalogs, bookings, multi-brand sites. A custom CMS gives you exactly the editing experience your team needs, with no plugin conflicts or renewal fees."
+   },
+   {
+    "q": "Can our non-technical team actually use it?",
+    "a": "Yes — that’s the main design goal. We build the editor interface around how your content team actually works, so publishing a page or product takes a few clicks, not a developer."
+   },
+   {
+    "q": "What is a headless CMS and do we need one?",
+    "a": "A headless CMS stores and manages your content separately from how it’s displayed, so the same content can power your website, mobile app, and any other screen at once. If you only have one website, a traditional CMS is usually simpler and cheaper to build."
+   },
+   {
+    "q": "Can you migrate our existing content from WordPress or another CMS?",
+    "a": "Yes, we handle content migration as part of the build so you don’t lose existing pages, posts, or SEO rankings in the move."
+   },
+   {
+    "q": "How long does a custom CMS build take?",
+    "a": "A focused CMS for a single site typically takes 3-6 weeks. More complex multi-brand or headless setups take longer — we’ll scope it exactly on a free call."
+   }
+  ]
+ },
+ "billing-software-development": {
+  "included": [
+   "Recurring and one-time invoicing, automated",
+   "Stripe, PayPal, or your preferred payment gateway built in",
+   "Usage-based or tiered billing logic, exactly as you price it",
+   "Automatic late-payment reminders and retry logic",
+   "Client-facing billing portal and admin dashboard",
+   "Exports clean to your accounting software"
+  ],
+  "process": null,
+  "faqs": [
+   {
+    "q": "Why build custom billing software instead of using a billing platform?",
+    "a": "Billing platforms like Chargebee or Recurly charge a percentage of revenue on top of a subscription fee, and they box you into their pricing-model rules. Custom billing software is a one-time build, has no revenue cut, and can match any pricing model you invent — tiered, usage-based, hybrid."
+   },
+   {
+    "q": "Can it handle usage-based or metered billing?",
+    "a": "Yes. We build billing logic around how you actually charge, including metered usage, overage charges, tiered plans, and mixed one-time plus recurring invoices."
+   },
+   {
+    "q": "Which payment processors can it connect to?",
+    "a": "Most commonly Stripe or PayPal, but we can integrate any processor with a developer API, including region-specific gateways for the UK and EU."
+   },
+   {
+    "q": "Will it integrate with our accounting software?",
+    "a": "Yes, we build exports or direct integrations to common accounting tools like QuickBooks and Xero so your books stay accurate without manual re-entry."
+   },
+   {
+    "q": "How long does a billing system build take?",
+    "a": "A standard recurring billing system typically takes 3-6 weeks depending on the number of pricing models and integrations. We scope this precisely on a free discovery call."
+   }
+  ]
+ },
+ "veterinary-clinic-app-development": {
+  "included": [
+   "Online appointment booking, synced to your front-desk calendar",
+   "Pet health records clients can view from their phone",
+   "Automated vaccination and check-up reminders",
+   "In-app prescription refill requests",
+   "Push notifications for appointment confirmations",
+   "Your clinic’s own branding — not a shared directory app"
+  ],
+  "process": null,
+  "faqs": [
+   {
+    "q": "Why build a branded app instead of using a shared pet-care app?",
+    "a": "Shared directory apps put your clinic next to competitors and take a cut of bookings. A branded app is entirely yours — your name, your logo, your client relationship, with no referral fees."
+   },
+   {
+    "q": "Can clients book appointments and see their pet’s records in the app?",
+    "a": "Yes — appointment booking, vaccination history, and upcoming reminders are all visible to the pet owner, synced with your clinic’s scheduling system."
+   },
+   {
+    "q": "Does it work for multi-vet or multi-location practices?",
+    "a": "Yes, the app can route bookings to specific vets or locations and keep each practice’s calendar and records separate."
+   },
+   {
+    "q": "Can we send automated reminders for vaccinations and check-ups?",
+    "a": "Yes, automated push notifications and email reminders are a core feature — this is usually the biggest driver of repeat visits for clinics that add it."
+   },
+   {
+    "q": "How long does a custom veterinary clinic app take to build?",
+    "a": "A focused booking-and-records app typically takes 6-10 weeks for iOS and Android. We scope this exactly on a free discovery call based on your clinic’s workflow."
+   }
+  ]
+ }
+}

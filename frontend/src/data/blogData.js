@@ -1,39 +1,5 @@
-export const posts = [
-  {
-    slug: 'custom-pos-software-cost-2026',
-    title: 'How Much Does Custom POS Software Actually Cost in 2026?',
-    description: 'A realistic cost breakdown for custom point-of-sale software — development, integrations, and what off-the-shelf platforms don\u2019t tell you about long-term fees.',
-    date: '2026-09-02',
-    readTime: '7 min read',
-    tag: 'POS Software',
-    body: [
-      { h: 'The real cost of "free" POS platforms' },
-      { p: 'Square, Clover, and similar platforms advertise low or no upfront hardware cost, but charge a per-transaction fee plus a monthly software fee per register. For a two-register retail store doing $40,000/month in sales, that transaction fee alone can run $800-1,200/month — every month, indefinitely.' },
-      { h: 'What a custom build actually costs' },
-      { p: 'A single-location custom POS system — checkout, inventory sync, one payment processor integration — typically runs $8,000-18,000 as a one-time development cost, depending on how many integrations (accounting software, loyalty programs, multi-location sync) are included.' },
-      { p: 'Multi-location systems with centralized inventory and reporting typically land between $20,000-45,000, scaling with the number of integrations and the complexity of your checkout flow.' },
-      { h: 'Where the breakeven point is' },
-      { p: 'For most retailers doing over $15,000/month in card sales, a custom system pays for itself against platform transaction fees within 12-18 months — and every month after that is pure savings, since there\u2019s no ongoing software fee.' },
-      { h: 'What\u2019s not included in that number' },
-      { p: 'Payment processing fees (the bank/card network fee) don\u2019t go away with a custom build — those exist regardless of who built your checkout software. What disappears is the platform\u2019s markup on top of that processing fee, plus the monthly per-register software charge.' },
-    ],
-  },
-  {
-    slug: 'custom-cms-vs-wordpress',
-    title: 'Custom CMS vs. WordPress: When Off-the-Shelf Stops Working',
-    description: 'WordPress is the right choice for most sites — until it isn\u2019t. Here\u2019s how to tell which side of that line your business is on.',
-    date: '2026-08-14',
-    readTime: '6 min read',
-    tag: 'CMS Development',
-    body: [
-      { h: 'WordPress is usually the right call' },
-      { p: 'For a blog, a brochure site, or a small business with a standard content model, WordPress (or Webflow) is genuinely the cheaper, faster option. Most businesses should start there, not with a custom build.' },
-      { h: 'The signs you\u2019ve outgrown it' },
-      { p: 'The pattern is consistent: you\u2019re running 15+ plugins to support a content model WordPress wasn\u2019t built for, page load times have crept up because of plugin bloat, or your editorial team needs a workflow (multi-brand publishing, complex approval chains, non-standard content types) that no plugin combination cleanly solves.' },
-      { h: 'The real cost comparison' },
-      { p: 'WordPress plugin and hosting costs for a heavily-customized site often run $200-600/month once you add premium plugins, a page builder license, and managed hosting built to handle the plugin load. A custom CMS is a one-time build — typically $6,000-20,000 depending on complexity — with no recurring license fees afterward.' },
-      { h: 'Headless vs. traditional' },
-      { p: 'If your content only needs to power one website, a traditional custom CMS is simpler and cheaper. If the same content needs to feed a website, a mobile app, and possibly other screens, a headless CMS is worth the extra setup cost since it avoids maintaining the same content in multiple places.' },
-    ],
-  },
-]
+import { postsEn } from './blogEn'
+import { postsDe } from './blogDe'
+
+// Every post exists in English and German; `pair` is the slug of the translation (used for hreflang + language switcher).
+export const posts = [...postsEn, ...postsDe]

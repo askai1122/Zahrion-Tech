@@ -1,31 +1,6 @@
-import { Link } from 'react-router-dom'
+import LocalLink from '../i18n/LocalLink'
+import { useUI } from '../i18n/useLang'
 import { Facebook, Instagram, Linkedin, Mail } from 'lucide-react'
-
-const links = {
-  Company: [
-    { to: '/about', label: 'About Us' },
-    { to: '/services', label: 'Services' },
-    { to: '/portfolio', label: 'Portfolio' },
-    { to: '/contact', label: 'Contact' },
-  ],
-  Services: [
-    { to: '/hire-web-developer', label: 'Hire a Web Developer' },
-    { to: '/hire-mobile-app-developer', label: 'Hire a Mobile App Developer' },
-    { to: '/hire-nodejs-developer', label: 'Hire a Node.js Developer' },
-    { to: '/hire-software-developer', label: 'Hire a Software Developer' },
-    { to: '/custom-cms-development', label: 'Custom CMS Development' },
-    { to: '/custom-pos-software-development', label: 'Custom POS Software' },
-    { to: '/billing-software-development', label: 'Billing Software Development' },
-    { to: '/veterinary-clinic-app-development', label: 'Veterinary Clinic Apps' },
-  ],
-  Locations: [
-    { to: '/software-development-agency-nashville', label: 'Nashville, TN' },
-    { to: '/custom-software-development-edmonton', label: 'Edmonton, AB' },
-    { to: '/it-outsourcing-hartford', label: 'Hartford, CT' },
-    { to: '/pos-software-systems-chicago', label: 'Chicago, IL' },
-    { to: '/blog', label: 'Blog' },
-  ],
-}
 
 const socialLinks = [
   { icon: Facebook, href: '#' },
@@ -35,21 +10,23 @@ const socialLinks = [
 ]
 
 export default function Footer() {
+  const u = useUI().footer
+  const links = u.columns
   return (
     <footer className="relative dark:bg-slate-900 bg-slate-100 border-t dark:border-white/5 border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center mb-4">
+            <LocalLink to="/" className="flex items-center mb-4">
               <img
                 src="/zahriontech-logo.png"
                 alt="ZahrionTech"
                 className="h-14 w-auto max-w-[220px] object-contain"
               />
-            </Link>
+            </LocalLink>
             <p className="dark:text-slate-400 text-slate-600 text-sm leading-relaxed max-w-xs">
-              We craft world-class digital experiences — from blazing-fast websites to enterprise-grade apps.
+              {u.tagline}
             </p>
             <div className="flex gap-3 mt-6">
               {socialLinks.map(({ icon: Icon, href }) => (
@@ -67,19 +44,29 @@ export default function Footer() {
               <ul className="flex flex-col gap-2">
                 {items.map(item => (
                   <li key={item.label}>
-                    <Link to={item.to} className="dark:text-slate-400 text-slate-600 text-sm dark:hover:text-brand-400 hover:text-brand-500 transition-colors">
+                    <LocalLink to={item.to} className="dark:text-slate-400 text-slate-600 text-sm dark:hover:text-brand-400 hover:text-brand-500 transition-colors">
                       {item.label}
-                    </Link>
+                    </LocalLink>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
+          <div>
+            <h4 className="font-display font-semibold dark:text-white text-slate-900 mb-4 text-sm uppercase tracking-wider">{u.tools}</h4>
+            <ul className="flex flex-col gap-2">
+              {u.toolLinks.map(t => (
+                <li key={t.href}>
+                  <a href={t.href} target="_blank" rel="noopener" className="dark:text-slate-400 text-slate-600 text-sm dark:hover:text-brand-400 hover:text-brand-500 transition-colors">{t.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t dark:border-white/5 border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="dark:text-slate-500 text-slate-500 text-sm">
-            © {new Date().getFullYear()} ZahrionTech. All rights reserved.
+            © {new Date().getFullYear()} ZahrionTech. {u.rights}
           </p>
         
         </div>

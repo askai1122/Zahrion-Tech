@@ -1,58 +1,52 @@
 import { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
+import Seo from '../i18n/Seo'
+import { useLang } from '../i18n/useLang'
+import { portfolio as pfContent } from '../i18n/content/pages'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ExternalLink, Github, ArrowRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import LocalLink from '../i18n/LocalLink'
 import PageWrapper from '../components/PageWrapper'
 import SectionHeading from '../components/SectionHeading'
-
-const categories = ['All', 'Web App', 'Mobile App', 'Desktop App', 'Social Media']
 
 const projects = [
   {
     title: 'FinTrack Dashboard',
-    tag: 'Web App',
-    desc: 'A real-time financial analytics dashboard with interactive charts, budget tracking, and multi-account management.',
+    cat: 1,
     tech: ['React', 'Node.js', 'SQLite', 'Chart.js'],
     color: 'from-brand-500/25 to-cyan-500/15',
     accent: 'brand',
   },
   {
     title: 'ShopEase Mobile',
-    tag: 'Mobile App',
-    desc: 'A full-featured e-commerce app with cart, payments, order tracking and push notifications built with Flutter.',
+    cat: 2,
     tech: ['Flutter', 'Firebase', 'Stripe', 'REST API'],
     color: 'from-emerald-500/25 to-teal-500/15',
     accent: 'emerald',
   },
   {
     title: 'StockPro Desktop',
-    tag: 'Desktop App',
-    desc: 'Cross-platform inventory management desktop app with barcode scanning, reports, and offline-first sync.',
+    cat: 3,
     tech: ['Electron', 'React', 'SQLite', 'Node.js'],
     color: 'from-orange-500/25 to-yellow-500/15',
     accent: 'orange',
   },
   {
     title: 'BrandWave Social',
-    tag: 'Social Media',
-    desc: 'Complete social media rebrand and management for a lifestyle brand — 3× engagement growth in 60 days.',
+    cat: 4,
     tech: ['Instagram', 'TikTok', 'Canva Pro', 'Meta Ads'],
     color: 'from-pink-500/25 to-rose-500/15',
     accent: 'pink',
   },
   {
     title: 'MediConnect Portal',
-    tag: 'Web App',
-    desc: 'Telemedicine web platform with video consultations, appointment booking, prescriptions, and patient records.',
+    cat: 1,
     tech: ['Next.js', 'WebRTC', 'PostgreSQL', 'Tailwind'],
     color: 'from-accent-500/25 to-pink-500/15',
     accent: 'accent',
   },
   {
     title: 'DeliveryX Driver App',
-    tag: 'Mobile App',
-    desc: 'Gig economy driver app with real-time GPS tracking, earnings dashboard, and delivery management.',
+    cat: 2,
     tech: ['React Native', 'Google Maps', 'Socket.io', 'Node.js'],
     color: 'from-cyan-500/25 to-brand-500/15',
     accent: 'cyan',
@@ -60,22 +54,15 @@ const projects = [
 ]
 
 export default function Portfolio() {
-  const [active, setActive] = useState('All')
-
-  const filtered = active === 'All' ? projects : projects.filter(p => p.tag === active)
+  const { lang } = useLang()
+  const c = pfContent[lang]
+  const [active, setActive] = useState(0)
+  const all = projects.map((p, i) => ({ ...p, desc: c.descs[i], tag: c.cats[p.cat] }))
+  const filtered = active === 0 ? all : all.filter(p => p.cat === active)
 
   return (
     <PageWrapper>
-      <Helmet>
-        <title>Portfolio – ZahrionTech</title>
-        <meta name="description" content="Browse ZahrionTech's portfolio of web apps, mobile apps, desktop software and social media campaigns." />
-        <link rel="canonical" href="https://zahriontech.com/portfolio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zahriontech.com/portfolio" />
-        <meta property="og:title" content="Portfolio – ZahrionTech" />
-        <meta property="og:description" content="Browse ZahrionTech's portfolio of web apps, mobile apps, desktop software and social media campaigns." />
-        <meta property="og:image" content="https://zahriontech.com/zahriontech-logo.png" />
-      </Helmet>
+      <Seo path="/portfolio" title={c.title} description={c.desc} />
 
       {/* Hero */}
       <section className="relative pt-32 pb-16 grid-pattern overflow-hidden">
@@ -84,13 +71,13 @@ export default function Portfolio() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono dark:bg-brand-500/10 bg-brand-50 dark:text-brand-400 text-brand-600 dark:border-brand-500/20 border-brand-200 border mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse-slow" />
-              Our Work
+              {c.badge}
             </span>
             <h1 className="font-poppins font-black text-5xl sm:text-6xl dark:text-white text-slate-900 mb-4">
-              Featured <span className="gradient-text">Projects</span>
+              {c.h1a}<span className="gradient-text">{c.h1b}</span>
             </h1>
             <p className="dark:text-slate-400 text-slate-600 text-lg max-w-2xl mx-auto">
-              Real products shipped for real clients — from startups to established businesses.
+              {c.intro}
             </p>
           </motion.div>
         </div>
@@ -100,12 +87,12 @@ export default function Portfolio() {
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2 justify-center">
-            {categories.map(cat => (
+            {c.cats.map((cat, ci) => (
               <button
                 key={cat}
-                onClick={() => setActive(cat)}
+                onClick={() => setActive(ci)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  active === cat
+                  active === ci
                     ? 'bg-gradient-to-r from-brand-500 to-accent-500 text-white shadow-lg shadow-brand-500/25'
                     : 'dark:bg-white/5 bg-slate-100 dark:text-slate-400 text-slate-600 dark:hover:bg-white/10 hover:bg-slate-200'
                 }`}
@@ -179,12 +166,12 @@ export default function Portfolio() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="font-poppins font-black text-3xl dark:text-white text-slate-900 mb-3">
-              Want to be our next <span className="gradient-text">success story?</span>
+              {c.ctaA}<span className="gradient-text">{c.ctaB}</span>
             </h2>
-            <p className="dark:text-slate-400 text-slate-600 mb-6">Let's build something great together.</p>
-            <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 text-white font-medium hover:opacity-90 transition-opacity">
-              Start a Project <ArrowRight size={16} />
-            </Link>
+            <p className="dark:text-slate-400 text-slate-600 mb-6">{c.ctaText}</p>
+            <LocalLink to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 text-white font-medium hover:opacity-90 transition-opacity">
+              {c.ctaBtn} <ArrowRight size={16} />
+            </LocalLink>
           </motion.div>
         </div>
       </section>

@@ -1,74 +1,28 @@
-import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import { Globe, Monitor, Smartphone, Share2, UserCheck, Wrench, CheckCircle2, ArrowRight } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import LocalLink from '../i18n/LocalLink'
+import Seo from '../i18n/Seo'
+import { useLang } from '../i18n/useLang'
+import { services as svcContent } from '../i18n/content/pages'
 import PageWrapper from '../components/PageWrapper'
 import SectionHeading from '../components/SectionHeading'
 
-const services = [
-  {
-    icon: Globe,
-    title: 'Website Development',
-    color: 'from-brand-500 to-cyan-400',
-    desc: 'From landing pages to complex web applications. We build fast, SEO-friendly, accessible websites using React, Next.js, and modern backend stacks.',
-    features: ['Custom React / Next.js apps', 'RESTful & GraphQL APIs', 'SEO optimization', 'CMS integration', 'Performance tuning', 'Responsive design'],
-    slug: '/hire-web-developer',
-  },
-  {
-    icon: Monitor,
-    title: 'Desktop App Development',
-    color: 'from-accent-500 to-pink-500',
-    desc: 'Cross-platform desktop apps for Windows, macOS, and Linux using Electron or Tauri — with native performance and beautiful UIs.',
-    features: ['Electron / Tauri apps', 'Cross-platform support', 'Auto-updater', 'Offline-first', 'Native OS integration', 'Secure local storage'],
-    slug: '/hire-software-developer',
-  },
-  {
-    icon: Smartphone,
-    title: 'Mobile App Development',
-    color: 'from-emerald-500 to-teal-400',
-    desc: 'Native-quality iOS & Android apps with Flutter or React Native. Smooth, performant, and pixel-perfect on every device.',
-    features: ['Flutter & React Native', 'App Store publishing', 'Push notifications', 'Offline mode', 'Payment integration', 'Analytics & crash reporting'],
-    slug: '/hire-mobile-app-developer',
-  },
-  {
-    icon: Share2,
-    title: 'Social Media Management',
-    color: 'from-orange-500 to-yellow-400',
-    desc: 'Content strategy, creative design, scheduling, and analytics management across Instagram, Facebook, LinkedIn, Twitter, and TikTok.',
-    features: ['Content strategy', 'Graphic & video creation', 'Scheduling & automation', 'Community management', 'Analytics & reporting', 'Paid ads management'],
-    slug: null,
-  },
-  {
-    icon: UserCheck,
-    title: 'Personal Assistant Services',
-    color: 'from-pink-500 to-rose-400',
-    desc: 'Dedicated virtual assistance for busy entrepreneurs — email management, research, scheduling, data entry, and more.',
-    features: ['Email & calendar management', 'Research & reports', 'Data entry', 'Customer support', 'Task management', 'Document preparation'],
-    slug: null,
-  },
-  {
-    icon: Wrench,
-    title: 'Bug Fixing & Maintenance',
-    color: 'from-slate-500 to-slate-400',
-    desc: 'Fast, reliable debugging and long-term maintenance for any tech stack. We diagnose, fix, and future-proof your codebase.',
-    features: ['Any framework or stack', 'Performance audits', 'Security patching', 'Code refactoring', 'Dependency updates', '24/7 monitoring option'],
-    slug: '/hire-software-developer',
-  },
+const meta = [
+  { icon: Globe, color: 'from-brand-500 to-cyan-400', slug: '/hire-web-developer' },
+  { icon: Monitor, color: 'from-accent-500 to-pink-500', slug: '/hire-software-developer' },
+  { icon: Smartphone, color: 'from-emerald-500 to-teal-400', slug: '/hire-mobile-app-developer' },
+  { icon: Share2, color: 'from-orange-500 to-yellow-400', slug: null },
+  { icon: UserCheck, color: 'from-pink-500 to-rose-400', slug: null },
+  { icon: Wrench, color: 'from-slate-500 to-slate-400', slug: '/hire-software-developer' },
 ]
 
 export default function Services() {
+  const { lang } = useLang()
+  const c = svcContent[lang]
+  const services = meta.map((m, i) => ({ ...m, ...c.items[i] }))
   return (
     <PageWrapper>
-      <Helmet>
-        <title>Services – ZahrionTech</title>
-        <meta name="description" content="Explore ZahrionTech's services for clients in the USA, UK, Germany, and Europe: web, mobile, and desktop development, and more." />
-        <link rel="canonical" href="https://zahriontech.com/services" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zahriontech.com/services" />
-        <meta property="og:title" content="Services – ZahrionTech" />
-        <meta property="og:description" content="Web development, mobile apps, desktop software, and more — for clients in the USA, UK, Germany, and Europe." />
-        <meta property="og:image" content="https://zahriontech.com/zahriontech-logo.png" />
-      </Helmet>
+      <Seo path="/services" title={c.title} description={c.desc} ogDescription={c.ogDesc} />
 
       {/* Hero */}
       <section className="relative pt-32 pb-16 grid-pattern overflow-hidden">
@@ -77,13 +31,13 @@ export default function Services() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono dark:bg-brand-500/10 bg-brand-50 dark:text-brand-400 text-brand-600 dark:border-brand-500/20 border-brand-200 border mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse-slow" />
-              What We Offer
+              {c.badge}
             </span>
             <h1 className="font-poppins font-black text-5xl sm:text-6xl dark:text-white text-slate-900 mb-4">
-              Our <span className="gradient-text">Services</span>
+              {c.h1a}<span className="gradient-text">{c.h1b}</span>
             </h1>
             <p className="dark:text-slate-400 text-slate-600 text-lg max-w-2xl mx-auto">
-              Everything you need to build, grow, and maintain your digital presence — under one roof.
+              {c.intro}
             </p>
           </motion.div>
         </div>
@@ -109,13 +63,13 @@ export default function Services() {
                 <p className="dark:text-slate-400 text-slate-600 text-sm leading-relaxed">{svc.desc}</p>
                 <div className="flex items-center gap-4 mt-6 flex-wrap">
                   {svc.slug && (
-                    <Link to={svc.slug} className="inline-flex items-center gap-2 text-sm font-medium dark:text-brand-400 text-brand-600 hover:underline">
-                      Learn more <ArrowRight size={14} />
-                    </Link>
+                    <LocalLink to={svc.slug} className="inline-flex items-center gap-2 text-sm font-medium dark:text-brand-400 text-brand-600 hover:underline">
+                      {c.learn} <ArrowRight size={14} />
+                    </LocalLink>
                   )}
-                  <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-medium dark:text-slate-400 text-slate-600 hover:underline">
-                    Get a quote <ArrowRight size={14} />
-                  </Link>
+                  <LocalLink to="/contact" className="inline-flex items-center gap-2 text-sm font-medium dark:text-slate-400 text-slate-600 hover:underline">
+                    {c.quote} <ArrowRight size={14} />
+                  </LocalLink>
                 </div>
               </div>
               <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -138,11 +92,11 @@ export default function Services() {
             className="glass rounded-3xl p-10 neon-glow relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-brand-500/10 to-accent-500/10" />
             <div className="relative">
-              <h2 className="font-poppins font-black text-3xl dark:text-white text-slate-900 mb-3">Not sure which service you need?</h2>
-              <p className="dark:text-slate-400 text-slate-600 mb-6">Book a free 30-minute consultation and we'll figure it out together.</p>
-              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 text-white font-medium hover:opacity-90 transition-opacity">
-                Book Free Consultation <ArrowRight size={16} />
-              </Link>
+              <h2 className="font-poppins font-black text-3xl dark:text-white text-slate-900 mb-3">{c.ctaTitle}</h2>
+              <p className="dark:text-slate-400 text-slate-600 mb-6">{c.ctaText}</p>
+              <LocalLink to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 text-white font-medium hover:opacity-90 transition-opacity">
+                {c.ctaBtn} <ArrowRight size={16} />
+              </LocalLink>
             </div>
           </motion.div>
         </div>
