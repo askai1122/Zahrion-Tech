@@ -1,6 +1,7 @@
-import LocalLink from '../i18n/LocalLink'
-import { useUI } from '../i18n/useLang'
+import { Link } from 'react-router-dom'
 import { Facebook, Instagram, Linkedin, Mail } from 'lucide-react'
+import { useLang, resolveHref } from '../hooks/useLang'
+import { staticPages } from '../i18n/routes'
 
 const socialLinks = [
   { icon: Facebook, href: '#' },
@@ -10,23 +11,23 @@ const socialLinks = [
 ]
 
 export default function Footer() {
-  const u = useUI().footer
-  const links = u.columns
+  const { lang, c } = useLang()
+  const f = c.footer
   return (
     <footer className="relative dark:bg-slate-900 bg-slate-100 border-t dark:border-white/5 border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <LocalLink to="/" className="flex items-center mb-4">
+            <Link to={staticPages.home[lang]} className="flex items-center mb-4">
               <img
                 src="/zahriontech-logo.png"
                 alt="ZahrionTech"
                 className="h-14 w-auto max-w-[220px] object-contain"
               />
-            </LocalLink>
+            </Link>
             <p className="dark:text-slate-400 text-slate-600 text-sm leading-relaxed max-w-xs">
-              {u.tagline}
+              {f.tagline}
             </p>
             <div className="flex gap-3 mt-6">
               {socialLinks.map(({ icon: Icon, href }) => (
@@ -38,35 +39,25 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          {Object.entries(links).map(([title, items]) => (
+          {f.groups.map(({ title, items }) => (
             <div key={title}>
               <h4 className="font-display font-semibold dark:text-white text-slate-900 mb-4 text-sm uppercase tracking-wider">{title}</h4>
               <ul className="flex flex-col gap-2">
-                {items.map(item => (
-                  <li key={item.label}>
-                    <LocalLink to={item.to} className="dark:text-slate-400 text-slate-600 text-sm dark:hover:text-brand-400 hover:text-brand-500 transition-colors">
-                      {item.label}
-                    </LocalLink>
+                {items.map(([key, label]) => (
+                  <li key={label}>
+                    <Link to={resolveHref(lang, key)} className="dark:text-slate-400 text-slate-600 text-sm dark:hover:text-brand-400 hover:text-brand-500 transition-colors">
+                      {label}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
-          <div>
-            <h4 className="font-display font-semibold dark:text-white text-slate-900 mb-4 text-sm uppercase tracking-wider">{u.tools}</h4>
-            <ul className="flex flex-col gap-2">
-              {u.toolLinks.map(t => (
-                <li key={t.href}>
-                  <a href={t.href} target="_blank" rel="noopener" className="dark:text-slate-400 text-slate-600 text-sm dark:hover:text-brand-400 hover:text-brand-500 transition-colors">{t.label}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t dark:border-white/5 border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="dark:text-slate-500 text-slate-500 text-sm">
-            © {new Date().getFullYear()} ZahrionTech. {u.rights}
+            © {new Date().getFullYear()} ZahrionTech. {f.rights}
           </p>
         
         </div>

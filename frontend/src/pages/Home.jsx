@@ -1,42 +1,19 @@
-import LocalLink from '../i18n/LocalLink'
-import Seo from '../i18n/Seo'
-import { useLang } from '../i18n/useLang'
-import { home as homeContent } from '../i18n/content/pages'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, Globe, Smartphone, Monitor, Share2, UserCheck, Wrench, Star, ChevronRight } from 'lucide-react'
+import { ArrowRight, Star, ChevronRight } from 'lucide-react'
 import PageWrapper from '../components/PageWrapper'
 import SectionHeading from '../components/SectionHeading'
-
-const svcMeta = [
-  { icon: Globe, color: 'from-brand-500 to-cyan-400' },
-  { icon: Monitor, color: 'from-accent-500 to-pink-500' },
-  { icon: Smartphone, color: 'from-emerald-500 to-teal-400' },
-  { icon: Share2, color: 'from-orange-500 to-yellow-400' },
-  { icon: UserCheck, color: 'from-pink-500 to-rose-400' },
-  { icon: Wrench, color: 'from-slate-500 to-slate-400' },
-]
-const testMeta = [
-  { name: 'Sarah Mitchell', rating: 5 },
-  { name: 'Ahmed Raza', rating: 5 },
-  { name: 'Elena Torres', rating: 5 },
-]
-const projMeta = [
-  { title: 'FinTrack Dashboard', color: 'from-brand-500/20 to-accent-500/20' },
-  { title: 'ShopEase Mobile', color: 'from-emerald-500/20 to-teal-500/20' },
-  { title: 'StockPro Desktop', color: 'from-orange-500/20 to-yellow-500/20' },
-]
-const statValues = ['120+', '98%', null, '30+']
+import StaticSeo from '../components/StaticSeo'
+import { icons } from '../components/icons'
+import { useLang, resolveHref } from '../hooks/useLang'
 
 export default function Home() {
-  const { lang } = useLang()
-  const c = homeContent[lang]
-  const services = svcMeta.map((m, i) => ({ ...m, label: c.services[i][0], desc: c.services[i][1] }))
-  const testimonials = testMeta.map((m, i) => ({ ...m, role: c.testimonials[i][0], text: c.testimonials[i][1] }))
-  const portfolioItems = projMeta.map((m, i) => ({ ...m, tag: c.tags[i] }))
-  const stats = statValues.map((v, i) => ({ value: v || c.statYears, label: c.stats[i] }))
+  const { lang, c } = useLang()
+  const h = c.home
+  const { stats, services, testimonials, portfolioItems } = h
   return (
     <PageWrapper>
-      <Seo path="/" title={c.title} description={c.desc} />
+      <StaticSeo pageKey="home" />
 
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 grid-pattern noise">
@@ -53,18 +30,23 @@ export default function Home() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono dark:bg-white/5 bg-slate-100 dark:text-slate-300 text-slate-600 dark:border-white/10 border-slate-200 border mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            {c.badge}
+            {h.badge}
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="font-poppins font-black text-5xl sm:text-6xl lg:text-7xl xl:text-8xl dark:text-white text-slate-900 leading-[1.05] mb-6"
+            lang={lang}
+            className={`font-poppins font-black dark:text-white text-slate-900 leading-[1.05] mb-6 ${
+              lang === 'de'
+                ? '[overflow-wrap:anywhere] [hyphens:auto] text-[1.65rem] min-[390px]:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl'
+                : 'text-5xl sm:text-6xl lg:text-7xl xl:text-8xl'
+            }`}
           >
-            {c.h1a}
-            <span className="block gradient-text">{c.h1b}</span>
-            {c.h1c}
+            {h.h1[0]}
+            <span className="block gradient-text">{h.h1[1]}</span>
+            {h.h1[2]}
           </motion.h1>
 
           <motion.p
@@ -73,7 +55,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="dark:text-slate-400 text-slate-600 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            {c.hero}
+            {h.sub}
           </motion.p>
 
           <motion.div
@@ -82,19 +64,19 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.45 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <LocalLink
-              to="/contact"
+            <Link
+              to={resolveHref(lang, 'contact')}
               className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 text-white font-poppins font-semibold text-base hover:opacity-90 transition-all neon-glow"
             >
-              {c.start}
+              {h.primaryCta}
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </LocalLink>
-            <LocalLink
-              to="/portfolio"
+            </Link>
+            <Link
+              to={resolveHref(lang, 'portfolio')}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-xl dark:bg-white/5 bg-slate-100 dark:text-slate-200 text-slate-700 font-semibold text-base dark:hover:bg-white/10 hover:bg-slate-200 dark:border-white/10 border-slate-200 border transition-all"
             >
-              {c.portfolio}
-            </LocalLink>
+              {h.secondaryCta}
+            </Link>
           </motion.div>
 
           {/* Stats */}
@@ -126,9 +108,12 @@ export default function Home() {
       {/* ── Services Overview ────────────────────────────── */}
       <section className="py-24 relative dark:bg-slate-900/50 bg-slate-100/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading tag={c.svcHead.tag} title={c.svcHead.title} highlight={c.svcHead.hl} subtitle={c.svcHead.sub} poppins />
+          <SectionHeading {...h.servicesHeading} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((svc, i) => (
+            {services.map((svc, i) => {
+              const SvcIcon = icons[svc.icon]
+              const href = resolveHref(lang, svc.to)
+              const card = (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
@@ -139,20 +124,24 @@ export default function Home() {
                 className="group glass rounded-2xl p-6 dark:hover:border-brand-500/30 hover:border-brand-300 transition-all cursor-pointer"
               >
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${svc.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <svc.icon size={22} className="text-white" />
+                  <SvcIcon size={22} className="text-white" />
                 </div>
                 <h3 className="font-display font-semibold dark:text-white text-slate-900 text-lg mb-2">{svc.label}</h3>
                 <p className="dark:text-slate-400 text-slate-600 text-sm leading-relaxed">{svc.desc}</p>
                 <div className="flex items-center gap-1 mt-4 dark:text-brand-400 text-brand-500 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                  {c.learn} <ChevronRight size={14} />
+                  {h.learnMore} <ChevronRight size={14} />
                 </div>
               </motion.div>
-            ))}
+              )
+              return href ? (
+                <Link key={i} to={href} className="block">{card}</Link>
+              ) : card
+            })}
           </div>
           <div className="text-center mt-12">
-            <LocalLink to="/services" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl dark:bg-white/5 bg-slate-200 dark:text-slate-300 text-slate-700 font-medium dark:hover:bg-white/10 hover:bg-slate-300 transition-all text-sm">
-              {c.allSvc} <ArrowRight size={16} />
-            </LocalLink>
+            <Link to={resolveHref(lang, 'services')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl dark:bg-white/5 bg-slate-200 dark:text-slate-300 text-slate-700 font-medium dark:hover:bg-white/10 hover:bg-slate-300 transition-all text-sm">
+              {h.viewAll} <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
@@ -160,7 +149,7 @@ export default function Home() {
       {/* ── Portfolio Preview ────────────────────────────── */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading tag={c.workHead.tag} title={c.workHead.title} highlight={c.workHead.hl} subtitle={c.workHead.sub} poppins />
+          <SectionHeading {...h.portfolioHeading} />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {portfolioItems.map((p, i) => (
               <motion.div
@@ -181,7 +170,7 @@ export default function Home() {
                   <div>
                     <h3 className="font-display font-bold dark:text-white text-slate-900 text-xl mb-2">{p.title}</h3>
                     <div className="flex items-center gap-1 dark:text-brand-300 text-brand-600 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                      {c.caseStudy} <ArrowRight size={14} />
+                      {h.viewCase} <ArrowRight size={14} />
                     </div>
                   </div>
                 </div>
@@ -189,9 +178,9 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <LocalLink to="/portfolio" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 text-white font-medium hover:opacity-90 transition-opacity text-sm">
-              {c.allProj} <ArrowRight size={16} />
-            </LocalLink>
+            <Link to={resolveHref(lang, 'portfolio')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 text-white font-medium hover:opacity-90 transition-opacity text-sm">
+              {h.seeAll} <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
@@ -199,7 +188,7 @@ export default function Home() {
       {/* ── Testimonials ─────────────────────────────────── */}
       <section className="py-24 dark:bg-slate-900/50 bg-slate-100/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading tag={c.testHead.tag} title={c.testHead.title} highlight={c.testHead.hl} />
+          <SectionHeading {...h.testimonialsHeading} />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
               <motion.div
@@ -245,17 +234,17 @@ export default function Home() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl" />
             <div className="relative">
               <h2 className="font-poppins font-black text-4xl sm:text-5xl dark:text-white text-slate-900 mb-4">
-                {c.cta.a}<span className="gradient-text">{c.cta.b}</span>
+                {h.cta.pre}<span className="gradient-text">{h.cta.highlight}</span>
               </h2>
               <p className="dark:text-slate-400 text-slate-600 mb-8 text-lg">
-                {c.cta.text}
+                {h.cta.text}
               </p>
-              <LocalLink
-                to="/contact"
+              <Link
+                to={resolveHref(lang, 'contact')}
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 text-white font-semibold text-base hover:opacity-90 transition-all neon-glow"
               >
-                {c.cta.btn} <ArrowRight size={18} />
-              </LocalLink>
+                {h.cta.button} <ArrowRight size={18} />
+              </Link>
             </div>
           </motion.div>
         </div>

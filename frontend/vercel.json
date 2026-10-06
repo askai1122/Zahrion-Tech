@@ -1,8 +1,10 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/admin",
       "destination": "/index.html"
     }
-  ]
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }

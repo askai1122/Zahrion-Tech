@@ -1,52 +1,56 @@
 import { useState } from 'react'
-import Seo from '../i18n/Seo'
-import { useLang } from '../i18n/useLang'
-import { portfolio as pfContent } from '../i18n/content/pages'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ExternalLink, Github, ArrowRight } from 'lucide-react'
-import LocalLink from '../i18n/LocalLink'
+import { Link } from 'react-router-dom'
 import PageWrapper from '../components/PageWrapper'
-import SectionHeading from '../components/SectionHeading'
+import StaticSeo from '../components/StaticSeo'
+import { useLang, resolveHref } from '../hooks/useLang'
 
 const projects = [
   {
     title: 'FinTrack Dashboard',
-    cat: 1,
+    tag: 'Web App',
+    desc: 'A real-time financial analytics dashboard with interactive charts, budget tracking, and multi-account management.',
     tech: ['React', 'Node.js', 'SQLite', 'Chart.js'],
     color: 'from-brand-500/25 to-cyan-500/15',
     accent: 'brand',
   },
   {
     title: 'ShopEase Mobile',
-    cat: 2,
+    tag: 'Mobile App',
+    desc: 'A full-featured e-commerce app with cart, payments, order tracking and push notifications built with Flutter.',
     tech: ['Flutter', 'Firebase', 'Stripe', 'REST API'],
     color: 'from-emerald-500/25 to-teal-500/15',
     accent: 'emerald',
   },
   {
     title: 'StockPro Desktop',
-    cat: 3,
+    tag: 'Desktop App',
+    desc: 'Cross-platform inventory management desktop app with barcode scanning, reports, and offline-first sync.',
     tech: ['Electron', 'React', 'SQLite', 'Node.js'],
     color: 'from-orange-500/25 to-yellow-500/15',
     accent: 'orange',
   },
   {
     title: 'BrandWave Social',
-    cat: 4,
+    tag: 'Social Media',
+    desc: 'Complete social media rebrand and management for a lifestyle brand — 3× engagement growth in 60 days.',
     tech: ['Instagram', 'TikTok', 'Canva Pro', 'Meta Ads'],
     color: 'from-pink-500/25 to-rose-500/15',
     accent: 'pink',
   },
   {
     title: 'MediConnect Portal',
-    cat: 1,
+    tag: 'Web App',
+    desc: 'Telemedicine web platform with video consultations, appointment booking, prescriptions, and patient records.',
     tech: ['Next.js', 'WebRTC', 'PostgreSQL', 'Tailwind'],
     color: 'from-accent-500/25 to-pink-500/15',
     accent: 'accent',
   },
   {
     title: 'DeliveryX Driver App',
-    cat: 2,
+    tag: 'Mobile App',
+    desc: 'Gig economy driver app with real-time GPS tracking, earnings dashboard, and delivery management.',
     tech: ['React Native', 'Google Maps', 'Socket.io', 'Node.js'],
     color: 'from-cyan-500/25 to-brand-500/15',
     accent: 'cyan',
@@ -54,15 +58,17 @@ const projects = [
 ]
 
 export default function Portfolio() {
-  const { lang } = useLang()
-  const c = pfContent[lang]
-  const [active, setActive] = useState(0)
-  const all = projects.map((p, i) => ({ ...p, desc: c.descs[i], tag: c.cats[p.cat] }))
-  const filtered = active === 0 ? all : all.filter(p => p.cat === active)
+  const { lang, c } = useLang()
+  const pp = c.portfolioPage
+  const categories = pp.categories
+  const catLabel = key => (categories.find(([k]) => k === key) || [key, key])[1]
+  const [active, setActive] = useState('All')
+
+  const filtered = active === 'All' ? projects : projects.filter(p => p.tag === active)
 
   return (
     <PageWrapper>
-      <Seo path="/portfolio" title={c.title} description={c.desc} />
+      <StaticSeo pageKey="portfolio" />
 
       {/* Hero */}
       <section className="relative pt-32 pb-16 grid-pattern overflow-hidden">
@@ -71,13 +77,13 @@ export default function Portfolio() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono dark:bg-brand-500/10 bg-brand-50 dark:text-brand-400 text-brand-600 dark:border-brand-500/20 border-brand-200 border mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse-slow" />
-              {c.badge}
+              {pp.tag}
             </span>
-            <h1 className="font-poppins font-black text-5xl sm:text-6xl dark:text-white text-slate-900 mb-4">
-              {c.h1a}<span className="gradient-text">{c.h1b}</span>
+            <h1 lang={lang} className="font-poppins font-black text-5xl sm:text-6xl dark:text-white text-slate-900 mb-4 [overflow-wrap:anywhere]">
+              {pp.h1[0]}<span className="gradient-text">{pp.h1[1]}</span>
             </h1>
             <p className="dark:text-slate-400 text-slate-600 text-lg max-w-2xl mx-auto">
-              {c.intro}
+              {pp.sub}
             </p>
           </motion.div>
         </div>
@@ -87,17 +93,17 @@ export default function Portfolio() {
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2 justify-center">
-            {c.cats.map((cat, ci) => (
+            {categories.map(([cat, label]) => (
               <button
                 key={cat}
-                onClick={() => setActive(ci)}
+                onClick={() => setActive(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  active === ci
+                  active === cat
                     ? 'bg-gradient-to-r from-brand-500 to-accent-500 text-white shadow-lg shadow-brand-500/25'
                     : 'dark:bg-white/5 bg-slate-100 dark:text-slate-400 text-slate-600 dark:hover:bg-white/10 hover:bg-slate-200'
                 }`}
               >
-                {cat}
+                {label}
               </button>
             ))}
           </div>
@@ -129,7 +135,7 @@ export default function Portfolio() {
                     </div>
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 rounded-full text-xs font-mono dark:bg-white/10 bg-white/60 dark:text-white text-slate-700">
-                        {p.tag}
+                        {catLabel(p.tag)}
                       </span>
                     </div>
                     <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -145,7 +151,7 @@ export default function Portfolio() {
                   {/* Card body */}
                   <div className="p-6">
                     <h3 className="font-display font-bold dark:text-white text-slate-900 text-lg mb-2">{p.title}</h3>
-                    <p className="dark:text-slate-400 text-slate-600 text-sm leading-relaxed mb-4">{p.desc}</p>
+                    <p className="dark:text-slate-400 text-slate-600 text-sm leading-relaxed mb-4">{pp.projects[p.title] || p.desc}</p>
                     <div className="flex flex-wrap gap-2">
                       {p.tech.map(t => (
                         <span key={t} className="px-2 py-1 rounded-md text-xs font-mono dark:bg-white/5 bg-slate-100 dark:text-slate-400 text-slate-500">
@@ -166,12 +172,12 @@ export default function Portfolio() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="font-poppins font-black text-3xl dark:text-white text-slate-900 mb-3">
-              {c.ctaA}<span className="gradient-text">{c.ctaB}</span>
+              {pp.cta.pre}<span className="gradient-text">{pp.cta.highlight}</span>
             </h2>
-            <p className="dark:text-slate-400 text-slate-600 mb-6">{c.ctaText}</p>
-            <LocalLink to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 text-white font-medium hover:opacity-90 transition-opacity">
-              {c.ctaBtn} <ArrowRight size={16} />
-            </LocalLink>
+            <p className="dark:text-slate-400 text-slate-600 mb-6">{pp.cta.text}</p>
+            <Link to={resolveHref(lang, 'contact')} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 text-white font-medium hover:opacity-90 transition-opacity">
+              {pp.cta.button} <ArrowRight size={16} />
+            </Link>
           </motion.div>
         </div>
       </section>

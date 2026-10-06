@@ -1,7 +1,13 @@
 import { motion } from 'framer-motion'
 
-export default function SectionHeading({ tag, title, highlight, subtitle, poppins }) {
-  const headingFont = poppins ? 'font-poppins' : 'font-display'
+export default function SectionHeading({ tag, title, highlight, subtitle }) {
+  const usePoppins = (
+    (title === 'Featured' && highlight === 'Projects') ||
+    (title === 'Services Built for' && highlight === 'Modern Businesses') ||
+    (title === 'Ausgewählte' && highlight === 'Projekte') ||
+    (title === 'Leistungen für' && highlight === 'moderne Unternehmen')
+  )
+  const headingFont = usePoppins ? 'font-poppins' : 'font-display'
 
   return (
     <motion.div

@@ -20,8 +20,11 @@
   },
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/generate-sitemap.mjs",
+    "seo": "node scripts/generate-seo-files.mjs",
+    "prebuild": "node scripts/generate-seo-files.mjs",
     "build": "vite build",
+    "postbuild": "node scripts/prerender-head.mjs",
     "preview": "vite preview"
-  }
+  },
+  "type": "module"
 }
