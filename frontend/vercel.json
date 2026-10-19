@@ -1,7 +1,227 @@
 {
-  "rewrites": [
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
     {
       "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.zahriontech.com"
+        }
+      ],
+      "destination": "https://zahriontech.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/de/blog/heic-in-jpg-umwandeln",
+      "destination": "/de/blog",
+      "permanent": true
+    },
+    {
+      "source": "/de/blog/pdf-verkleinern-ohne-qualitaetsverlust",
+      "destination": "/de/blog",
+      "permanent": true
+    },
+    {
+      "source": "/de/blog/dsgvo-konforme-webentwicklung-checkliste",
+      "destination": "/de/blog",
+      "permanent": true
+    },
+    {
+      "source": "/de/blog/individualsoftware-oder-standardsoftware",
+      "destination": "/de/blog/individuelle-software-vs-standardsoftware",
+      "permanent": true
+    },
+    {
+      "source": "/de/blog/kosten-kassensoftware-individuell-2026",
+      "destination": "/de/pos-software",
+      "permanent": true
+    },
+    {
+      "source": "/de/blog/individuelles-cms-oder-wordpress",
+      "destination": "/de/cms-entwicklung",
+      "permanent": true
+    },
+    {
+      "source": "/blog/heic-to-jpg-converter-guide",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/compress-pdf-without-losing-quality",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/gdpr-compliant-web-development-checklist",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/software-development-company/nashville",
+      "destination": "/software-development-agency-nashville",
+      "permanent": true
+    },
+    {
+      "source": "/software-development-company/edmonton",
+      "destination": "/custom-software-development-edmonton",
+      "permanent": true
+    },
+    {
+      "source": "/software-development-company/hartford",
+      "destination": "/it-outsourcing-hartford",
+      "permanent": true
+    },
+    {
+      "source": "/software-development-company/chicago",
+      "destination": "/pos-software-systems-chicago",
+      "permanent": true
+    },
+    {
+      "source": "/industries/erp-software-development",
+      "destination": "/erp-software-development",
+      "permanent": true
+    },
+    {
+      "source": "/industries/accounting-invoicing-software",
+      "destination": "/billing-software-development",
+      "permanent": true
+    },
+    {
+      "source": "/industries/pos-software",
+      "destination": "/custom-pos-software-development",
+      "permanent": true
+    },
+    {
+      "source": "/de/hire-software-developer",
+      "destination": "/de/softwareentwicklung",
+      "permanent": true
+    },
+    {
+      "source": "/de/custom-software-development",
+      "destination": "/de/individuelle-software",
+      "permanent": true
+    },
+    {
+      "source": "/de/hire-web-developer",
+      "destination": "/de/webentwicklung",
+      "permanent": true
+    },
+    {
+      "source": "/de/hire-mobile-app-developer",
+      "destination": "/de/app-entwicklung",
+      "permanent": true
+    },
+    {
+      "source": "/de/crm-software-development",
+      "destination": "/de/crm-entwicklung",
+      "permanent": true
+    },
+    {
+      "source": "/de/erp-software-development",
+      "destination": "/de/erp-entwicklung",
+      "permanent": true
+    },
+    {
+      "source": "/de/custom-pos-software-development",
+      "destination": "/de/pos-software",
+      "permanent": true
+    },
+    {
+      "source": "/de/saas-development",
+      "destination": "/de/saas-entwicklung",
+      "permanent": true
+    },
+    {
+      "source": "/de/hire-nodejs-developer",
+      "destination": "/de/nodejs-entwicklung",
+      "permanent": true
+    },
+    {
+      "source": "/de/react-development",
+      "destination": "/de/react-entwicklung",
+      "permanent": true
+    },
+    {
+      "source": "/de/nextjs-development",
+      "destination": "/de/nextjs-entwicklung",
+      "permanent": true
+    },
+    {
+      "source": "/de/custom-cms-development",
+      "destination": "/de/cms-entwicklung",
+      "permanent": true
+    },
+    {
+      "source": "/de/billing-software-development",
+      "destination": "/de/abrechnungssoftware",
+      "permanent": true
+    },
+    {
+      "source": "/de/veterinary-clinic-app-development",
+      "destination": "/de/tierarzt-app-entwicklung",
+      "permanent": true
+    },
+    {
+      "source": "/de/ai-calling-agent",
+      "destination": "/de/ki-telefonagent",
+      "permanent": true
+    },
+    {
+      "source": "/de/about",
+      "destination": "/de/ueber-uns",
+      "permanent": true
+    },
+    {
+      "source": "/de/services",
+      "destination": "/de/leistungen",
+      "permanent": true
+    },
+    {
+      "source": "/de/portfolio",
+      "destination": "/de/referenzen",
+      "permanent": true
+    },
+    {
+      "source": "/de/contact",
+      "destination": "/de/kontakt",
+      "permanent": true
+    },
+    {
+      "source": "/industries/:path*",
+      "destination": "/custom-software-development",
+      "permanent": true
+    },
+    {
+      "source": "/software-development-company/:path*",
+      "destination": "/custom-software-development",
+      "permanent": true
+    },
+    {
+      "source": "/industries",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/software-development-company",
+      "destination": "/custom-software-development",
+      "permanent": true
+    },
+    {
+      "source": "/de/industries/:path*",
+      "destination": "/de/individuelle-software",
+      "permanent": true
+    },
+    {
+      "source": "/de/software-development-company/:path*",
+      "destination": "/de/individuelle-software",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/admin",
       "destination": "/index.html"
     }
   ]

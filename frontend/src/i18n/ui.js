@@ -33,6 +33,16 @@ export const ui = {
             ['svc:pos', 'Custom POS Software'],
             ['svc:billing', 'Billing Software Development'],
             ['svc:vet', 'Veterinary Clinic Apps'],
+            ['svc:aicall', 'AI Calling Agent'],
+          ],
+        },
+        {
+          title: 'AI Calling Agent',
+          items: [
+            ['/ai-calling-agent/usa', 'AI Calling Agent USA'],
+            ['/ai-calling-agent/uk', 'AI Calling Agent UK'],
+            ['/ai-calling-agent/canada', 'AI Calling Agent Canada'],
+            ['/ai-calling-agent/australia', 'AI Calling Agent Australia'],
           ],
         },
         {
@@ -109,6 +119,7 @@ export const ui = {
         { icon: 'Globe', title: 'Website Development', color: 'from-brand-500 to-cyan-400', desc: 'From landing pages to complex web applications. We build fast, SEO-friendly, accessible websites using React, Next.js, and modern backend stacks.', features: ['Custom React / Next.js apps', 'RESTful & GraphQL APIs', 'SEO optimization', 'CMS integration', 'Performance tuning', 'Responsive design'], to: 'svc:web' },
         { icon: 'Monitor', title: 'Desktop App Development', color: 'from-accent-500 to-pink-500', desc: 'Cross-platform desktop apps for Windows, macOS, and Linux using Electron or Tauri — with native performance and beautiful UIs.', features: ['Electron / Tauri apps', 'Cross-platform support', 'Auto-updater', 'Offline-first', 'Native OS integration', 'Secure local storage'], to: 'svc:software' },
         { icon: 'Smartphone', title: 'Mobile App Development', color: 'from-emerald-500 to-teal-400', desc: 'Native-quality iOS & Android apps with Flutter or React Native. Smooth, performant, and pixel-perfect on every device.', features: ['Flutter & React Native', 'App Store publishing', 'Push notifications', 'Offline mode', 'Payment integration', 'Analytics & crash reporting'], to: 'svc:app' },
+        { icon: 'PhoneCall', title: 'AI Calling Agent', color: 'from-cyan-500 to-brand-500', desc: 'Voice AI that answers your calls 24/7, books appointments, qualifies leads and writes everything into your CRM — with a clean handover to your team.', features: ['Inbound call answering', 'Appointment booking', 'Lead qualification', 'Outbound reminders (with consent)', 'CRM and calendar integration', 'Multilingual conversations'], to: 'svc:aicall' },
         { icon: 'Share2', title: 'Social Media Management', color: 'from-orange-500 to-yellow-400', desc: 'Content strategy, creative design, scheduling, and analytics management across Instagram, Facebook, LinkedIn, Twitter, and TikTok.', features: ['Content strategy', 'Graphic & video creation', 'Scheduling & automation', 'Community management', 'Analytics & reporting', 'Paid ads management'], to: null },
         { icon: 'UserCheck', title: 'Personal Assistant Services', color: 'from-pink-500 to-rose-400', desc: 'Dedicated virtual assistance for busy entrepreneurs — email management, research, scheduling, data entry, and more.', features: ['Email & calendar management', 'Research & reports', 'Data entry', 'Customer support', 'Task management', 'Document preparation'], to: null },
         { icon: 'Wrench', title: 'Bug Fixing & Maintenance', color: 'from-slate-500 to-slate-400', desc: 'Fast, reliable debugging and long-term maintenance for any tech stack. We diagnose, fix, and future-proof your codebase.', features: ['Any framework or stack', 'Performance audits', 'Security patching', 'Code refactoring', 'Dependency updates', '24/7 monitoring option'], to: 'svc:software' },
@@ -193,7 +204,7 @@ export const ui = {
       software: 'Software Development', custom: 'Custom Software Development', web: 'Web Development', app: 'Mobile App Development',
       crm: 'CRM Software Development', erp: 'ERP Software Development', pos: 'POS Software Development', saas: 'SaaS Development',
       node: 'Node.js Development', react: 'React Development', nextjs: 'Next.js Development', cms: 'Custom CMS Development',
-      billing: 'Billing Software Development', vet: 'Veterinary Clinic Apps',
+      billing: 'Billing Software Development', vet: 'Veterinary Clinic Apps', aicall: 'AI Calling Agent',
     },
   },
 
@@ -238,6 +249,13 @@ export const ui = {
             ['svc:node', 'Node.js Entwicklung'],
             ['svc:react', 'React Entwicklung'],
             ['svc:nextjs', 'Next.js Entwicklung'],
+          ],
+        },
+        {
+          title: 'KI-Telefonagent',
+          items: [
+            ['svc:aicall', 'KI-Telefonagent'],
+            ['/de/ki-telefonagent/deutschland', 'KI-Telefonagent Deutschland'],
           ],
         },
       ],
@@ -306,6 +324,7 @@ export const ui = {
         { icon: 'Code', title: 'Individuelle Software', color: 'from-accent-500 to-pink-500', desc: 'Maßgeschneiderte Business-Software für Ihre Prozesse: von CRM- und ERP-Systemen über POS- und Abrechnungssoftware bis zu SaaS-Produkten und Backend-Lösungen.', features: ['CRM-Systeme', 'ERP-Systeme', 'POS- und Abrechnungssoftware', 'SaaS-Produkte und MVPs', 'Backend- und API-Entwicklung', 'Schnittstellen und Integrationen'], to: 'svc:custom' },
         { icon: 'Monitor', title: 'Desktop-Anwendungen', color: 'from-slate-500 to-slate-400', desc: 'Plattformübergreifende Desktop-Software für Windows, macOS und Linux mit Electron oder Tauri – mit nativer Performance und moderner Oberfläche.', features: ['Electron- und Tauri-Anwendungen', 'Plattformübergreifend', 'Automatische Updates', 'Offline-first', 'Integration ins Betriebssystem', 'Sichere lokale Datenspeicherung'], to: 'svc:software' },
         { icon: 'Wrench', title: 'Wartung und Fehlerbehebung', color: 'from-orange-500 to-yellow-400', desc: 'Zuverlässige Fehlersuche und langfristige Wartung für jeden Technologie-Stack. Wir analysieren, beheben und machen Ihre Codebasis zukunftsfähig.', features: ['Jedes Framework, jeder Stack', 'Performance-Analysen', 'Sicherheitsupdates', 'Refactoring', 'Aktualisierung von Abhängigkeiten', 'Monitoring auf Wunsch'], to: 'svc:software' },
+        { icon: 'PhoneCall', title: 'KI-Telefonagent', color: 'from-cyan-500 to-brand-500', desc: 'Sprach-KI, die Ihre Anrufe rund um die Uhr annimmt, Termine bucht, Anfragen qualifiziert und alles ins CRM schreibt – mit sauberer Übergabe an Ihr Team.', features: ['Annahme eingehender Anrufe', 'Terminbuchung', 'Qualifizierung von Anfragen', 'Ausgehende Erinnerungen (mit Einwilligung)', 'CRM- und Kalenderanbindung', 'Mehrsprachige Gespräche'], to: 'svc:aicall' },
         { icon: 'Share2', title: 'Social Media Management', color: 'from-pink-500 to-rose-400', desc: 'Content-Strategie, Design, Planung und Auswertung für Instagram, Facebook, LinkedIn, X und TikTok.', features: ['Content-Strategie', 'Grafik- und Videoerstellung', 'Planung und Automatisierung', 'Community-Management', 'Analyse und Reporting', 'Management bezahlter Anzeigen'], to: null },
         { icon: 'UserCheck', title: 'Persönliche Assistenz', color: 'from-slate-500 to-slate-400', desc: 'Virtuelle Assistenz für Unternehmerinnen und Unternehmer – von E-Mail-Management über Recherche bis zur Dateneingabe.', features: ['E-Mail- und Kalenderverwaltung', 'Recherche und Berichte', 'Dateneingabe', 'Kundenservice', 'Aufgabenverwaltung', 'Dokumentenerstellung'], to: null },
       ],
@@ -388,7 +407,7 @@ export const ui = {
       software: 'Softwareentwicklung', custom: 'Individuelle Software', web: 'Webentwicklung', app: 'App Entwicklung',
       crm: 'CRM Entwicklung', erp: 'ERP Entwicklung', pos: 'POS Software', saas: 'SaaS Entwicklung',
       node: 'Node.js Entwicklung', react: 'React Entwicklung', nextjs: 'Next.js Entwicklung', cms: 'CMS Entwicklung',
-      billing: 'Abrechnungssoftware', vet: 'App für Tierarztpraxen',
+      billing: 'Abrechnungssoftware', vet: 'App für Tierarztpraxen', aicall: 'KI-Telefonagent',
     },
   },
 }

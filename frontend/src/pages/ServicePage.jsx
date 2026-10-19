@@ -10,6 +10,7 @@ import { useLang } from '../hooks/useLang'
 import { servicePaths, staticPages, absolute } from '../i18n/routes'
 import { servicesDe } from '../data/servicePagesDe'
 import { servicesEn } from '../data/servicePagesEn'
+import { aiHubLinks } from '../data/aiCallingContent'
 
 // Data-driven service page. Section markup/classes are copied from the existing service pages
 // (HireSoftwareDeveloper etc.) so it looks identical to the rest of the site.
@@ -179,6 +180,15 @@ export default function ServicePage({ serviceKey }) {
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass dark:text-slate-200 text-slate-700 text-sm font-medium hover:text-brand-400 transition-colors"
               >
                 {c.serviceLabels[k]} <ArrowRight size={14} />
+              </Link>
+            ))}
+            {serviceKey === 'aicall' && aiHubLinks(lang).map(h => (
+              <Link
+                key={h.href}
+                to={h.href}
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass dark:text-slate-200 text-slate-700 text-sm font-medium hover:text-brand-400 transition-colors"
+              >
+                {h.label} <ArrowRight size={14} />
               </Link>
             ))}
             <Link

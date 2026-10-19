@@ -35,6 +35,7 @@ export const servicePaths = {
   cms:      { en: '/custom-cms-development',             de: '/de/cms-entwicklung',            legacy: true },
   billing:  { en: '/billing-software-development',       de: '/de/abrechnungssoftware',        legacy: true },
   vet:      { en: '/veterinary-clinic-app-development',  de: '/de/tierarzt-app-entwicklung',   legacy: true },
+  aicall:   { en: '/ai-calling-agent',                   de: '/de/ki-telefonagent' },
 }
 
 // English-only pages (US/Canada location landing pages). No German equivalent.
@@ -53,6 +54,14 @@ export const blogPairs = {
   crm:       { en: 'custom-crm-development',                de: 'crm-software-entwickeln-lassen' },
   app:       { en: 'mobile-app-development-cost-process',   de: 'app-entwickeln-lassen-kosten-ablauf' },
   saasmvp:   { en: 'saas-mvp-development',                  de: 'saas-mvp-entwickeln-lassen' },
+  aiguide:   { en: 'what-is-an-ai-calling-agent',          de: 'was-ist-ein-ki-telefonagent' },
+  aivshuman: { en: 'ai-receptionist-vs-answering-service', de: 'ki-telefonassistent-vs-callcenter' },
+  aicost:    { en: 'ai-calling-agent-cost',                de: 'ki-telefonagent-kosten' },
+  aibooking: { en: 'ai-appointment-booking-by-phone',      de: 'terminbuchung-per-telefon-mit-ki' },
+  aiivr:     { en: 'ai-calling-agent-vs-ivr',              de: 'ki-telefonagent-vs-ivr' },
+  aiclinic:  { en: 'ai-calling-agent-for-clinics',         de: 'ki-telefonagent-fuer-arztpraxen' },
+  aitrades:  { en: 'ai-calling-agent-for-trades-and-home-services', de: 'ki-telefonagent-fuer-handwerker' },
+  airealestate: { en: 'ai-calling-agent-for-real-estate',  de: 'ki-telefonagent-fuer-immobilienmakler' },
 }
 
 // ---------- helpers ----------

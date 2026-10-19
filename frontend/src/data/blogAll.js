@@ -1,6 +1,7 @@
 // Combined blog access: the two original English posts (unchanged) + the new DE/EN articles.
 import { posts as legacyPosts } from './blogData.js'
 import { blogArticles } from './blogArticles.js'
+import { blogAi } from './blogAi.js'
 
 const legacyLinks = {
   'custom-pos-software-cost-2026': ['pos', 'custom', 'erp'],
@@ -10,6 +11,7 @@ const legacyLinks = {
 const all = [
   ...legacyPosts.map(p => ({ ...p, lang: 'en', pair: null, links: legacyLinks[p.slug] || [] })),
   ...blogArticles,
+  ...blogAi,
 ]
 
 export const allPosts = all

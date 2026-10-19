@@ -22,6 +22,7 @@ import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import NotFound from './pages/NotFound'
 import ServicePage from './pages/ServicePage'
+import AiPlacePage from './pages/AiPlacePage'
 import LangHead from './components/LangHead'
 import LanguageDetector from './components/LanguageDetector'
 import { staticPages, servicePaths } from './i18n/routes'
@@ -83,6 +84,13 @@ export default function App() {
             {Object.entries(servicePaths).map(([key, v]) => (
               <Route key={`de-${key}`} path={v.de} element={<ServicePage serviceKey={key} />} />
             ))}
+
+            {/* AI Calling Agent location pages: /ai-calling-agent/<country>[/<city>] and /de/ki-telefonagent/<city>.
+                AiPlacePage looks the path up in the city registry and renders NotFound for anything unknown. */}
+            <Route path="/ai-calling-agent/:country" element={<AiPlacePage />} />
+            <Route path="/ai-calling-agent/:country/:city" element={<AiPlacePage />} />
+            <Route path="/de/ki-telefonagent/:city" element={<AiPlacePage />} />
+
             <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

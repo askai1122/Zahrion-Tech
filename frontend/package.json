@@ -21,10 +21,12 @@
   "scripts": {
     "dev": "vite",
     "seo": "node scripts/generate-seo-files.mjs",
-    "prebuild": "node scripts/generate-seo-files.mjs",
+    "prebuild": "node scripts/optimize-ai-variants.mjs && node scripts/generate-seo-files.mjs",
     "build": "vite build",
-    "postbuild": "node scripts/prerender-head.mjs",
-    "preview": "vite preview"
+    "postbuild": "node scripts/prerender-head.mjs && node scripts/seo-audit.mjs",
+    "preview": "vite preview",
+    "audit": "node scripts/seo-audit.mjs",
+    "variants": "node scripts/optimize-ai-variants.mjs"
   },
   "type": "module"
 }

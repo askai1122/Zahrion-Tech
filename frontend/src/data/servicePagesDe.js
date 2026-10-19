@@ -570,4 +570,47 @@ export const servicesDe = {
     ],
     related: ['app', 'custom', 'node', 'saas'],
   },
+
+  aicall: {
+    icon: 'PhoneCall',
+    badge: 'KI-Telefonagent',
+    meta: {
+      title: 'KI-Telefonagent entwickeln lassen | ZahrionTech',
+      description: 'ZahrionTech entwickelt KI-Telefonagenten, die Anrufe rund um die Uhr annehmen, Termine buchen und Anfragen qualifizieren – individuell für Ihr Unternehmen.',
+      ogTitle: 'KI-Telefonagent entwickeln lassen | ZahrionTech',
+      ogDescription: 'Sprach-KI, die Ihre Anrufe annimmt, Termine bucht und Anfragen qualifiziert – angebunden an Kalender und CRM.',
+    },
+    h1: { pre: 'KI-Telefonagenten, die', highlight: 'annehmen, buchen, qualifizieren' },
+    intro: 'Jeder verpasste Anruf ist ein Kunde, der als Nächstes bei der Konkurrenz anruft. ZahrionTech entwickelt KI-Telefonagenten, die sofort abnehmen, ein natürliches Gespräch führen, Termine buchen, Anfragen qualifizieren und alles in Ihr CRM schreiben – und an Ihr Team übergeben, sobald ein Mensch gefragt ist.',
+    features: [
+      'Sofortige Annahme eingehender Anrufe, 24 Stunden täglich',
+      'Terminbuchung, Verschiebung und Stornierung',
+      'Qualifizierung von Anfragen mit Ihren eigenen Fragen',
+      'Ausgehende Erinnerungen und Nachfassanrufe, wo Einwilligungen vorliegen',
+      'Gesprächszusammenfassungen, Transkripte und Aufzeichnungen im CRM',
+      'Übergabe an Mitarbeitende mit vollem Gesprächskontext',
+      'Mehrsprachige Gespräche mit automatischem Wechsel',
+      'Anbindung an Kalender, CRM, Helpdesk und Telefonanlage',
+    ],
+    benefits: [
+      { title: 'Keine verpassten Anrufe', desc: 'Anrufe werden nachts, am Wochenende und in Stoßzeiten sofort angenommen.' },
+      { title: 'Weniger Routinearbeit', desc: 'Standardfragen und Terminbuchungen laufen automatisch, Ihr Team kümmert sich um Anrufe, die einen Menschen brauchen.' },
+      { title: 'Passend zu Ihrem Ablauf', desc: 'Gesprächsleitfaden, Buchungsregeln und Übergabe werden für Ihr Unternehmen gestaltet, nicht aus einer Standardvorlage übernommen.' },
+    ],
+    tech: ['Spracherkennung', 'Große Sprachmodelle', 'Sprachsynthese', 'SIP / VoIP', 'Node.js', 'REST und Webhooks'],
+    useCases: [
+      'Terminbuchung für Praxen, Salons und Dienstleister',
+      'Anrufannahme außerhalb der Geschäftszeiten für Handwerksbetriebe',
+      'Anfragenqualifizierung für Immobilienmakler und Agenturen',
+      'Fragen zu Bestellstatus und Lieferung für Handel und Logistik',
+    ],
+    faqs: [
+      { q: 'Was ist ein KI-Telefonagent?', a: 'Ein KI-Telefonagent ist eine Sprachsoftware, die gesprochene Sprache versteht, in natürlicher Sprache antwortet und Aktionen ausführt, etwa einen Termin zu buchen oder einen CRM-Eintrag zu aktualisieren. Anders als bei einem klassischen Sprachmenü spricht der Anrufer einfach.' },
+      { q: 'Kann der Agent auch ausgehende Anrufe führen?', a: 'Technisch ja, ausgehende Anrufe sind aber deutlich strenger reguliert als eingehende (Einwilligung nach § 7 UWG, DSGVO, Kennzeichnung als KI). Wir bauen Einwilligungsprüfung und Opt-out-Handling ein und empfehlen, die Anforderungen mit Ihrer Rechtsberatung zu klären.' },
+      { q: 'Merken Anrufer, dass sie mit einer KI sprechen?', a: 'Der Agent stellt sich standardmäßig als automatischer Assistent vor und übergibt auf Wunsch an einen Menschen. Die Formulierungen stimmen wir auf die für Sie geltenden Regeln ab.' },
+      { q: 'Mit welchen Systemen lässt sich der Agent verbinden?', a: 'Mit Kalendern, CRMs, Helpdesks, Buchungstools und Ihren eigenen Schnittstellen. Bei Individualsystemen entwickeln wir die Anbindung im Projekt mit.' },
+      { q: 'Betreuen Sie auch mein Unternehmen in meiner Stadt?', a: 'Der Agent läuft in der Cloud und wir arbeiten remote – wir betreuen Unternehmen in ganz Deutschland. Auf den Standortseiten finden Sie typische Branchen und rechtliche Hinweise.' },
+    ],
+    related: ['custom', 'crm', 'saas', 'node'],
+  },
 }

@@ -242,4 +242,47 @@ export const servicesEn = {
     ],
     related: ['react', 'web', 'node', 'saas'],
   },
+
+  aicall: {
+    icon: 'PhoneCall',
+    badge: 'AI Calling Agent',
+    meta: {
+      title: 'AI Calling Agent Development – ZahrionTech',
+      description: 'ZahrionTech builds AI calling agents that answer calls 24/7, book appointments, qualify leads and update your CRM – custom-built for your business.',
+      ogTitle: 'AI Calling Agent Development – ZahrionTech',
+      ogDescription: 'Voice AI that answers your calls, books appointments and qualifies leads – connected to your calendar and CRM.',
+    },
+    h1: { pre: 'AI Calling Agents That', highlight: 'Answer, Book & Qualify' },
+    intro: 'Every missed call is a customer who calls your competitor next. ZahrionTech builds AI calling agents that pick up instantly, hold a natural conversation, book appointments, qualify leads and write everything into your CRM – and hand over to your team whenever a human is needed.',
+    features: [
+      'Instant answering of inbound calls, 24 hours a day',
+      'Appointment booking, rescheduling and cancellation',
+      'Lead qualification with questions you define',
+      'Outbound reminders and follow-ups where you have consent',
+      'Call summaries, transcripts and recordings in your CRM',
+      'Warm handover to a human with full context',
+      'Multilingual conversations, switching with the caller',
+      'Integration with your calendar, CRM, helpdesk and phone system',
+    ],
+    benefits: [
+      { title: 'No missed calls', desc: 'Calls are answered on the first ring at night, at weekends and during peak hours.' },
+      { title: 'Less repetitive work', desc: 'Routine questions and bookings are handled automatically, so your team focuses on the calls that need a person.' },
+      { title: 'Built around your process', desc: 'Scripts, booking rules and handover logic are designed for your business, not a generic template.' },
+    ],
+    tech: ['Speech-to-text', 'Large language models', 'Text-to-speech', 'SIP / VoIP', 'Node.js', 'REST & webhooks'],
+    useCases: [
+      'Appointment booking for clinics, salons and service businesses',
+      'After-hours answering for trades and field services',
+      'Lead qualification for real estate and agencies',
+      'Order-status and FAQ calls for retail and logistics',
+    ],
+    faqs: [
+      { q: 'What is an AI calling agent?', a: 'An AI calling agent is voice software that understands spoken language, replies in natural speech and takes actions such as booking an appointment or updating a CRM record. Unlike a classic phone menu, the caller simply talks.' },
+      { q: 'Can it handle outbound calls?', a: 'Technically yes, but outbound calls are regulated far more strictly than inbound ones (consent, do-not-call lists, calling hours, AI disclosure). We build consent checks and opt-out handling in, and recommend you confirm requirements with your own legal adviser.' },
+      { q: 'Will callers know it is an AI?', a: 'The agent introduces itself as an automated assistant by default and can hand over to a person on request. We configure the wording for the rules that apply to your country.' },
+      { q: 'Which systems can it connect to?', a: 'Calendars, CRMs, helpdesks, booking tools and your own APIs. If you have a custom system, we build the integration as part of the project.' },
+      { q: 'Do you serve my city?', a: 'The agent runs in the cloud and we work remotely, so we serve businesses across the USA, UK, Canada, Australia and Germany. See the location pages for local industries and calling rules.' },
+    ],
+    related: ['custom', 'crm', 'saas', 'node'],
+  },
 }

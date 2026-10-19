@@ -10,6 +10,9 @@ export const EN_ONLY = [
   '/pos-software-systems-chicago',
 ]
 
+// URL prefixes of the AI calling agent location pages (country-specific, no 1:1 translation)
+export const EN_ONLY_PREFIXES = ['/ai-calling-agent/']
+
 export const isDePath = p => p === '/de' || p.startsWith('/de/')
 export const stripLang = p => (isDePath(p) ? p.slice(3) || '/' : p)
 
@@ -18,7 +21,7 @@ export function localize(to, lang) {
   if (lang !== 'de') return to
   if (!to.startsWith('/') || to.startsWith('//')) return to
   const bare = to.split(/[?#]/)[0]
-  if (EN_ONLY.includes(bare) || isDePath(bare)) return to
+  if (EN_ONLY.includes(bare) || EN_ONLY_PREFIXES.some(x => bare.startsWith(x)) || isDePath(bare)) return to
   return to === '/' ? '/de' : '/de' + to
 }
 

@@ -8,7 +8,9 @@ import { servicesEn } from '../data/servicePagesEn.js'
 import { allPosts } from '../data/blogAll.js'
 import { locationPages } from '../data/locationPageData.js'
 import { ui } from './ui.js'
-import { organizationSchema, websiteSchema, serviceSchema, faqSchema, articleSchema } from './schema.js'
+import { allAiPages, aiHubLinks } from '../data/aiCallingContent.js'
+import { AI_DATE } from '../data/aiCities.js'
+import { organizationSchema, websiteSchema, serviceSchema, faqSchema, articleSchema, breadcrumbSchema } from './schema.js'
 
 const NEW_PAGE_DATE = '2026-10-06'
 
@@ -35,7 +37,7 @@ const staticIntro = {
 
 function navLinks(lang) {
   const out = ui[lang].nav.links.map(l => ({ href: staticPages[l.key][lang], label: l.label }))
-  const order = ['custom', 'software', 'web', 'app', 'crm', 'erp', 'pos', 'saas']
+  const order = ['custom', 'software', 'web', 'app', 'crm', 'erp', 'pos', 'saas', 'aicall']
   const svcLabels = ui[lang].serviceLabels
   for (const k of order) out.push({ href: servicePaths[k][lang], label: svcLabels[k] })
   return out
@@ -58,7 +60,9 @@ export function buildPages() {
         priority: key === 'home' ? 1.0 : key === 'services' ? 0.9 : key === 'blog' ? 0.8 : key === 'contact' ? 0.6 : 0.7,
         changefreq: key === 'home' || key === 'blog' ? 'weekly' : 'monthly',
         schema: key === 'home' ? [organizationSchema(lang), websiteSchema(lang)] : [],
-        links: navLinks(lang),
+        links: key === 'blog'
+          ? navLinks(lang).concat(allPosts.filter(x => x.lang === lang).map(x => ({ href: blogPath(lang, x.slug), label: x.title })))
+          : navLinks(lang),
       })
     }
   }
@@ -76,7 +80,7 @@ export function buildPages() {
         serviceSchema({ name: d.badge, description: d.meta.description, url: absolute(paths.de), lang: 'de' }),
         faqSchema(d.faqs),
       ],
-      links: d.related.map(r => ({ href: servicePaths[r].de, label: ui.de.serviceLabels[r] })).concat(navLinks('de').slice(0, 6)),
+      links: d.related.map(r => ({ href: servicePaths[r].de, label: ui.de.serviceLabels[r] })).concat(navLinks('de').slice(0, 6), key === 'aicall' ? aiHubLinks('de') : []),
     })
     // English
     if (paths.legacy) {
@@ -96,22 +100,45 @@ export function buildPages() {
           serviceSchema({ name: e.badge, description: e.meta.description, url: absolute(paths.en), lang: 'en' }),
           faqSchema(e.faqs),
         ],
-        links: e.related.map(r => ({ href: servicePaths[r].en, label: ui.en.serviceLabels[r] })).concat(navLinks('en').slice(0, 6)),
+        links: e.related.map(r => ({ href: servicePaths[r].en, label: ui.en.serviceLabels[r] })).concat(navLinks('en').slice(0, 6), key === 'aicall' ? aiHubLinks('en') : []),
       })
     }
   }
 
   // ── English-only location pages ──
   for (const loc of locationPages) {
-    const { cityName, region, serviceLabel, headline, intro } = loc
+    const { cityName, region, serviceLabel, headline, intro, included, faqs } = loc
     pages.push({
       path: '/' + loc.slug, lang: 'en', type: 'location', key: loc.slug,
       title: `${serviceLabel} in ${cityName}, ${region} – ZahrionTech`,
       description: `ZahrionTech provides ${serviceLabel.toLowerCase()} for businesses in ${cityName}, ${region} — custom-built software, transparent pricing, full code ownership.`,
       ogTitle: `${serviceLabel} in ${cityName}, ${region} – ZahrionTech`,
       ogDescription: `Custom software development for businesses in ${cityName}, ${region}.`,
-      h1: `${headline.pre} ${headline.highlight}`, intro,
+      h1: `${headline.pre} ${headline.highlight}`, intro, features: included, faqs,
       priority: 0.8, changefreq: 'monthly', schema: [], links: navLinks('en').slice(0, 6),
+    })
+  }
+
+  // ── AI calling agent: country hubs + city pages (all text comes from data/aiCallingContent.js) ──
+  for (const a of allAiPages()) {
+    const hub = a.kind === 'hub'
+    const sections = a.kind === 'city' ? a.sections.slice(1) : a.sections // city: sections[0] repeats the intro
+    pages.push({
+      path: a.path, lang: a.lang, type: hub ? 'ai-hub' : 'ai-city', key: a.path,
+      ...a.meta,
+      h1: `${a.h1.pre} ${a.h1.highlight}`, intro: a.intro,
+      features: a.features,
+      body: sections.flatMap(x => [{ h: x.h }, { p: x.p }]),
+      faqs: a.faqs,
+      lastmod: AI_DATE, priority: hub ? 0.7 : 0.6, changefreq: 'monthly',
+      schema: [
+        serviceSchema({ name: a.badge, description: a.meta.description, url: absolute(a.path), lang: a.lang, areaServed: a.areaServed }),
+        faqSchema(a.faqs),
+        breadcrumbSchema(a.crumbs),
+      ],
+      links: hub
+        ? a.groups.flatMap(g => g.cities.map(c => ({ href: c.href, label: c.label }))).concat(a.crumbs.slice(1, -1).map(c => ({ href: c.path, label: c.name })), [{ href: staticPages.blog[a.lang], label: ui[a.lang].nav.links.find(l => l.key === 'blog').label }])
+        : a.nearby.map(n => ({ href: n.href, label: n.label })).concat(a.crumbs.slice(1, -1).map(c => ({ href: c.path, label: c.name })), [{ href: staticPages.blog[a.lang], label: ui[a.lang].nav.links.find(l => l.key === 'blog').label }]),
     })
   }
 

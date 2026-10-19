@@ -55,7 +55,7 @@ export function websiteSchema(lang) {
   }
 }
 
-export function serviceSchema({ name, description, url, lang }) {
+export function serviceSchema({ name, description, url, lang, areaServed }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -65,7 +65,8 @@ export function serviceSchema({ name, description, url, lang }) {
     url,
     inLanguage: lang === 'de' ? 'de-DE' : 'en',
     provider: { '@id': ORG_ID },
-    areaServed: lang === 'de'
+    areaServed: areaServed ? { '@type': areaServed.type, name: areaServed.name }
+      : lang === 'de'
       ? [{ '@type': 'Country', name: 'Deutschland' }, { '@type': 'Continent', name: 'Europe' }]
       : [{ '@type': 'Country', name: 'United States' }, { '@type': 'Country', name: 'United Kingdom' }, { '@type': 'Country', name: 'Germany' }, { '@type': 'Continent', name: 'Europe' }],
   }
@@ -96,5 +97,18 @@ export function articleSchema({ title, description, date, url, lang }) {
     author: { '@type': 'Organization', name: 'ZahrionTech', url: SITE },
     publisher: { '@type': 'Organization', name: 'ZahrionTech', logo: { '@type': 'ImageObject', url: LOGO } },
     image: LOGO,
+  }
+}
+
+export function breadcrumbSchema(crumbs) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      item: SITE + (c.path === '/' ? '/' : c.path),
+    })),
   }
 }
