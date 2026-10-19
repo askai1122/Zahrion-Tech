@@ -86,7 +86,7 @@ Sitemap: ${SITE}/sitemap.xml
 writeFileSync(join(root, 'vercel.json'), JSON.stringify({
   cleanUrls: true,
   trailingSlash: false,
-  redirects: redirects(),
+  redirects: redirects({ withWww: process.env.SEO_WWW_REDIRECT === '1' }),
   rewrites: [{ source: '/admin', destination: '/index.html' }],
 }, null, 2) + '\n')
 

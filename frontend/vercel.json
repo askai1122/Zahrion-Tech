@@ -3,17 +3,6 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.zahriontech.com"
-        }
-      ],
-      "destination": "https://zahriontech.com/$1",
-      "permanent": true
-    },
-    {
       "source": "/de/blog/heic-in-jpg-umwandeln",
       "destination": "/de/blog",
       "permanent": true

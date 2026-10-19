@@ -133,8 +133,6 @@ for (const r of rs) {
   if (fixed.has(r.destination)) err(`redirect chain: ${r.source} -> ${r.destination} -> ${fixed.get(r.destination)}`)
   if (!byPath.has(r.destination)) err(`redirect ${r.source} -> ${r.destination}: destination page does not exist`)
 }
-const www = rs[0]
-if (!www || !www.has || !/\$1$/.test(www.destination)) err('www -> apex redirect missing (first redirect in redirects.js)')
 const vj = JSON.parse(readFileSync(join(root, 'vercel.json'), 'utf8'))
 if (vj.cleanUrls !== true || vj.trailingSlash !== false) err('vercel.json must have cleanUrls:true and trailingSlash:false')
 if ((vj.rewrites || []).some(r => r.source !== '/admin')) err('vercel.json has a catch-all rewrite: unknown URLs would return 200 (soft 404)')

@@ -37,12 +37,14 @@ const LEGACY_INDUSTRIES = [
   ['/industries/pos-software', '/custom-pos-software-development'],
 ]
 
-export function redirects() {
+// withWww=false by default: the www -> apex redirect is configured in Vercel (Domains), NOT here. Having it in both places
+// can create a redirect loop (ERR_TOO_MANY_REDIRECTS) when the Vercel domain redirects the other way round.
+export function redirects({ withWww = false } = {}) {
   const out = []
   const add = (source, destination) => out.push({ source, destination, permanent: true })
 
-  // 1. non-canonical host -> canonical host (www -> apex)
-  out.push({
+  // 1. non-canonical host -> canonical host (www -> apex), only when explicitly requested
+  if (withWww) out.push({
     source: '/(.*)',
     has: [{ type: 'host', value: `www.${HOST}` }],
     destination: `${SITE}/$1`,
