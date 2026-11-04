@@ -26,7 +26,7 @@ export default function Contact() {
     }
     setLoading(true)
     try {
-      const res = await fetch('https://apii.zahriontech.com/api/contact', {
+      const res = await fetch('https://gregarious-quietude-production-4f5b.up.railway.app/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         // `service` keeps the English value the backend already knows; German leads are tagged in the message.
