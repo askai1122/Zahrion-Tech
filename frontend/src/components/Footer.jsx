@@ -59,7 +59,9 @@ export default function Footer() {
           <p className="dark:text-slate-500 text-slate-500 text-sm">
             © {new Date().getFullYear()} ZahrionTech. {f.rights}
           </p>
-        
+          <Link to="/privacy-policy" className="dark:text-slate-500 text-slate-500 text-sm dark:hover:text-brand-400 hover:text-brand-500 transition-colors">
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>

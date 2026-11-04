@@ -44,6 +44,7 @@ export const englishOnlyPaths = [
   '/custom-software-development-edmonton',
   '/it-outsourcing-hartford',
   '/pos-software-systems-chicago',
+  '/privacy-policy',
 ]
 
 // Blog: translated article pairs. Each pair shares a `pair` key.

@@ -105,6 +105,17 @@ export function buildPages() {
     }
   }
 
+  // ── Privacy Policy (English-only) ──
+  pages.push({
+    path: '/privacy-policy', lang: 'en', type: 'page', key: 'privacy-policy',
+    title: 'Privacy Policy – ZahrionTech',
+    description: 'ZahrionTech Privacy Policy: how we collect, use, and protect your personal data, including information about Google AdSense advertising.',
+    ogTitle: 'Privacy Policy – ZahrionTech',
+    ogDescription: 'Read the ZahrionTech Privacy Policy to understand how your data is handled.',
+    h1: 'Privacy Policy', intro: '',
+    priority: 0.3, changefreq: 'yearly', schema: [], links: navLinks('en').slice(0, 6),
+  })
+
   // ── English-only location pages ──
   for (const loc of locationPages) {
     const { cityName, region, serviceLabel, headline, intro, included, faqs } = loc

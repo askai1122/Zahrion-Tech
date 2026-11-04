@@ -23,6 +23,7 @@ import BlogPost from './pages/BlogPost'
 import NotFound from './pages/NotFound'
 import ServicePage from './pages/ServicePage'
 import AiPlacePage from './pages/AiPlacePage'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 import LangHead from './components/LangHead'
 import LanguageDetector from './components/LanguageDetector'
 import { staticPages, servicePaths } from './i18n/routes'
@@ -91,6 +92,7 @@ export default function App() {
             <Route path="/ai-calling-agent/:country/:city" element={<AiPlacePage />} />
             <Route path="/de/ki-telefonagent/:city" element={<AiPlacePage />} />
 
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
