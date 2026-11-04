@@ -40,7 +40,7 @@ export default function App() {
     if (pathname.startsWith('/admin') || sessionStorage.getItem('nx_visitor_tracked')) return
 
     sessionStorage.setItem('nx_visitor_tracked', '1')
-    fetch('https://api.zahriontech.com/api/visitors/track', { method: 'POST' }).catch(() => {})
+    fetch('https://apii.zahriontech.com/api/visitors/track', { method: 'POST' }).catch(() => {})
   }, [pathname])
 
   return (

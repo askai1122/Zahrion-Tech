@@ -26,7 +26,7 @@ export default function Contact() {
     }
     setLoading(true)
     try {
-      const res = await fetch('https://api.zahriontech.com/api/contact', {
+      const res = await fetch('https://apii.zahriontech.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         // `service` keeps the English value the backend already knows; German leads are tagged in the message.
