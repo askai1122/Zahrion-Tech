@@ -55,6 +55,12 @@ export const ui = {
             ['blog', 'Blog'],
           ],
         },
+        {
+          title: 'Legal',
+          items: [
+            ['/privacy-policy', 'Privacy Policy'],
+          ],
+        },
       ],
       rights: 'All rights reserved.',
     },
