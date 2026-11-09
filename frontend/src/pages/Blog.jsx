@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Clock } from 'lucide-react'
 import PageWrapper from '../components/PageWrapper'
 import StaticSeo from '../components/StaticSeo'
+import AdNativeBanner from '../components/AdNativeBanner'
 import { useLang } from '../hooks/useLang'
 import { getPosts } from '../data/blogAll'
 import { blogPath } from '../i18n/routes'
@@ -54,6 +55,11 @@ export default function Blog() {
                 </Link>
               </motion.div>
             ))}
+          </div>
+
+          {/* Native Banner below the posts list */}
+          <div className="mt-10">
+            <AdNativeBanner />
           </div>
         </div>
       </section>
